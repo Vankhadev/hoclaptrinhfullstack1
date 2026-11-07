@@ -423,7 +423,8 @@ footer {
 
 .hero2 {
     min-height: 55vh;
-    background: linear-gradient(rgba(0, 0, 0, 0.55),);
+    background: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)),
+                url("./image/bentre05.jpg") no-repeat center center / cover;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -470,5 +471,71 @@ footer {
     }
 }
 
+/* =======================================================
+   KHU VỰC VIDEO GIỚI THIỆU (.video-section)
+======================================================= */
+
+.video-section {
+    padding:  70px 20px;
+    text-align: center;
+}
+
+.video-header {
+    max-width: 800px;
+    margin: 0 auto 35px auto;
+}
+
+.video-header .sub-title {
+    display: inline-block;
+    color: #35B0D2;
+    font-size: 0.95rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
 
 
+.video-header h2 {
+    font-size: 2.3rem;
+    color: #222;
+    margin-bottom: 15px;
+    font-weight: 800;
+}
+
+.video-header p {
+    font-size: 1.05rem;
+    color: #666;
+    line-height: 1.7; 
+}
+
+.video-container {
+    max-width: 950px;
+    margin: 0  auto;
+    aspect-ratio: 16/ 9;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+    background-color: #000000;
+}
+
+.video-container iframe  {
+    width: 100%;
+    height: 100%;
+    border: none;
+    display: block;
+}
+
+@media (max-width: 768px) {
+    .video-section {
+        padding: 45px 15px;
+    }
+
+    .video-header h2 {
+        font-size: 1.8rem;
+    }
+
+    .video-container {
+        border-radius: 12px;
+    }
+}
