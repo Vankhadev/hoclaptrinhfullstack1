@@ -596,6 +596,7 @@ footer {
     font-size: 0.88rem;
     font-weight: 600;
     margin-bottom: 14px;
+    border-radius: 10px;
 }
 
 .spot-content h3  {
