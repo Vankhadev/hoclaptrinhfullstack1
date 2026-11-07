@@ -1,472 +1,740 @@
 * {
+    /* [Làm gì]: Xóa bỏ toàn bộ lề ngoài về 0 | [Tác dụng khi dùng]: Bỏ khoảng cách mép thừa mặc định của trình duyệt */
     margin: 0;
+    /* [Làm gì]: Xóa bỏ toàn bộ khoảng đệm trong về 0 | [Tác dụng khi dùng]: Đưa khoảng cách lót bên trong về 0 để tự chủ động style */
     padding: 0;
+    /* [Làm gì]: Thiết lập mô hình tính toán kích thước hộp | [Tác dụng khi dùng]: border-box giữ nguyên kích thước khung khi thêm padding hay border */
     box-sizing: border-box;
+    /* [Làm gì]: Cài đặt phông chữ hiển thị cho văn bản | [Tác dụng khi dùng]: Định hình font chữ đẹp mắt, hiện đại và đồng bộ toàn website */
     font-family: 'Poppins', sans-serif;
 }
 
 body {
+   /* [Làm gì]: Chiều cao của dòng chữ (khoảng cách giữa các dòng) | [Tác dụng khi dùng]: Giúp các dòng chữ thoáng mắt, dễ đọc, không bị dí sát vào nhau */
    line-height: 1.6;
+   /* [Làm gì]: Căn lề tự động | [Tác dụng khi dùng]: Tự động chia đều khoảng cách lề xung quanh phần tử */
    margin: auto;
 }
 
 ul {
+    /* [Làm gì]: Kích hoạt bố cục linh hoạt Flexbox | [Tác dụng khi dùng]: Dàn các phần tử con nằm ngang hoặc dọc một cách linh hoạt, dễ căn chỉnh */
     display: flex;
+    /* [Làm gì]: Xóa bỏ toàn bộ lề ngoài về 0 | [Tác dụng khi dùng]: Bỏ khoảng cách mép thừa mặc định của trình duyệt */
     margin: 0;
+    /* [Làm gì]: Xóa bỏ toàn bộ khoảng đệm trong về 0 | [Tác dụng khi dùng]: Đưa khoảng cách lót bên trong về 0 để tự chủ động style */
     padding: 0;
 }
 
 li {
+    /* [Làm gì]: Thiết lập khoảng cách lề bên ngoài (0 10px) | [Tác dụng khi dùng]: Đẩy phần tử cách xa các phần tử lân cận xung quanh */
     margin: 0 10px;
+    /* [Làm gì]: Định dạng kiểu dấu đầu dòng danh sách | [Tác dụng khi dùng]: none để xóa bỏ dấu chấm tròn đen mặc định của thẻ ul/li */
     list-style: none;
 }
 
 a {
+    /* [Làm gì]: Đường gạch trang trí chữ | [Tác dụng khi dùng]: none để xóa đường gạch chân mặc định của thẻ liên kết a, nhìn gọn gàng */
     text-decoration: none;
 }
 
 header {
+    /* [Làm gì]: Thiết lập màu sắc hoặc lớp nền (#fff) | [Tác dụng khi dùng]: Tô màu phân biệt các khối hoặc làm nền tương phản cho chữ */
     background-color: #fff;
+    /* [Làm gì]: Định vị bám dính khi cuộn trang | [Tác dụng khi dùng]: Giữ thanh header/menu luôn dính trên đỉnh màn hình khi người dùng cuộn xem bài viết */
     position: sticky;
+    /* [Làm gì]: Cách mép trên đỉnh 0 pixel | [Tác dụng khi dùng]: Giữ thanh menu dính chặt sát mép đỉnh trên cùng của màn hình */
     top: 0;
+    /* [Làm gì]: Thiết lập màu sắc hoặc lớp nền (#fff) | [Tác dụng khi dùng]: Tô màu phân biệt các khối hoặc làm nền tương phản cho chữ */
     background: #fff;
+    /* [Làm gì]: Tạo đường viền kẻ ở mép đáy dưới cùng | [Tác dụng khi dùng]: Phân tách thanh header hoặc tiêu đề với phần nội dung bên dưới */
     border-bottom: 1px solid #eaeaea;
+    /* [Làm gì]: Cài đặt thời gian chuyển đổi hiệu ứng mượt mà (var(--transition)) | [Tác dụng khi dùng]: Giúp đổi màu, phóng to, trượt êm ái không bị giật cục */
     transition: var(--transition);
 }
 
 nav {
+    /* [Làm gì]: Giới hạn bề ngang tối đa (1200px) | [Tác dụng khi dùng]: Giữ nội dung không bị bè quá rộng trên màn hình máy tính lớn */
     max-width: 1200px;
+    /* [Làm gì]: Căn lề trên-dưới 0, trái-phải tự động (auto) | [Tác dụng khi dùng]: Căn khối khung nội dung ra chính giữa màn hình */
     margin: 0 auto;
+    /* [Làm gì]: Kích hoạt bố cục linh hoạt Flexbox | [Tác dụng khi dùng]: Dàn các phần tử con nằm ngang hoặc dọc một cách linh hoạt, dễ căn chỉnh */
     display: flex;
+    /* [Làm gì]: Chia đều khoảng trống, đẩy phần tử về 2 đầu mép | [Tác dụng khi dùng]: Đẩy Logo sang sát bên trái và Menu sang sát bên phải */
     justify-content: space-between;
+    /* [Làm gì]: Căn chỉnh tất cả phần tử con thẳng hàng vào giữa tâm theo trục dọc | [Tác dụng khi dùng]: Giúp logo và menu đều nhau không bị lệch cao thấp */
     align-items: center;
+    /* [Làm gì]: Tạo khoảng đệm lót bên trong (15px 20px) | [Tác dụng khi dùng]: Giúp chữ thông thoáng và mở rộng diện tích bấm cho nút */
     padding: 15px 20px;
+    /* [Làm gì]: Định vị tương đối | [Tác dụng khi dùng]: Làm mốc tọa độ gốc (0,0) cho các thẻ con bên trong dùng position: absolute căn theo */
     position: relative;
 }
 
 .logo {
+    /* [Làm gì]: Cài đặt phông chữ hiển thị cho văn bản | [Tác dụng khi dùng]: Định hình font chữ đẹp mắt, hiện đại và đồng bộ toàn website */
     font-family: "Playfair Display", serif;
+    /* [Làm gì]: Cài đặt kích thước cỡ chữ (1.8rem) | [Tác dụng khi dùng]: Phân cấp tiêu đề to rõ và nội dung bài viết vừa tầm mắt người đọc */
     font-size: 1.8rem;
+    /* [Làm gì]: Độ đậm nét của chữ (700) | [Tác dụng khi dùng]: In đậm (600-800) tạo điểm nhấn mạnh mẽ, nét vừa (400-500) cho chữ thường dễ đọc */
     font-weight: 700;
+    /* [Làm gì]: Đặt màu sắc cho văn bản chữ (#35b0d2) | [Tác dụng khi dùng]: Thiết lập màu sắc thương hiệu hoặc giúp chữ dễ nhìn, không chói mắt */
     color: #35b0d2;
+    /* [Làm gì]: Đường gạch trang trí chữ | [Tác dụng khi dùng]: none để xóa đường gạch chân mặc định của thẻ liên kết a, nhìn gọn gàng */
     text-decoration: none;
+    /* [Làm gì]: Khoảng cách giãn giữa các con chữ (1px) | [Tác dụng khi dùng]: Giúp chữ in hoa hoặc logo nhìn thoáng, thanh lịch và cao cấp hơn */
     letter-spacing: 1px;
 }
 
 .nav-links {
+    /* [Làm gì]: Kích hoạt bố cục linh hoạt Flexbox | [Tác dụng khi dùng]: Dàn các phần tử con nằm ngang hoặc dọc một cách linh hoạt, dễ căn chỉnh */
     display: flex;
+    /* [Làm gì]: Định dạng kiểu dấu đầu dòng danh sách | [Tác dụng khi dùng]: none để xóa bỏ dấu chấm tròn đen mặc định của thẻ ul/li */
     list-style: none;
+    /* [Làm gì]: Khoảng cách tự động giữa các phần tử con trong Flexbox (25px) | [Tác dụng khi dùng]: Cách đều các mục mà không cần đặt margin lẻ tẻ */
     gap: 25px;
+    /* [Làm gì]: Căn chỉnh tất cả phần tử con thẳng hàng vào giữa tâm theo trục dọc | [Tác dụng khi dùng]: Giúp logo và menu đều nhau không bị lệch cao thấp */
     align-items: center;
+    /* [Làm gì]: Xóa bỏ toàn bộ khoảng đệm trong về 0 | [Tác dụng khi dùng]: Đưa khoảng cách lót bên trong về 0 để tự chủ động style */
     padding: 0;
+    /* [Làm gì]: Xóa bỏ toàn bộ lề ngoài về 0 | [Tác dụng khi dùng]: Bỏ khoảng cách mép thừa mặc định của trình duyệt */
     margin: 0;
 }
 
 .nav-links a {
+    /* [Làm gì]: Đường gạch trang trí chữ | [Tác dụng khi dùng]: none để xóa đường gạch chân mặc định của thẻ liên kết a, nhìn gọn gàng */
     text-decoration: none;
+    /* [Làm gì]: Đặt màu sắc cho văn bản chữ (#444) | [Tác dụng khi dùng]: Thiết lập màu sắc thương hiệu hoặc giúp chữ dễ nhìn, không chói mắt */
     color: #444;
+    /* [Làm gì]: Độ đậm nét của chữ (500) | [Tác dụng khi dùng]: In đậm (600-800) tạo điểm nhấn mạnh mẽ, nét vừa (400-500) cho chữ thường dễ đọc */
     font-weight: 500;
+    /* [Làm gì]: Tạo khoảng đệm lót bên trong (8px 12px) | [Tác dụng khi dùng]: Giúp chữ thông thoáng và mở rộng diện tích bấm cho nút */
     padding: 8px 12px;
+    /* [Làm gì]: Bo tròn các góc của phần tử (5px) | [Tác dụng khi dùng]: Tạo góc bo mềm mại, hiện đại cho nút bấm, thẻ bài viết, hình ảnh */
     border-radius: 5px;
+    /* [Làm gì]: Cài đặt thời gian chuyển đổi hiệu ứng mượt mà (all 0.5s ease) | [Tác dụng khi dùng]: Giúp đổi màu, phóng to, trượt êm ái không bị giật cục */
     transition: all 0.5s ease;
 }
 
 .nav-links a:hover {
+    /* [Làm gì]: Đặt màu sắc cho văn bản chữ (#35b0d2) | [Tác dụng khi dùng]: Thiết lập màu sắc thương hiệu hoặc giúp chữ dễ nhìn, không chói mắt */
     color: #35B0D2;
+    /* [Làm gì]: Thiết lập màu sắc hoặc lớp nền (#e8f5e9) | [Tác dụng khi dùng]: Tô màu phân biệt các khối hoặc làm nền tương phản cho chữ */
     background-color: #e8f5e9;
 }
 
 
 .menu-toggle {
+    /* [Làm gì]: Ẩn hoàn toàn phần tử khỏi màn hình | [Tác dụng khi dùng]: Dùng để giấu menu hoặc nút bấm khi chưa đến lúc hiển thị */
     display: none;
+    /* [Làm gì]: Thiết lập màu sắc hoặc lớp nền (none) | [Tác dụng khi dùng]: Tô màu phân biệt các khối hoặc làm nền tương phản cho chữ */
     background: none;
+    /* [Làm gì]: Xóa bỏ đường viền mặc định | [Tác dụng khi dùng]: Xóa viền xám xấu xí của thẻ <button> hoặc <iframe> */
     border: none;
+    /* [Làm gì]: Cài đặt kích thước cỡ chữ (1.5rem) | [Tác dụng khi dùng]: Phân cấp tiêu đề to rõ và nội dung bài viết vừa tầm mắt người đọc */
     font-size: 1.5rem;
+    /* [Làm gì]: Đặt màu sắc cho văn bản chữ (#333) | [Tác dụng khi dùng]: Thiết lập màu sắc thương hiệu hoặc giúp chữ dễ nhìn, không chói mắt */
     color: #333;
+    /* [Làm gì]: Đổi kiểu con trỏ chuột khi rê vào | [Tác dụng khi dùng]: pointer hiện hình bàn tay để báo hiệu đây là nút có thể click được */
     cursor: pointer;
 }
 
 @media (max-width: 768px) {
     .menu-toggle {
+        /* [Làm gì]: Hiển thị phần tử dưới dạng khối độc lập chiếm trọn 1 dòng | [Tác dụng khi dùng]: Tự xuống dòng và ăn khớp các thuộc tính width/height/padding */
         display: block;
     }
 
     .nav-links {
+        /* [Làm gì]: Ẩn hoàn toàn phần tử khỏi màn hình | [Tác dụng khi dùng]: Dùng để giấu menu hoặc nút bấm khi chưa đến lúc hiển thị */
         display: none;
+         /* [Làm gì]: Xếp các phần tử con theo một cột dọc từ trên xuống | [Tác dụng khi dùng]: BẮT BUỘC dùng khi làm giao diện trên điện thoại di động */
          flex-direction: column;
+        /* [Làm gì]: Định vị tuyệt đối tách khỏi luồng tài liệu | [Tác dụng khi dùng]: Đặt phần tử ở vị trí chính xác bất kỳ theo thẻ cha mà không đẩy xô lệch layout */
         position: absolute;
+        /* [Làm gì]: Đặt vị trí đỉnh bằng 100% chiều cao thẻ cha | [Tác dụng khi dùng]: Thả menu con nằm ngay sát mép dưới của thanh navbar */
         top: 100%;
+        /* [Làm gì]: Căn sát mép trái 0 pixel | [Tác dụng khi dùng]: Cho menu hoặc khung trải dài từ mép trái màn hình */
         left: 0;
+        /* [Làm gì]: Chiếm trọn 100% độ rộng của thẻ cha | [Tác dụng khi dùng]: Để phần tử tràn đầy khung hoặc ép rớt xuống 1 hàng riêng */
         width: 100%;
+        /* [Làm gì]: Thiết lập màu sắc hoặc lớp nền (#fff) | [Tác dụng khi dùng]: Tô màu phân biệt các khối hoặc làm nền tương phản cho chữ */
         background-color: #fff;
+        /* [Làm gì]: Khoảng cách tự động giữa các phần tử con trong Flexbox (10px) | [Tác dụng khi dùng]: Cách đều các mục mà không cần đặt margin lẻ tẻ */
         gap: 10px;
+        /* [Làm gì]: Tạo khoảng đệm lót bên trong (20px) | [Tác dụng khi dùng]: Giúp chữ thông thoáng và mở rộng diện tích bấm cho nút */
         padding: 20px;
+        /* [Làm gì]: Tạo hiệu ứng đổ bóng mờ cho phần tử (0 10px 15px rgba(0, 0, 0, 0.1)) | [Tác dụng khi dùng]: Tạo chiều sâu 3D, giúp nút bấm/thẻ nổi bật trên bề mặt trang */
         box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+        /* [Làm gì]: Thứ tự xếp lớp theo chiều sâu trục Z (1000) | [Tác dụng khi dùng]: Số càng cao thì phần tử càng nằm đè lên trên các phần tử khác (menu nổi trên banner) */
         z-index: 1000;
+        /* [Làm gì]: Độ mờ / độ trong suốt của phần tử (0) | [Tác dụng khi dùng]: Tạo hiệu ứng mờ dần (Fade-in/Fade-out) cực mượt */
         opacity: 0;
+        /* [Làm gì]: Trạng thái hiển thị trong luồng tài liệu (hidden) | [Tác dụng khi dùng]: hidden để ẩn hẳn không bấm nhầm được khi đóng menu, visible để bấm bình thường */
         visibility: hidden;
+        /* [Làm gì]: Biến đổi hình học (translatey(-20px)) | [Tác dụng khi dùng]: scale phóng to ảnh khi hover, translateY trượt mở menu */
         transform: translateY(-20px);
+        /* [Làm gì]: Cài đặt thời gian chuyển đổi hiệu ứng mượt mà (all 0.3s ease-in-out) | [Tác dụng khi dùng]: Giúp đổi màu, phóng to, trượt êm ái không bị giật cục */
         transition: all 0.3s ease-in-out;
     }
 
     .nav-links {
+        /* [Làm gì]: Kích hoạt bố cục linh hoạt Flexbox | [Tác dụng khi dùng]: Dàn các phần tử con nằm ngang hoặc dọc một cách linh hoạt, dễ căn chỉnh */
         display: flex;
+        /* [Làm gì]: Xếp các phần tử con theo một cột dọc từ trên xuống | [Tác dụng khi dùng]: BẮT BUỘC dùng khi làm giao diện trên điện thoại di động */
         flex-direction: column;
+        /* [Làm gì]: Định vị tuyệt đối tách khỏi luồng tài liệu | [Tác dụng khi dùng]: Đặt phần tử ở vị trí chính xác bất kỳ theo thẻ cha mà không đẩy xô lệch layout */
         position: absolute;
+        /* [Làm gì]: Đặt vị trí đỉnh bằng 100% chiều cao thẻ cha | [Tác dụng khi dùng]: Thả menu con nằm ngay sát mép dưới của thanh navbar */
         top: 100%;
+        /* [Làm gì]: Căn sát mép trái 0 pixel | [Tác dụng khi dùng]: Cho menu hoặc khung trải dài từ mép trái màn hình */
         left: 0;
+        /* [Làm gì]: Chiếm trọn 100% độ rộng của thẻ cha | [Tác dụng khi dùng]: Để phần tử tràn đầy khung hoặc ép rớt xuống 1 hàng riêng */
         width: 100%;
+        /* [Làm gì]: Thiết lập màu sắc hoặc lớp nền (#ffff) | [Tác dụng khi dùng]: Tô màu phân biệt các khối hoặc làm nền tương phản cho chữ */
         background-color: #ffff;
+        /* [Làm gì]: Khoảng cách tự động giữa các phần tử con trong Flexbox (8px) | [Tác dụng khi dùng]: Cách đều các mục mà không cần đặt margin lẻ tẻ */
         gap: 8px;
+        /* [Làm gì]: Tạo khoảng đệm lót bên trong (20px) | [Tác dụng khi dùng]: Giúp chữ thông thoáng và mở rộng diện tích bấm cho nút */
         padding: 20px;
+        /* [Làm gì]: Tạo hiệu ứng đổ bóng mờ cho phần tử (0 12px 25px rgba(0, 0, 0, 0.12)) | [Tác dụng khi dùng]: Tạo chiều sâu 3D, giúp nút bấm/thẻ nổi bật trên bề mặt trang */
         box-shadow: 0 12px 25px rgba(0, 0, 0, 0.12);
+        /* [Làm gì]: Thứ tự xếp lớp theo chiều sâu trục Z (1000) | [Tác dụng khi dùng]: Số càng cao thì phần tử càng nằm đè lên trên các phần tử khác (menu nổi trên banner) */
         z-index: 1000;
     }
 
     .nav-links.active {
+       /* [Làm gì]: Độ mờ / độ trong suốt của phần tử (1) | [Tác dụng khi dùng]: Tạo hiệu ứng mờ dần (Fade-in/Fade-out) cực mượt */
        opacity: 1;
+       /* [Làm gì]: Trạng thái hiển thị trong luồng tài liệu (visible) | [Tác dụng khi dùng]: hidden để ẩn hẳn không bấm nhầm được khi đóng menu, visible để bấm bình thường */
        visibility: visible;
+       /* [Làm gì]: Biến đổi hình học (translatey(0)) | [Tác dụng khi dùng]: scale phóng to ảnh khi hover, translateY trượt mở menu */
        transform: translateY(0);
     }
 
     .nav-links li {
+        /* [Làm gì]: Chiếm trọn 100% độ rộng của thẻ cha | [Tác dụng khi dùng]: Để phần tử tràn đầy khung hoặc ép rớt xuống 1 hàng riêng */
         width: 100%;
+        /* [Làm gì]: Xóa bỏ toàn bộ lề ngoài về 0 | [Tác dụng khi dùng]: Bỏ khoảng cách mép thừa mặc định của trình duyệt */
         margin: 0;
     }
 
     .nav-links a {
+        /* [Làm gì]: Hiển thị phần tử dưới dạng khối độc lập chiếm trọn 1 dòng | [Tác dụng khi dùng]: Tự xuống dòng và ăn khớp các thuộc tính width/height/padding */
         display: block;
+        /* [Làm gì]: Tạo khoảng đệm lót bên trong (12px 18px) | [Tác dụng khi dùng]: Giúp chữ thông thoáng và mở rộng diện tích bấm cho nút */
         padding: 12px 18px;
+        /* [Làm gì]: Bo tròn các góc của phần tử (8px) | [Tác dụng khi dùng]: Tạo góc bo mềm mại, hiện đại cho nút bấm, thẻ bài viết, hình ảnh */
         border-radius: 8px;
+        /* [Làm gì]: Độ đậm nét của chữ (500) | [Tác dụng khi dùng]: In đậm (600-800) tạo điểm nhấn mạnh mẽ, nét vừa (400-500) cho chữ thường dễ đọc */
         font-weight: 500;
+        /* [Làm gì]: Cài đặt thời gian chuyển đổi hiệu ứng mượt mà (all 0.25s ease) | [Tác dụng khi dùng]: Giúp đổi màu, phóng to, trượt êm ái không bị giật cục */
         transition: all 0.25s ease;
     }
 
     .nav-links a:hover {
+        /* [Làm gì]: Thiết lập màu sắc hoặc lớp nền (#f0f9fb) | [Tác dụng khi dùng]: Tô màu phân biệt các khối hoặc làm nền tương phản cho chữ */
         background-color: #f0f9fb;
+        /* [Làm gì]: Đặt màu sắc cho văn bản chữ (#35b0d2) | [Tác dụng khi dùng]: Thiết lập màu sắc thương hiệu hoặc giúp chữ dễ nhìn, không chói mắt */
         color: #35B0D2;
+        /* [Làm gì]: Khoảng đệm lót ở mép left bên trong (24px) | [Tác dụng khi dùng]: Tạo khoảng cách thoáng cho nội dung */
         padding-left: 24px;
     }
 }
 
 .hero {
+    /* [Làm gì]: Đặt chiều cao tối thiểu (80vh) | [Tác dụng khi dùng]: Đảm bảo khung banner luôn đủ cao để tạo ấn tượng cho trang */
     min-height: 80vh;
+    /* [Làm gì]: Thiết lập màu sắc hoặc lớp nền (linear-gradient(rgba(0, 0, 0, 0.55),) | [Tác dụng khi dùng]: Tô màu phân biệt các khối hoặc làm nền tương phản cho chữ */
     background: linear-gradient(rgba(0, 0, 0, 0.55),
     rgba(0, 0, 0, 0.55)),
     url ("./image/bentre04.jpg") no-repeat center center / cover;
+    /* [Làm gì]: Kích hoạt bố cục linh hoạt Flexbox | [Tác dụng khi dùng]: Dàn các phần tử con nằm ngang hoặc dọc một cách linh hoạt, dễ căn chỉnh */
     display: flex;
+    /* [Làm gì]: Căn các phần tử con vào chính giữa theo trục ngang | [Tác dụng khi dùng]: Giúp nội dung hoặc các thẻ nằm cân đối ở giữa */
     justify-content: center;
+    /* [Làm gì]: Căn chỉnh tất cả phần tử con thẳng hàng vào giữa tâm theo trục dọc | [Tác dụng khi dùng]: Giúp logo và menu đều nhau không bị lệch cao thấp */
     align-items: center;
+    /* [Làm gì]: Căn lề cho dòng chữ (center) | [Tác dụng khi dùng]: center để căn giữa toàn bộ chữ hoặc nút bấm ra tâm trang web */
     text-align: center;
+    /* [Làm gì]: Đặt màu sắc cho văn bản chữ (#fff) | [Tác dụng khi dùng]: Thiết lập màu sắc thương hiệu hoặc giúp chữ dễ nhìn, không chói mắt */
     color: #fff;
     /* padding: 60px 20px; */
+    /* [Làm gì]: Chèn hình ảnh làm hình nền | [Tác dụng khi dùng]: Tạo banner, background hình ảnh đẹp mắt cho giao diện */
     background-image: url("./image/bentre04.jpg");
+    /* [Làm gì]: Quy định ảnh nền có lặp lại hay không | [Tác dụng khi dùng]: no-repeat giúp ảnh chỉ hiện đúng 1 lần duy nhất, không bị nhân bản dạng lưới */
     background-repeat: no-repeat;
+    /* [Làm gì]: Điều chỉnh kích thước ảnh nền | [Tác dụng khi dùng]: cover giúp ảnh tự động co giãn phủ kín toàn bộ khung chứa bất kể màn hình to hay nhỏ */
     background-size: cover;
+    /* [Làm gì]: Xác định vị trí trọng tâm của ảnh nền | [Tác dụng khi dùng]: Giữ phần đẹp nhất của bức ảnh luôn nằm ở chính giữa khung hình */
     background-position: center center;
 }
 
 .hero-item {
+    /* [Làm gì]: Giới hạn bề ngang tối đa (850px) | [Tác dụng khi dùng]: Giữ nội dung không bị bè quá rộng trên màn hình máy tính lớn */
     max-width: 850px;
+    /* [Làm gì]: Chiếm trọn 100% độ rộng của thẻ cha | [Tác dụng khi dùng]: Để phần tử tràn đầy khung hoặc ép rớt xuống 1 hàng riêng */
     width: 100%;
 }
 
 .hero-text {
+    /* [Làm gì]: Kích hoạt bố cục linh hoạt Flexbox | [Tác dụng khi dùng]: Dàn các phần tử con nằm ngang hoặc dọc một cách linh hoạt, dễ căn chỉnh */
     display: flex;
+    /* [Làm gì]: Xếp các phần tử con theo một cột dọc từ trên xuống | [Tác dụng khi dùng]: BẮT BUỘC dùng khi làm giao diện trên điện thoại di động */
     flex-direction: column;
+    /* [Làm gì]: Căn chỉnh tất cả phần tử con thẳng hàng vào giữa tâm theo trục dọc | [Tác dụng khi dùng]: Giúp logo và menu đều nhau không bị lệch cao thấp */
     align-items: center;
+    /* [Làm gì]: Khoảng cách tự động giữa các phần tử con trong Flexbox (18px) | [Tác dụng khi dùng]: Cách đều các mục mà không cần đặt margin lẻ tẻ */
     gap: 18px;
 }
 
 
 .hero-text > span:first-child {
+    /* [Làm gì]: Cài đặt kích thước cỡ chữ (1.1rem) | [Tác dụng khi dùng]: Phân cấp tiêu đề to rõ và nội dung bài viết vừa tầm mắt người đọc */
     font-size: 1.1rem;
+    /* [Làm gì]: Chuyển đổi định dạng chữ hoa/chữ thường | [Tác dụng khi dùng]: uppercase biến toàn bộ chữ thành IN HOA sang trọng */
     text-transform: uppercase;
+    /* [Làm gì]: Độ đậm nét của chữ (600) | [Tác dụng khi dùng]: In đậm (600-800) tạo điểm nhấn mạnh mẽ, nét vừa (400-500) cho chữ thường dễ đọc */
     font-weight: 600;
+    /* [Làm gì]: Đặt màu sắc cho văn bản chữ (#35b0d2) | [Tác dụng khi dùng]: Thiết lập màu sắc thương hiệu hoặc giúp chữ dễ nhìn, không chói mắt */
     color: #35B0D2;
+    /* [Làm gì]: Khoảng cách giãn giữa các con chữ (3px) | [Tác dụng khi dùng]: Giúp chữ in hoa hoặc logo nhìn thoáng, thanh lịch và cao cấp hơn */
     letter-spacing: 3px;
+    /* [Làm gì]: Tạo đường viền bao quanh phần tử (1px solid #35b0d2) | [Tác dụng khi dùng]: Trang trí đường viền nổi bật cho nút bấm hoặc khung */
     border: 1px solid #35B0D2;
+    /* [Làm gì]: Bo tròn các góc của phần tử (20px) | [Tác dụng khi dùng]: Tạo góc bo mềm mại, hiện đại cho nút bấm, thẻ bài viết, hình ảnh */
     border-radius: 20px;
+    /* [Làm gì]: Tạo khoảng đệm lót bên trong (3px 15px) | [Tác dụng khi dùng]: Giúp chữ thông thoáng và mở rộng diện tích bấm cho nút */
     padding: 3px 15px;
 }
 
 .hero-text h1 {
+    /* [Làm gì]: Cài đặt kích thước cỡ chữ (3.5rem) | [Tác dụng khi dùng]: Phân cấp tiêu đề to rõ và nội dung bài viết vừa tầm mắt người đọc */
     font-size: 3.5rem;
+    /* [Làm gì]: Độ đậm nét của chữ (800) | [Tác dụng khi dùng]: In đậm (600-800) tạo điểm nhấn mạnh mẽ, nét vừa (400-500) cho chữ thường dễ đọc */
     font-weight: 800;
+    /* [Làm gì]: Chiều cao của dòng chữ (khoảng cách giữa các dòng) | [Tác dụng khi dùng]: Giúp các dòng chữ thoáng mắt, dễ đọc, không bị dí sát vào nhau */
     line-height: 1.25;
+    /* [Làm gì]: Tạo bóng đổ mờ phía sau con chữ (0 1px  rgba(0, 0, 0, 0.5)) | [Tác dụng khi dùng]: Giúp chữ trắng hoặc xanh nổi rõ nét trên nền ảnh mà không bị chìm */
     text-shadow: 0 1px  rgba(0, 0, 0, 0.5);
+    /* [Làm gì]: Đặt màu sắc cho văn bản chữ (#35b0d2) | [Tác dụng khi dùng]: Thiết lập màu sắc thương hiệu hoặc giúp chữ dễ nhìn, không chói mắt */
     color: #35B0D2;
 }
 
 
 .hero-text .hero-title {
+    /* [Làm gì]: Hiển thị phần tử dưới dạng khối độc lập chiếm trọn 1 dòng | [Tác dụng khi dùng]: Tự xuống dòng và ăn khớp các thuộc tính width/height/padding */
     display: block;
+    /* [Làm gì]: Cài đặt kích thước cỡ chữ (1.05rem) | [Tác dụng khi dùng]: Phân cấp tiêu đề to rõ và nội dung bài viết vừa tầm mắt người đọc */
     font-size: 1.05rem;
+    /* [Làm gì]: Đặt màu sắc cho văn bản chữ (#35b0d2) | [Tác dụng khi dùng]: Thiết lập màu sắc thương hiệu hoặc giúp chữ dễ nhìn, không chói mắt */
     color: #35B0D2;
+    /* [Làm gì]: Chiều cao của dòng chữ (khoảng cách giữa các dòng) | [Tác dụng khi dùng]: Giúp các dòng chữ thoáng mắt, dễ đọc, không bị dí sát vào nhau */
     line-height: 1.8;
+    /* [Làm gì]: Giới hạn bề ngang tối đa (750px) | [Tác dụng khi dùng]: Giữ nội dung không bị bè quá rộng trên màn hình máy tính lớn */
     max-width: 750px;
+    /* [Làm gì]: Tạo bóng đổ mờ phía sau con chữ (0 1px rgba( 0, 0, 0, 0.5)) | [Tác dụng khi dùng]: Giúp chữ trắng hoặc xanh nổi rõ nét trên nền ảnh mà không bị chìm */
     text-shadow: 0 1px rgba( 0, 0, 0, 0.5);
 }
 
 @media (max-width: 768px) {
     .hero {
+        /* [Làm gì]: Đặt chiều cao tối thiểu (70vh) | [Tác dụng khi dùng]: Đảm bảo khung banner luôn đủ cao để tạo ấn tượng cho trang */
         min-height: 70vh;
+        /* [Làm gì]: Tạo khoảng đệm lót bên trong (40px 15px) | [Tác dụng khi dùng]: Giúp chữ thông thoáng và mở rộng diện tích bấm cho nút */
         padding: 40px 15px;
     }
 
     .hero-text h1 {
+        /* [Làm gì]: Cài đặt kích thước cỡ chữ (2rem) | [Tác dụng khi dùng]: Phân cấp tiêu đề to rõ và nội dung bài viết vừa tầm mắt người đọc */
         font-size: 2rem;
     }
 
     .hero-text .hero-title {
+        /* [Làm gì]: Cài đặt kích thước cỡ chữ (0.95rem) | [Tác dụng khi dùng]: Phân cấp tiêu đề to rõ và nội dung bài viết vừa tầm mắt người đọc */
         font-size: 0.95rem;
+        /* [Làm gì]: Chiều cao của dòng chữ (khoảng cách giữa các dòng) | [Tác dụng khi dùng]: Giúp các dòng chữ thoáng mắt, dễ đọc, không bị dí sát vào nhau */
         line-height: 1.6;
     }
 }
 
 main { 
+    /* [Làm gì]: Thiết lập màu sắc hoặc lớp nền (#f9fbfb) | [Tác dụng khi dùng]: Tô màu phân biệt các khối hoặc làm nền tương phản cho chữ */
     background-color: #f9fbfb;
+    /* [Làm gì]: Tạo khoảng đệm lót bên trong (70px 20px) | [Tác dụng khi dùng]: Giúp chữ thông thoáng và mở rộng diện tích bấm cho nút */
     padding: 70px 20px;
 }
 
 main section {
+    /* [Làm gì]: Giới hạn bề ngang tối đa (1200px) | [Tác dụng khi dùng]: Giữ nội dung không bị bè quá rộng trên màn hình máy tính lớn */
     max-width: 1200px;
+    /* [Làm gì]: Căn lề trên-dưới 0, trái-phải tự động (auto) | [Tác dụng khi dùng]: Căn khối khung nội dung ra chính giữa màn hình */
     margin: 0 auto;
+    /* [Làm gì]: Kích hoạt bố cục linh hoạt Flexbox | [Tác dụng khi dùng]: Dàn các phần tử con nằm ngang hoặc dọc một cách linh hoạt, dễ căn chỉnh */
     display: flex;
+    /* [Làm gì]: Cho phép các phần tử tự động xuống dòng khi thiếu chỗ | [Tác dụng khi dùng]: Giúp các thẻ tự động rớt dòng linh hoạt khi co nhỏ màn hình */
     flex-wrap: wrap;
+    /* [Làm gì]: Căn các phần tử con vào chính giữa theo trục ngang | [Tác dụng khi dùng]: Giúp nội dung hoặc các thẻ nằm cân đối ở giữa */
     justify-content: center;
+    /* [Làm gì]: Khoảng cách tự động giữa các phần tử con trong Flexbox (30px) | [Tác dụng khi dùng]: Cách đều các mục mà không cần đặt margin lẻ tẻ */
     gap: 30px;
 }
 
 
 .section-content {
+    /* [Làm gì]: Chiếm trọn 100% độ rộng của thẻ cha | [Tác dụng khi dùng]: Để phần tử tràn đầy khung hoặc ép rớt xuống 1 hàng riêng */
     width: 100%;
+    /* [Làm gì]: Căn lề cho dòng chữ (center) | [Tác dụng khi dùng]: center để căn giữa toàn bộ chữ hoặc nút bấm ra tâm trang web */
     text-align: center;
+    /* [Làm gì]: Khoảng cách lề ở mép bottom bên ngoài (20px) | [Tác dụng khi dùng]: Đẩy phần tử cách xa các khối lân cận */
     margin-bottom: 20px;
 }
 
 .section-content h2 {
+    /* [Làm gì]: Cài đặt kích thước cỡ chữ (2.3rem) | [Tác dụng khi dùng]: Phân cấp tiêu đề to rõ và nội dung bài viết vừa tầm mắt người đọc */
     font-size: 2.3rem;
+    /* [Làm gì]: Độ đậm nét của chữ (700) | [Tác dụng khi dùng]: In đậm (600-800) tạo điểm nhấn mạnh mẽ, nét vừa (400-500) cho chữ thường dễ đọc */
     font-weight: 700;
+    /* [Làm gì]: Đặt màu sắc cho văn bản chữ (#35b0d2) | [Tác dụng khi dùng]: Thiết lập màu sắc thương hiệu hoặc giúp chữ dễ nhìn, không chói mắt */
     color: #35B0D2;
+    /* [Làm gì]: Định vị tương đối | [Tác dụng khi dùng]: Làm mốc tọa độ gốc (0,0) cho các thẻ con bên trong dùng position: absolute căn theo */
     position: relative;
+    /* [Làm gì]: Khoảng đệm lót ở mép bottom bên trong (15px) | [Tác dụng khi dùng]: Tạo khoảng cách thoáng cho nội dung */
     padding-bottom: 15px;
 }
 
 .section-content h2::after {
+    /* [Làm gì]: Khởi tạo nội dung cho phần tử giả ::before hoặc ::after | [Tác dụng khi dùng]: BẮT BUỘC phải có content để vẽ vạch kẻ trang trí */
     content: "";
+    /* [Làm gì]: Định vị tuyệt đối tách khỏi luồng tài liệu | [Tác dụng khi dùng]: Đặt phần tử ở vị trí chính xác bất kỳ theo thẻ cha mà không đẩy xô lệch layout */
     position: absolute;
+    /* [Làm gì]: Khoảng cách định vị từ mép dưới cùng | [Tác dụng khi dùng]: Đặt vị trí chân của phần tử khi dùng absolute/relative */
     bottom: 0;
+    /* [Làm gì]: Đẩy phần tử sang phải 50% độ rộng thẻ cha | [Tác dụng khi dùng]: Kết hợp transform: translateX(-50%) để căn giữa tuyệt đối */
     left: 50%;
+    /* [Làm gì]: Biến đổi hình học (translatex(-50%)) | [Tác dụng khi dùng]: scale phóng to ảnh khi hover, translateY trượt mở menu */
     transform: translateX(-50%);
+    /* [Làm gì]: Đặt độ rộng bề ngang của phần tử (70px) | [Tác dụng khi dùng]: Kiểm soát kích thước chiều ngang theo ý muốn */
     width: 70px;
+    /* [Làm gì]: Đặt chiều cao cố định (3px) | [Tác dụng khi dùng]: Đảm bảo các bức ảnh hoặc khung có chiều cao đều tăm tắp */
     height: 3px;
+    /* [Làm gì]: Thiết lập màu sắc hoặc lớp nền (#35b0d2) | [Tác dụng khi dùng]: Tô màu phân biệt các khối hoặc làm nền tương phản cho chữ */
     background-color: #35B0D2;
+    /* [Làm gì]: Bo tròn các góc của phần tử (2px) | [Tác dụng khi dùng]: Tạo góc bo mềm mại, hiện đại cho nút bấm, thẻ bài viết, hình ảnh */
     border-radius: 2px;
+    /* [Làm gì]: Cài đặt kích thước cỡ chữ (2.5rem) | [Tác dụng khi dùng]: Phân cấp tiêu đề to rõ và nội dung bài viết vừa tầm mắt người đọc */
     font-size: 2.5rem;
+    /* [Làm gì]: Căn lề cho dòng chữ (center) | [Tác dụng khi dùng]: center để căn giữa toàn bộ chữ hoặc nút bấm ra tâm trang web */
     text-align: center;
 }
 
 
 
 .section-content-item {
+    /* [Làm gì]: Tỉ lệ co giãn và kích thước cơ sở trong Flexbox (1 1 450px) | [Tác dụng khi dùng]: Chia đều độ rộng các cột hoặc ép phần tử chiếm trọn hàng */
     flex: 1 1 450px;
+    /* [Làm gì]: Giới hạn bề ngang tối đa (550px) | [Tác dụng khi dùng]: Giữ nội dung không bị bè quá rộng trên màn hình máy tính lớn */
     max-width: 550px;
+    /* [Làm gì]: Thiết lập màu sắc hoặc lớp nền (#222) | [Tác dụng khi dùng]: Tô màu phân biệt các khối hoặc làm nền tương phản cho chữ */
     background-color: #222;
+    /* [Làm gì]: Bo tròn các góc của phần tử (12px) | [Tác dụng khi dùng]: Tạo góc bo mềm mại, hiện đại cho nút bấm, thẻ bài viết, hình ảnh */
     border-radius: 12px;
+    /* [Làm gì]: Xử lý phần nội dung bị tràn ra ngoài khung | [Tác dụng khi dùng]: hidden cắt bỏ phần thừa giúp giữ bo góc và giấu phần ảnh zoom khi hover */
     overflow: hidden;
+    /* [Làm gì]: Tạo hiệu ứng đổ bóng mờ cho phần tử (0 5px 10px rgba(0, 0, 0, 0.06)) | [Tác dụng khi dùng]: Tạo chiều sâu 3D, giúp nút bấm/thẻ nổi bật trên bề mặt trang */
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.06);
+    /* [Làm gì]: Cài đặt thời gian chuyển đổi hiệu ứng mượt mà (transform 0.35s ease, box-shadow 0.35s ease) | [Tác dụng khi dùng]: Giúp đổi màu, phóng to, trượt êm ái không bị giật cục */
     transition: transform 0.35s ease, box-shadow 0.35s ease;
+    /* [Làm gì]: Kích hoạt bố cục linh hoạt Flexbox | [Tác dụng khi dùng]: Dàn các phần tử con nằm ngang hoặc dọc một cách linh hoạt, dễ căn chỉnh */
     display: flex;
+    /* [Làm gì]: Xếp các phần tử con theo một cột dọc từ trên xuống | [Tác dụng khi dùng]: BẮT BUỘC dùng khi làm giao diện trên điện thoại di động */
     flex-direction: column;
+    /* [Làm gì]: Đổi kiểu con trỏ chuột khi rê vào | [Tác dụng khi dùng]: pointer hiện hình bàn tay để báo hiệu đây là nút có thể click được */
     cursor: pointer;
 }
 
 
 .section-content-item:hover {
+    /* [Làm gì]: Biến đổi hình học (translatey(-8px)) | [Tác dụng khi dùng]: scale phóng to ảnh khi hover, translateY trượt mở menu */
     transform: translateY(-8px);
+    /* [Làm gì]: Tạo hiệu ứng đổ bóng mờ cho phần tử (0 15px 30px rgba(0, 0, 0, 0.12)) | [Tác dụng khi dùng]: Tạo chiều sâu 3D, giúp nút bấm/thẻ nổi bật trên bề mặt trang */
     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.12);
 
 }
 
 .section-content-item img {
+    /* [Làm gì]: Chiếm trọn 100% độ rộng của thẻ cha | [Tác dụng khi dùng]: Để phần tử tràn đầy khung hoặc ép rớt xuống 1 hàng riêng */
     width: 100%;
+    /* [Làm gì]: Đặt chiều cao cố định (280px) | [Tác dụng khi dùng]: Đảm bảo các bức ảnh hoặc khung có chiều cao đều tăm tắp */
     height: 280px;
+    /* [Làm gì]: Cắt cúp hình ảnh thông minh vừa vặn khung | [Tác dụng khi dùng]: BẮT BUỘC DÙNG: Giúp ảnh không bao giờ bị méo hình hay bẹp ảnh */
     object-fit: cover;
+    /* [Làm gì]: Hiển thị phần tử dưới dạng khối độc lập chiếm trọn 1 dòng | [Tác dụng khi dùng]: Tự xuống dòng và ăn khớp các thuộc tính width/height/padding */
     display: block;
+    /* [Làm gì]: Cài đặt thời gian chuyển đổi hiệu ứng mượt mà (transform 0.7s ease) | [Tác dụng khi dùng]: Giúp đổi màu, phóng to, trượt êm ái không bị giật cục */
     transition: transform 0.7s ease;
 }
 
 .section-content-item a {
+    /* [Làm gì]: Hiển thị phần tử dưới dạng khối độc lập chiếm trọn 1 dòng | [Tác dụng khi dùng]: Tự xuống dòng và ăn khớp các thuộc tính width/height/padding */
     display: block;
+    /* [Làm gì]: Chiếm trọn 100% độ rộng của thẻ cha | [Tác dụng khi dùng]: Để phần tử tràn đầy khung hoặc ép rớt xuống 1 hàng riêng */
     width: 100%;
+    /* [Làm gì]: Xử lý phần nội dung bị tràn ra ngoài khung | [Tác dụng khi dùng]: hidden cắt bỏ phần thừa giúp giữ bo góc và giấu phần ảnh zoom khi hover */
     overflow: hidden;
 }
 .section-content-item:hover img {
+    /* [Làm gì]: Biến đổi hình học (scale(1.05)) | [Tác dụng khi dùng]: scale phóng to ảnh khi hover, translateY trượt mở menu */
     transform: scale(1.05);
 }
 
 
 .section-content-item h3 {
+    /* [Làm gì]: Cài đặt kích thước cỡ chữ (1.35rem) | [Tác dụng khi dùng]: Phân cấp tiêu đề to rõ và nội dung bài viết vừa tầm mắt người đọc */
     font-size: 1.35rem;
+    /* [Làm gì]: Đặt màu sắc cho văn bản chữ (#35b0d2) | [Tác dụng khi dùng]: Thiết lập màu sắc thương hiệu hoặc giúp chữ dễ nhìn, không chói mắt */
     color: #35B0D2;
+    /* [Làm gì]: Tạo khoảng đệm lót bên trong (22px 20px 10px 20px) | [Tác dụng khi dùng]: Giúp chữ thông thoáng và mở rộng diện tích bấm cho nút */
     padding: 22px 20px 10px 20px;
 }
 
 .section-content-item span {
+    /* [Làm gì]: Hiển thị phần tử dưới dạng khối độc lập chiếm trọn 1 dòng | [Tác dụng khi dùng]: Tự xuống dòng và ăn khớp các thuộc tính width/height/padding */
     display: block;
+    /* [Làm gì]: Cài đặt kích thước cỡ chữ (0.98rem) | [Tác dụng khi dùng]: Phân cấp tiêu đề to rõ và nội dung bài viết vừa tầm mắt người đọc */
     font-size: 0.98rem;
+    /* [Làm gì]: Đặt màu sắc cho văn bản chữ (#fff) | [Tác dụng khi dùng]: Thiết lập màu sắc thương hiệu hoặc giúp chữ dễ nhìn, không chói mắt */
     color: #fff;
+    /* [Làm gì]: Chiều cao của dòng chữ (khoảng cách giữa các dòng) | [Tác dụng khi dùng]: Giúp các dòng chữ thoáng mắt, dễ đọc, không bị dí sát vào nhau */
     line-height: 1.6;
+    /* [Làm gì]: Tạo khoảng đệm lót bên trong (0 20px 25px 20px) | [Tác dụng khi dùng]: Giúp chữ thông thoáng và mở rộng diện tích bấm cho nút */
     padding: 0 20px 25px 20px;
 }
 
 
 .section-content-item img { 
+    /* [Làm gì]: Đặt chiều cao cố định (220px) | [Tác dụng khi dùng]: Đảm bảo các bức ảnh hoặc khung có chiều cao đều tăm tắp */
     height: 220px;
 }
 
 
 .section-content-botton {
+    /* [Làm gì]: Tự căn chỉnh riêng cho chính phần tử này trong Flexbox | [Tác dụng khi dùng]: Ghi đè lệnh của thẻ cha, chống bị kéo dãn chiều cao */
     align-self: center;
+    /* [Làm gì]: Chiều cao tự động co vừa vặn với nội dung bên trong | [Tác dụng khi dùng]: Chống bị flexbox kéo dãn chiều cao vô lý */
     height: fit-content;
+    /* [Làm gì]: Căn lề tự động | [Tác dụng khi dùng]: Tự động chia đều khoảng cách lề xung quanh phần tử */
     margin: 25px auto 10px auto;
+    /* [Làm gì]: Hiển thị dạng khối nhưng vẫn nằm cùng hàng | [Tác dụng khi dùng]: Cho phép nút bấm vừa căn giữa theo text-align vừa chỉnh được padding */
     display: inline-block;
+    /* [Làm gì]: Xóa bỏ toàn bộ khoảng đệm trong về 0 | [Tác dụng khi dùng]: Đưa khoảng cách lót bên trong về 0 để tự chủ động style */
     padding: 0;
+    /* [Làm gì]: Tạo đường viền bao quanh phần tử (1px solid #333) | [Tác dụng khi dùng]: Trang trí đường viền nổi bật cho nút bấm hoặc khung */
     border: 1px solid #333;
+    /* [Làm gì]: Bo tròn các góc của phần tử (30px) | [Tác dụng khi dùng]: Tạo góc bo mềm mại, hiện đại cho nút bấm, thẻ bài viết, hình ảnh */
     border-radius: 30px;
+    /* [Làm gì]: Đổi kiểu con trỏ chuột khi rê vào | [Tác dụng khi dùng]: pointer hiện hình bàn tay để báo hiệu đây là nút có thể click được */
     cursor: pointer;
+    /* [Làm gì]: Tạo hiệu ứng đổ bóng mờ cho phần tử (0 8px 20px rgba( 53, 176, 210, 0.35)) | [Tác dụng khi dùng]: Tạo chiều sâu 3D, giúp nút bấm/thẻ nổi bật trên bề mặt trang */
     box-shadow: 0 8px 20px rgba( 53, 176, 210, 0.35);
+    /* [Làm gì]: Xử lý phần nội dung bị tràn ra ngoài khung | [Tác dụng khi dùng]: hidden cắt bỏ phần thừa giúp giữ bo góc và giấu phần ảnh zoom khi hover */
     overflow: hidden;
+    /* [Làm gì]: Cài đặt thời gian chuyển đổi hiệu ứng mượt mà (all 0.3s ease) | [Tác dụng khi dùng]: Giúp đổi màu, phóng to, trượt êm ái không bị giật cục */
     transition: all 0.3s ease;
 }
 
 .section-content-botton a {
+    /* [Làm gì]: Đường gạch trang trí chữ | [Tác dụng khi dùng]: none để xóa đường gạch chân mặc định của thẻ liên kết a, nhìn gọn gàng */
     text-decoration: none;
+    /* [Làm gì]: Đặt màu sắc cho văn bản chữ (#fff) | [Tác dụng khi dùng]: Thiết lập màu sắc thương hiệu hoặc giúp chữ dễ nhìn, không chói mắt */
     color: #fff;
+    /* [Làm gì]: Hiển thị phần tử dưới dạng khối độc lập chiếm trọn 1 dòng | [Tác dụng khi dùng]: Tự xuống dòng và ăn khớp các thuộc tính width/height/padding */
     display: block;
+    /* [Làm gì]: Tạo khoảng đệm lót bên trong (14px 38px) | [Tác dụng khi dùng]: Giúp chữ thông thoáng và mở rộng diện tích bấm cho nút */
     padding: 14px 38px;
 }
 
 .section-content-botton span {
+    /* [Làm gì]: Cài đặt kích thước cỡ chữ (1.05rem) | [Tác dụng khi dùng]: Phân cấp tiêu đề to rõ và nội dung bài viết vừa tầm mắt người đọc */
     font-size: 1.05rem;
+    /* [Làm gì]: Độ đậm nét của chữ (600) | [Tác dụng khi dùng]: In đậm (600-800) tạo điểm nhấn mạnh mẽ, nét vừa (400-500) cho chữ thường dễ đọc */
     font-weight: 600;
+    /* [Làm gì]: Khoảng cách giãn giữa các con chữ (1px) | [Tác dụng khi dùng]: Giúp chữ in hoa hoặc logo nhìn thoáng, thanh lịch và cao cấp hơn */
     letter-spacing: 1px;
+    /* [Làm gì]: Đặt màu sắc cho văn bản chữ (black) | [Tác dụng khi dùng]: Thiết lập màu sắc thương hiệu hoặc giúp chữ dễ nhìn, không chói mắt */
     color: black;
 }
 
 .section-content-botton:hover {
+    /* [Làm gì]: Biến đổi hình học (translatey(-3px) scale(1.03)) | [Tác dụng khi dùng]: scale phóng to ảnh khi hover, translateY trượt mở menu */
     transform: translateY(-3px) scale(1.03);
+    /* [Làm gì]: Tạo hiệu ứng đổ bóng mờ cho phần tử (0 12px 25px rgba(53, 176, 210, 0.5)) | [Tác dụng khi dùng]: Tạo chiều sâu 3D, giúp nút bấm/thẻ nổi bật trên bề mặt trang */
     box-shadow: 0 12px 25px rgba(53, 176, 210, 0.5);
+    /* [Làm gì]: Thiết lập màu sắc hoặc lớp nền (linear-gradient(135deg, #42c2e6, #229fc3)) | [Tác dụng khi dùng]: Tô màu phân biệt các khối hoặc làm nền tương phản cho chữ */
     background: linear-gradient(135deg, #42c2e6, #229fc3);
 }
 
 .section-content-botton:active {
+    /* [Làm gì]: Biến đổi hình học (translatey(0) scale(1)) | [Tác dụng khi dùng]: scale phóng to ảnh khi hover, translateY trượt mở menu */
     transform: translateY(0) scale(1);
+    /* [Làm gì]: Tạo hiệu ứng đổ bóng mờ cho phần tử (0 4px 12px rgba(53, 176, 210, 0.3)) | [Tác dụng khi dùng]: Tạo chiều sâu 3D, giúp nút bấm/thẻ nổi bật trên bề mặt trang */
     box-shadow: 0 4px 12px rgba(53, 176, 210, 0.3);
 
 }
 
 .section-btn-box {
+    /* [Làm gì]: Tỉ lệ co giãn và kích thước cơ sở trong Flexbox (0 0 100%) | [Tác dụng khi dùng]: Chia đều độ rộng các cột hoặc ép phần tử chiếm trọn hàng */
     flex: 0 0 100%;
+    /* [Làm gì]: Chiếm trọn 100% độ rộng của thẻ cha | [Tác dụng khi dùng]: Để phần tử tràn đầy khung hoặc ép rớt xuống 1 hàng riêng */
     width: 100%;
+    /* [Làm gì]: Căn lề cho dòng chữ (center) | [Tác dụng khi dùng]: center để căn giữa toàn bộ chữ hoặc nút bấm ra tâm trang web */
     text-align: center;
+    /* [Làm gì]: Khoảng cách lề ở mép top bên ngoài (30px) | [Tác dụng khi dùng]: Đẩy phần tử cách xa các khối lân cận */
     margin-top: 30px;
 }
 
 footer {
+    /* [Làm gì]: Thiết lập màu sắc hoặc lớp nền (#141414) | [Tác dụng khi dùng]: Tô màu phân biệt các khối hoặc làm nền tương phản cho chữ */
     background-color: #141414;
+    /* [Làm gì]: Đặt màu sắc cho văn bản chữ (#fff) | [Tác dụng khi dùng]: Thiết lập màu sắc thương hiệu hoặc giúp chữ dễ nhìn, không chói mắt */
     color: #fff;
+    /* [Làm gì]: Tạo khoảng đệm lót bên trong (50px 20px 30px 20px) | [Tác dụng khi dùng]: Giúp chữ thông thoáng và mở rộng diện tích bấm cho nút */
     padding: 50px 20px 30px 20px;
 }
 
 .section-footer {
+    /* [Làm gì]: Giới hạn bề ngang tối đa (1200px) | [Tác dụng khi dùng]: Giữ nội dung không bị bè quá rộng trên màn hình máy tính lớn */
     max-width: 1200px;
+    /* [Làm gì]: Căn lề trên-dưới 0, trái-phải tự động (auto) | [Tác dụng khi dùng]: Căn khối khung nội dung ra chính giữa màn hình */
     margin: 0 auto;
+    /* [Làm gì]: Kích hoạt bố cục linh hoạt Flexbox | [Tác dụng khi dùng]: Dàn các phần tử con nằm ngang hoặc dọc một cách linh hoạt, dễ căn chỉnh */
     display: flex;
+    /* [Làm gì]: Xếp các phần tử con theo một cột dọc từ trên xuống | [Tác dụng khi dùng]: BẮT BUỘC dùng khi làm giao diện trên điện thoại di động */
     flex-direction: column;
+    /* [Làm gì]: Căn chỉnh tất cả phần tử con thẳng hàng vào giữa tâm theo trục dọc | [Tác dụng khi dùng]: Giúp logo và menu đều nhau không bị lệch cao thấp */
     align-items: center;
+    /* [Làm gì]: Căn lề cho dòng chữ (center) | [Tác dụng khi dùng]: center để căn giữa toàn bộ chữ hoặc nút bấm ra tâm trang web */
     text-align: center;
+    /* [Làm gì]: Khoảng cách tự động giữa các phần tử con trong Flexbox (14px) | [Tác dụng khi dùng]: Cách đều các mục mà không cần đặt margin lẻ tẻ */
     gap: 14px;
 }
 
 
 .section-footer a {
+    /* [Làm gì]: Đường gạch trang trí chữ | [Tác dụng khi dùng]: none để xóa đường gạch chân mặc định của thẻ liên kết a, nhìn gọn gàng */
     text-decoration: none;
+    /* [Làm gì]: Đặt màu sắc cho văn bản chữ (#35b0d2) | [Tác dụng khi dùng]: Thiết lập màu sắc thương hiệu hoặc giúp chữ dễ nhìn, không chói mắt */
     color: #35B0D2;
+    /* [Làm gì]: Độ đậm nét của chữ (700) | [Tác dụng khi dùng]: In đậm (600-800) tạo điểm nhấn mạnh mẽ, nét vừa (400-500) cho chữ thường dễ đọc */
     font-weight: 700;
+    /* [Làm gì]: Khoảng cách giãn giữa các con chữ (1.5px) | [Tác dụng khi dùng]: Giúp chữ in hoa hoặc logo nhìn thoáng, thanh lịch và cao cấp hơn */
     letter-spacing: 1.5px;
+    /* [Làm gì]: Cài đặt thời gian chuyển đổi hiệu ứng mượt mà (color 0.3s ease) | [Tác dụng khi dùng]: Giúp đổi màu, phóng to, trượt êm ái không bị giật cục */
     transition: color 0.3s ease;
 }
 
 .section-footer a:hover {
+    /* [Làm gì]: Đặt màu sắc cho văn bản chữ (#42c2e6) | [Tác dụng khi dùng]: Thiết lập màu sắc thương hiệu hoặc giúp chữ dễ nhìn, không chói mắt */
     color: #42c2e6;
 }
 
 .section-footer span {
+    /* [Làm gì]: Đặt màu sắc cho văn bản chữ (#bbbbbb ) | [Tác dụng khi dùng]: Thiết lập màu sắc thương hiệu hoặc giúp chữ dễ nhìn, không chói mắt */
     color: #bbbbbb ;
+    /* [Làm gì]: Cài đặt kích thước cỡ chữ (1.05rem) | [Tác dụng khi dùng]: Phân cấp tiêu đề to rõ và nội dung bài viết vừa tầm mắt người đọc */
     font-size: 1.05rem;
+    /* [Làm gì]: Kiểu chữ (in nghiêng hoặc thẳng) | [Tác dụng khi dùng]: italic in nghiêng tạo cảm giác ấm áp, gần gũi cho câu chào */
     font-style: italic;
+    /* [Làm gì]: Chiều cao của dòng chữ (khoảng cách giữa các dòng) | [Tác dụng khi dùng]: Giúp các dòng chữ thoáng mắt, dễ đọc, không bị dí sát vào nhau */
     line-height: 1.6;
 }
 
 .footer-copyright {
+    /* [Làm gì]: Cài đặt kích thước cỡ chữ (0.88rem) | [Tác dụng khi dùng]: Phân cấp tiêu đề to rõ và nội dung bài viết vừa tầm mắt người đọc */
     font-size: 0.88rem;
+    /* [Làm gì]: Đặt màu sắc cho văn bản chữ (#777777) | [Tác dụng khi dùng]: Thiết lập màu sắc thương hiệu hoặc giúp chữ dễ nhìn, không chói mắt */
     color: #777777;
+    /* [Làm gì]: Khoảng cách lề ở mép top bên ngoài (5px) | [Tác dụng khi dùng]: Đẩy phần tử cách xa các khối lân cận */
     margin-top: 5px;
+    /* [Làm gì]: Khoảng đệm lót ở mép top bên trong (10px) | [Tác dụng khi dùng]: Tạo khoảng cách thoáng cho nội dung */
     padding-top: 10px;
+    /* [Làm gì]: Tạo đường kẻ ở mép trên cùng | [Tác dụng khi dùng]: Ngăn cách phần chân trang (copyright) với nội dung phía trên */
     border-top: 1px solid rgba(255, 255, 255, 0.1);
+    /* [Làm gì]: Chiếm trọn 100% độ rộng của thẻ cha | [Tác dụng khi dùng]: Để phần tử tràn đầy khung hoặc ép rớt xuống 1 hàng riêng */
     width: 100%;
+    /* [Làm gì]: Giới hạn bề ngang tối đa (600px) | [Tác dụng khi dùng]: Giữ nội dung không bị bè quá rộng trên màn hình máy tính lớn */
     max-width: 600px;
 }
 
 
 .hero2 {
+    /* [Làm gì]: Đặt chiều cao tối thiểu (55vh) | [Tác dụng khi dùng]: Đảm bảo khung banner luôn đủ cao để tạo ấn tượng cho trang */
     min-height: 55vh;
+    /* [Làm gì]: Thiết lập màu sắc hoặc lớp nền (linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)),) | [Tác dụng khi dùng]: Tô màu phân biệt các khối hoặc làm nền tương phản cho chữ */
     background: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)),
                 url("./image/bentre05.jpg") no-repeat center center / cover;
+    /* [Làm gì]: Kích hoạt bố cục linh hoạt Flexbox | [Tác dụng khi dùng]: Dàn các phần tử con nằm ngang hoặc dọc một cách linh hoạt, dễ căn chỉnh */
     display: flex;
+    /* [Làm gì]: Căn các phần tử con vào chính giữa theo trục ngang | [Tác dụng khi dùng]: Giúp nội dung hoặc các thẻ nằm cân đối ở giữa */
     justify-content: center;
+    /* [Làm gì]: Căn chỉnh tất cả phần tử con thẳng hàng vào giữa tâm theo trục dọc | [Tác dụng khi dùng]: Giúp logo và menu đều nhau không bị lệch cao thấp */
     align-items: center;
+    /* [Làm gì]: Căn lề cho dòng chữ (center) | [Tác dụng khi dùng]: center để căn giữa toàn bộ chữ hoặc nút bấm ra tâm trang web */
     text-align: center;
+    /* [Làm gì]: Đặt màu sắc cho văn bản chữ (#35b0d2) | [Tác dụng khi dùng]: Thiết lập màu sắc thương hiệu hoặc giúp chữ dễ nhìn, không chói mắt */
     color: #35B0D2;
+    /* [Làm gì]: Tạo khoảng đệm lót bên trong (40px 20px) | [Tác dụng khi dùng]: Giúp chữ thông thoáng và mở rộng diện tích bấm cho nút */
     padding: 40px 20px;
 }
 
 .hero2-item {
+        /* [Làm gì]: Giới hạn bề ngang tối đa (800px) | [Tác dụng khi dùng]: Giữ nội dung không bị bè quá rộng trên màn hình máy tính lớn */
         max-width: 800px;
+        /* [Làm gì]: Chiếm trọn 100% độ rộng của thẻ cha | [Tác dụng khi dùng]: Để phần tử tràn đầy khung hoặc ép rớt xuống 1 hàng riêng */
         width: 100%;
 }
 
 
 .hero2-item h1 {
+ /* [Làm gì]: Cài đặt kích thước cỡ chữ (2.8rem) | [Tác dụng khi dùng]: Phân cấp tiêu đề to rõ và nội dung bài viết vừa tầm mắt người đọc */
  font-size: 2.8rem;
+ /* [Làm gì]: Độ đậm nét của chữ (800) | [Tác dụng khi dùng]: In đậm (600-800) tạo điểm nhấn mạnh mẽ, nét vừa (400-500) cho chữ thường dễ đọc */
  font-weight: 800;
+ /* [Làm gì]: Đặt màu sắc cho văn bản chữ (#35b0d2) | [Tác dụng khi dùng]: Thiết lập màu sắc thương hiệu hoặc giúp chữ dễ nhìn, không chói mắt */
  color: #35B0D2;
+ /* [Làm gì]: Chiều cao của dòng chữ (khoảng cách giữa các dòng) | [Tác dụng khi dùng]: Giúp các dòng chữ thoáng mắt, dễ đọc, không bị dí sát vào nhau */
  line-height: 1.3;
+ /* [Làm gì]: Tạo bóng đổ mờ phía sau con chữ (0 2px rgba(0, 0, 0, 0.6)) | [Tác dụng khi dùng]: Giúp chữ trắng hoặc xanh nổi rõ nét trên nền ảnh mà không bị chìm */
  text-shadow: 0 2px rgba(0, 0, 0, 0.6);
+ /* [Làm gì]: Khoảng cách lề ở mép bottom bên ngoài (18px) | [Tác dụng khi dùng]: Đẩy phần tử cách xa các khối lân cận */
  margin-bottom: 18px;   
 }
 
 .hero2-item p {
+    /* [Làm gì]: Cài đặt kích thước cỡ chữ (1.1rem) | [Tác dụng khi dùng]: Phân cấp tiêu đề to rõ và nội dung bài viết vừa tầm mắt người đọc */
     font-size: 1.1rem;
+    /* [Làm gì]: Đặt màu sắc cho văn bản chữ (#35b0d2) | [Tác dụng khi dùng]: Thiết lập màu sắc thương hiệu hoặc giúp chữ dễ nhìn, không chói mắt */
     color: #35B0D2;
+    /* [Làm gì]: Chiều cao của dòng chữ (khoảng cách giữa các dòng) | [Tác dụng khi dùng]: Giúp các dòng chữ thoáng mắt, dễ đọc, không bị dí sát vào nhau */
     line-height: 1.7;
+    /* [Làm gì]: Tạo bóng đổ mờ phía sau con chữ (0 2px 6px rgba(0, 0, 0, 0.5)) | [Tác dụng khi dùng]: Giúp chữ trắng hoặc xanh nổi rõ nét trên nền ảnh mà không bị chìm */
     text-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
 }
 
 
 @media (max-width: 768px) {
     .hero2 {
+        /* [Làm gì]: Đặt chiều cao tối thiểu (45vh) | [Tác dụng khi dùng]: Đảm bảo khung banner luôn đủ cao để tạo ấn tượng cho trang */
         min-height: 45vh;
+        /* [Làm gì]: Tạo khoảng đệm lót bên trong (30px 15px) | [Tác dụng khi dùng]: Giúp chữ thông thoáng và mở rộng diện tích bấm cho nút */
         padding: 30px 15px;
     }
 
     .hero2-item h1 {
+        /* [Làm gì]: Cài đặt kích thước cỡ chữ (2rem) | [Tác dụng khi dùng]: Phân cấp tiêu đề to rõ và nội dung bài viết vừa tầm mắt người đọc */
         font-size: 2rem;
     }
 
     .hero2-item-p{
+        /* [Làm gì]: Cài đặt kích thước cỡ chữ (0.95rem) | [Tác dụng khi dùng]: Phân cấp tiêu đề to rõ và nội dung bài viết vừa tầm mắt người đọc */
         font-size: 0.95rem;
     }
 }
@@ -476,292 +744,446 @@ footer {
 ======================================================= */
 
 .video-section {
+    /* [Làm gì]: Tạo khoảng đệm lót bên trong (70px 20px) | [Tác dụng khi dùng]: Giúp chữ thông thoáng và mở rộng diện tích bấm cho nút */
     padding:  70px 20px;
+    /* [Làm gì]: Căn lề cho dòng chữ (center) | [Tác dụng khi dùng]: center để căn giữa toàn bộ chữ hoặc nút bấm ra tâm trang web */
     text-align: center;
 }
 
 .video-header {
+    /* [Làm gì]: Giới hạn bề ngang tối đa (800px) | [Tác dụng khi dùng]: Giữ nội dung không bị bè quá rộng trên màn hình máy tính lớn */
     max-width: 800px;
+    /* [Làm gì]: Căn lề trên-dưới 0, trái-phải tự động (auto) | [Tác dụng khi dùng]: Căn khối khung nội dung ra chính giữa màn hình */
     margin: 0 auto 35px auto;
 }
 
 .video-header .sub-title {
+    /* [Làm gì]: Hiển thị dạng khối nhưng vẫn nằm cùng hàng | [Tác dụng khi dùng]: Cho phép nút bấm vừa căn giữa theo text-align vừa chỉnh được padding */
     display: inline-block;
+    /* [Làm gì]: Đặt màu sắc cho văn bản chữ (#35b0d2) | [Tác dụng khi dùng]: Thiết lập màu sắc thương hiệu hoặc giúp chữ dễ nhìn, không chói mắt */
     color: #35B0D2;
+    /* [Làm gì]: Cài đặt kích thước cỡ chữ (0.95rem) | [Tác dụng khi dùng]: Phân cấp tiêu đề to rõ và nội dung bài viết vừa tầm mắt người đọc */
     font-size: 0.95rem;
+    /* [Làm gì]: Độ đậm nét của chữ (700) | [Tác dụng khi dùng]: In đậm (600-800) tạo điểm nhấn mạnh mẽ, nét vừa (400-500) cho chữ thường dễ đọc */
     font-weight: 700;
+    /* [Làm gì]: Chuyển đổi định dạng chữ hoa/chữ thường | [Tác dụng khi dùng]: uppercase biến toàn bộ chữ thành IN HOA sang trọng */
     text-transform: uppercase;
+    /* [Làm gì]: Khoảng cách giãn giữa các con chữ (2px) | [Tác dụng khi dùng]: Giúp chữ in hoa hoặc logo nhìn thoáng, thanh lịch và cao cấp hơn */
     letter-spacing: 2px;
+    /* [Làm gì]: Khoảng cách lề ở mép bottom bên ngoài (10px) | [Tác dụng khi dùng]: Đẩy phần tử cách xa các khối lân cận */
     margin-bottom: 10px;
+    /* [Làm gì]: Tạo đường viền bao quanh phần tử (1px solid #35b0d2) | [Tác dụng khi dùng]: Trang trí đường viền nổi bật cho nút bấm hoặc khung */
     border: 1px solid #35B0D2;
+    /* [Làm gì]: Bo tròn các góc của phần tử (30px) | [Tác dụng khi dùng]: Tạo góc bo mềm mại, hiện đại cho nút bấm, thẻ bài viết, hình ảnh */
     border-radius: 30px;
+    /* [Làm gì]: Tạo khoảng đệm lót bên trong (5px 15px) | [Tác dụng khi dùng]: Giúp chữ thông thoáng và mở rộng diện tích bấm cho nút */
     padding: 5px 15px;
 }
 
 
 .video-header h2 {
+    /* [Làm gì]: Cài đặt kích thước cỡ chữ (2.3rem) | [Tác dụng khi dùng]: Phân cấp tiêu đề to rõ và nội dung bài viết vừa tầm mắt người đọc */
     font-size: 2.3rem;
+    /* [Làm gì]: Đặt màu sắc cho văn bản chữ (#222) | [Tác dụng khi dùng]: Thiết lập màu sắc thương hiệu hoặc giúp chữ dễ nhìn, không chói mắt */
     color: #222;
+    /* [Làm gì]: Khoảng cách lề ở mép bottom bên ngoài (15px) | [Tác dụng khi dùng]: Đẩy phần tử cách xa các khối lân cận */
     margin-bottom: 15px;
+    /* [Làm gì]: Độ đậm nét của chữ (800) | [Tác dụng khi dùng]: In đậm (600-800) tạo điểm nhấn mạnh mẽ, nét vừa (400-500) cho chữ thường dễ đọc */
     font-weight: 800;
 }
 
 .video-header p {
+    /* [Làm gì]: Cài đặt kích thước cỡ chữ (1.05rem) | [Tác dụng khi dùng]: Phân cấp tiêu đề to rõ và nội dung bài viết vừa tầm mắt người đọc */
     font-size: 1.05rem;
+    /* [Làm gì]: Đặt màu sắc cho văn bản chữ (#666) | [Tác dụng khi dùng]: Thiết lập màu sắc thương hiệu hoặc giúp chữ dễ nhìn, không chói mắt */
     color: #666;
+    /* [Làm gì]: Chiều cao của dòng chữ (khoảng cách giữa các dòng) | [Tác dụng khi dùng]: Giúp các dòng chữ thoáng mắt, dễ đọc, không bị dí sát vào nhau */
     line-height: 1.7; 
 }
 
 .video-container {
+    /* [Làm gì]: Giới hạn bề ngang tối đa (950px) | [Tác dụng khi dùng]: Giữ nội dung không bị bè quá rộng trên màn hình máy tính lớn */
     max-width: 950px;
+    /* [Làm gì]: Căn lề tự động | [Tác dụng khi dùng]: Tự động chia đều khoảng cách lề xung quanh phần tử */
     margin: 0  auto;
+    /* [Làm gì]: Cố định tỉ lệ khung hình (16/ 9) | [Tác dụng khi dùng]: Giữ chuẩn tỉ lệ video 16:9 trên mọi kích thước màn hình */
     aspect-ratio: 16/ 9;
+    /* [Làm gì]: Bo tròn các góc của phần tử (18px) | [Tác dụng khi dùng]: Tạo góc bo mềm mại, hiện đại cho nút bấm, thẻ bài viết, hình ảnh */
     border-radius: 18px;
+    /* [Làm gì]: Xử lý phần nội dung bị tràn ra ngoài khung | [Tác dụng khi dùng]: hidden cắt bỏ phần thừa giúp giữ bo góc và giấu phần ảnh zoom khi hover */
     overflow: hidden;
+    /* [Làm gì]: Tạo hiệu ứng đổ bóng mờ cho phần tử (0 15px 35px rgba(0, 0, 0, 0.15)) | [Tác dụng khi dùng]: Tạo chiều sâu 3D, giúp nút bấm/thẻ nổi bật trên bề mặt trang */
     box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+    /* [Làm gì]: Thiết lập màu sắc hoặc lớp nền (#000000) | [Tác dụng khi dùng]: Tô màu phân biệt các khối hoặc làm nền tương phản cho chữ */
     background-color: #000000;
 }
 
 .video-container iframe  {
+    /* [Làm gì]: Chiếm trọn 100% độ rộng của thẻ cha | [Tác dụng khi dùng]: Để phần tử tràn đầy khung hoặc ép rớt xuống 1 hàng riêng */
     width: 100%;
+    /* [Làm gì]: Chiếm trọn 100% chiều cao của thẻ cha | [Tác dụng khi dùng]: Giúp ảnh hoặc video lấp đầy toàn bộ khung chứa không bị hở đáy */
     height: 100%;
+    /* [Làm gì]: Xóa bỏ đường viền mặc định | [Tác dụng khi dùng]: Xóa viền xám xấu xí của thẻ <button> hoặc <iframe> */
     border: none;
+    /* [Làm gì]: Hiển thị phần tử dưới dạng khối độc lập chiếm trọn 1 dòng | [Tác dụng khi dùng]: Tự xuống dòng và ăn khớp các thuộc tính width/height/padding */
     display: block;
 }
 
 @media (max-width: 768px) {
     .video-section {
+        /* [Làm gì]: Tạo khoảng đệm lót bên trong (45px 15px) | [Tác dụng khi dùng]: Giúp chữ thông thoáng và mở rộng diện tích bấm cho nút */
         padding: 45px 15px;
     }
 
     .video-header h2 {
+        /* [Làm gì]: Cài đặt kích thước cỡ chữ (1.8rem) | [Tác dụng khi dùng]: Phân cấp tiêu đề to rõ và nội dung bài viết vừa tầm mắt người đọc */
         font-size: 1.8rem;
     }
 
     .video-container {
+        /* [Làm gì]: Bo tròn các góc của phần tử (12px) | [Tác dụng khi dùng]: Tạo góc bo mềm mại, hiện đại cho nút bấm, thẻ bài viết, hình ảnh */
         border-radius: 12px;
     }
 }
 
 .famous-spots-section  {
+    /* [Làm gì]: Giới hạn bề ngang tối đa (1200px) | [Tác dụng khi dùng]: Giữ nội dung không bị bè quá rộng trên màn hình máy tính lớn */
     max-width: 1200px;
+    /* [Làm gì]: Căn lề trên-dưới 0, trái-phải tự động (auto) | [Tác dụng khi dùng]: Căn khối khung nội dung ra chính giữa màn hình */
     margin: 0 auto;
+    /* [Làm gì]: Tạo khoảng đệm lót bên trong (70px 20px) | [Tác dụng khi dùng]: Giúp chữ thông thoáng và mở rộng diện tích bấm cho nút */
     padding: 70px 20px;
 }
 .spots-header {
+    /* [Làm gì]: Căn lề cho dòng chữ (center) | [Tác dụng khi dùng]: center để căn giữa toàn bộ chữ hoặc nút bấm ra tâm trang web */
     text-align: center;
+    /* [Làm gì]: Giới hạn bề ngang tối đa (800) | [Tác dụng khi dùng]: Giữ nội dung không bị bè quá rộng trên màn hình máy tính lớn */
     max-width: 800;
+    /* [Làm gì]: Căn lề trên-dưới 0, trái-phải tự động (auto) | [Tác dụng khi dùng]: Căn khối khung nội dung ra chính giữa màn hình */
     margin: 0 auto 50px auto;
 }
 
 .spots-header .sub-title {
+    /* [Làm gì]: Hiển thị dạng khối nhưng vẫn nằm cùng hàng | [Tác dụng khi dùng]: Cho phép nút bấm vừa căn giữa theo text-align vừa chỉnh được padding */
     display: inline-block;
+    /* [Làm gì]: Đặt màu sắc cho văn bản chữ (#35b0d2) | [Tác dụng khi dùng]: Thiết lập màu sắc thương hiệu hoặc giúp chữ dễ nhìn, không chói mắt */
     color: #35B0D2;
+    /* [Làm gì]: Cài đặt kích thước cỡ chữ (0.95rem) | [Tác dụng khi dùng]: Phân cấp tiêu đề to rõ và nội dung bài viết vừa tầm mắt người đọc */
     font-size: 0.95rem;
+    /* [Làm gì]: Độ đậm nét của chữ (700) | [Tác dụng khi dùng]: In đậm (600-800) tạo điểm nhấn mạnh mẽ, nét vừa (400-500) cho chữ thường dễ đọc */
     font-weight: 700;
+    /* [Làm gì]: Chuyển đổi định dạng chữ hoa/chữ thường | [Tác dụng khi dùng]: uppercase biến toàn bộ chữ thành IN HOA sang trọng */
     text-transform: uppercase;
+    /* [Làm gì]: Khoảng cách giãn giữa các con chữ (2px) | [Tác dụng khi dùng]: Giúp chữ in hoa hoặc logo nhìn thoáng, thanh lịch và cao cấp hơn */
     letter-spacing: 2px;
+    /* [Làm gì]: Khoảng cách lề ở mép bottom bên ngoài (10px) | [Tác dụng khi dùng]: Đẩy phần tử cách xa các khối lân cận */
     margin-bottom: 10px;
 }
 
 .spots-header h2 {
+    /* [Làm gì]: Cài đặt kích thước cỡ chữ (2.3rem) | [Tác dụng khi dùng]: Phân cấp tiêu đề to rõ và nội dung bài viết vừa tầm mắt người đọc */
     font-size: 2.3rem;
+    /* [Làm gì]: Đặt màu sắc cho văn bản chữ (#222) | [Tác dụng khi dùng]: Thiết lập màu sắc thương hiệu hoặc giúp chữ dễ nhìn, không chói mắt */
     color: #222;
+    /* [Làm gì]: Khoảng cách lề ở mép bottom bên ngoài (15px) | [Tác dụng khi dùng]: Đẩy phần tử cách xa các khối lân cận */
     margin-bottom: 15px;
+    /* [Làm gì]: Độ đậm nét của chữ (800) | [Tác dụng khi dùng]: In đậm (600-800) tạo điểm nhấn mạnh mẽ, nét vừa (400-500) cho chữ thường dễ đọc */
     font-weight: 800;
 }
 
 .spots-heade p  {
+    /* [Làm gì]: Cài đặt kích thước cỡ chữ (1.05rem) | [Tác dụng khi dùng]: Phân cấp tiêu đề to rõ và nội dung bài viết vừa tầm mắt người đọc */
     font-size: 1.05rem;
+    /* [Làm gì]: Đặt màu sắc cho văn bản chữ (#666) | [Tác dụng khi dùng]: Thiết lập màu sắc thương hiệu hoặc giúp chữ dễ nhìn, không chói mắt */
     color: #666;
+    /* [Làm gì]: Chiều cao của dòng chữ (khoảng cách giữa các dòng) | [Tác dụng khi dùng]: Giúp các dòng chữ thoáng mắt, dễ đọc, không bị dí sát vào nhau */
     line-height: 1.6;
 }
 
 .spot-item {
+    /* [Làm gì]: Kích hoạt bố cục linh hoạt Flexbox | [Tác dụng khi dùng]: Dàn các phần tử con nằm ngang hoặc dọc một cách linh hoạt, dễ căn chỉnh */
     display: flex;
+    /* [Làm gì]: Căn chỉnh tất cả phần tử con thẳng hàng vào giữa tâm theo trục dọc | [Tác dụng khi dùng]: Giúp logo và menu đều nhau không bị lệch cao thấp */
     align-items: center;
+    /* [Làm gì]: Khoảng cách tự động giữa các phần tử con trong Flexbox (50px) | [Tác dụng khi dùng]: Cách đều các mục mà không cần đặt margin lẻ tẻ */
     gap: 50px;
+    /* [Làm gì]: Khoảng cách lề ở mép bottom bên ngoài (70px) | [Tác dụng khi dùng]: Đẩy phần tử cách xa các khối lân cận */
     margin-bottom: 70px;
 }
 
 .spot-content {
+    /* [Làm gì]: Tỉ lệ co giãn và kích thước cơ sở trong Flexbox (1 1 500px) | [Tác dụng khi dùng]: Chia đều độ rộng các cột hoặc ép phần tử chiếm trọn hàng */
     flex: 1 1 500px;
 }
 
 .spot-tag {
+    /* [Làm gì]: Hiển thị dạng khối nhưng vẫn nằm cùng hàng | [Tác dụng khi dùng]: Cho phép nút bấm vừa căn giữa theo text-align vừa chỉnh được padding */
     display: inline-block;
+    /* [Làm gì]: Thiết lập màu sắc hoặc lớp nền (#e6f7fa) | [Tác dụng khi dùng]: Tô màu phân biệt các khối hoặc làm nền tương phản cho chữ */
     background-color: #e6f7fa;
+    /* [Làm gì]: Đặt màu sắc cho văn bản chữ (#35b0d2) | [Tác dụng khi dùng]: Thiết lập màu sắc thương hiệu hoặc giúp chữ dễ nhìn, không chói mắt */
     color: #35b0d2;
+    /* [Làm gì]: Tạo khoảng đệm lót bên trong (6px 12px) | [Tác dụng khi dùng]: Giúp chữ thông thoáng và mở rộng diện tích bấm cho nút */
     padding: 6px 12px;
+    /* [Làm gì]: Cài đặt kích thước cỡ chữ (0.88rem) | [Tác dụng khi dùng]: Phân cấp tiêu đề to rõ và nội dung bài viết vừa tầm mắt người đọc */
     font-size: 0.88rem;
+    /* [Làm gì]: Độ đậm nét của chữ (600) | [Tác dụng khi dùng]: In đậm (600-800) tạo điểm nhấn mạnh mẽ, nét vừa (400-500) cho chữ thường dễ đọc */
     font-weight: 600;
+    /* [Làm gì]: Khoảng cách lề ở mép bottom bên ngoài (14px) | [Tác dụng khi dùng]: Đẩy phần tử cách xa các khối lân cận */
     margin-bottom: 14px;
 }
 
 .spot-content h3  {
+    /* [Làm gì]: Cài đặt kích thước cỡ chữ (1.8rem) | [Tác dụng khi dùng]: Phân cấp tiêu đề to rõ và nội dung bài viết vừa tầm mắt người đọc */
     font-size: 1.8rem;
+    /* [Làm gì]: Đặt màu sắc cho văn bản chữ (#222222) | [Tác dụng khi dùng]: Thiết lập màu sắc thương hiệu hoặc giúp chữ dễ nhìn, không chói mắt */
     color: #222222;
+    /* [Làm gì]: Khoảng cách lề ở mép bottom bên ngoài (16px) | [Tác dụng khi dùng]: Đẩy phần tử cách xa các khối lân cận */
     margin-bottom: 16px;
+    /* [Làm gì]: Chiều cao của dòng chữ (khoảng cách giữa các dòng) | [Tác dụng khi dùng]: Giúp các dòng chữ thoáng mắt, dễ đọc, không bị dí sát vào nhau */
     line-height: 1.35;
 }
 
 .spot-content p{
+    /* [Làm gì]: Cài đặt kích thước cỡ chữ (1.05rem) | [Tác dụng khi dùng]: Phân cấp tiêu đề to rõ và nội dung bài viết vừa tầm mắt người đọc */
     font-size: 1.05rem;
+    /* [Làm gì]: Đặt màu sắc cho văn bản chữ (#555555) | [Tác dụng khi dùng]: Thiết lập màu sắc thương hiệu hoặc giúp chữ dễ nhìn, không chói mắt */
     color: #555555;
+    /* [Làm gì]: Chiều cao của dòng chữ (khoảng cách giữa các dòng) | [Tác dụng khi dùng]: Giúp các dòng chữ thoáng mắt, dễ đọc, không bị dí sát vào nhau */
     line-height: 1.8;
+    /* [Làm gì]: Khoảng cách lề ở mép bottom bên ngoài (20px) | [Tác dụng khi dùng]: Đẩy phần tử cách xa các khối lân cận */
     margin-bottom: 20px;
 }
 
 
 .spot-features {
+    /* [Làm gì]: Định dạng kiểu dấu đầu dòng danh sách | [Tác dụng khi dùng]: none để xóa bỏ dấu chấm tròn đen mặc định của thẻ ul/li */
     list-style: none;
+    /* [Làm gì]: Xóa bỏ toàn bộ khoảng đệm trong về 0 | [Tác dụng khi dùng]: Đưa khoảng cách lót bên trong về 0 để tự chủ động style */
     padding: 0;
+    /* [Làm gì]: Xóa bỏ toàn bộ lề ngoài về 0 | [Tác dụng khi dùng]: Bỏ khoảng cách mép thừa mặc định của trình duyệt */
     margin: 0;
+    /* [Làm gì]: Kích hoạt bố cục linh hoạt Flexbox | [Tác dụng khi dùng]: Dàn các phần tử con nằm ngang hoặc dọc một cách linh hoạt, dễ căn chỉnh */
     display: flex;
+    /* [Làm gì]: Xếp các phần tử con theo một cột dọc từ trên xuống | [Tác dụng khi dùng]: BẮT BUỘC dùng khi làm giao diện trên điện thoại di động */
     flex-direction: column;
+    /* [Làm gì]: Khoảng cách tự động giữa các phần tử con trong Flexbox (12px) | [Tác dụng khi dùng]: Cách đều các mục mà không cần đặt margin lẻ tẻ */
     gap: 12px;
     
 }
 
 .spot-features li {
+    /* [Làm gì]: Cài đặt kích thước cỡ chữ (0.98rem) | [Tác dụng khi dùng]: Phân cấp tiêu đề to rõ và nội dung bài viết vừa tầm mắt người đọc */
     font-size: 0.98rem;
+    /* [Làm gì]: Đặt màu sắc cho văn bản chữ (#444444) | [Tác dụng khi dùng]: Thiết lập màu sắc thương hiệu hoặc giúp chữ dễ nhìn, không chói mắt */
     color: #444444;
+    /* [Làm gì]: Kích hoạt bố cục linh hoạt Flexbox | [Tác dụng khi dùng]: Dàn các phần tử con nằm ngang hoặc dọc một cách linh hoạt, dễ căn chỉnh */
     display: flex;
+    /* [Làm gì]: Căn chỉnh tất cả phần tử con thẳng hàng vào giữa tâm theo trục dọc | [Tác dụng khi dùng]: Giúp logo và menu đều nhau không bị lệch cao thấp */
     align-items: center;
+    /* [Làm gì]: Khoảng cách tự động giữa các phần tử con trong Flexbox (10px) | [Tác dụng khi dùng]: Cách đều các mục mà không cần đặt margin lẻ tẻ */
     gap: 10px;
 }
 
 .spot-features li i{
+    /* [Làm gì]: Đặt màu sắc cho văn bản chữ (#35b0d2) | [Tác dụng khi dùng]: Thiết lập màu sắc thương hiệu hoặc giúp chữ dễ nhìn, không chói mắt */
     color: #35B0D2;
+    /* [Làm gì]: Cài đặt kích thước cỡ chữ (1.1rem) | [Tác dụng khi dùng]: Phân cấp tiêu đề to rõ và nội dung bài viết vừa tầm mắt người đọc */
     font-size: 1.1rem;
 }
 
 .spot-image  {
+    /* [Làm gì]: Tỉ lệ co giãn và kích thước cơ sở trong Flexbox (1 1 450px) | [Tác dụng khi dùng]: Chia đều độ rộng các cột hoặc ép phần tử chiếm trọn hàng */
     flex: 1 1 450px;
+    /* [Làm gì]: Bo tròn các góc của phần tử (18px) | [Tác dụng khi dùng]: Tạo góc bo mềm mại, hiện đại cho nút bấm, thẻ bài viết, hình ảnh */
     border-radius: 18px;
+    /* [Làm gì]: Xử lý phần nội dung bị tràn ra ngoài khung | [Tác dụng khi dùng]: hidden cắt bỏ phần thừa giúp giữ bo góc và giấu phần ảnh zoom khi hover */
     overflow: hidden;
+    /* [Làm gì]: Tạo hiệu ứng đổ bóng mờ cho phần tử (0 12px 30px rgba(0, 0, 0, 0.12)) | [Tác dụng khi dùng]: Tạo chiều sâu 3D, giúp nút bấm/thẻ nổi bật trên bề mặt trang */
     box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
 }
 
 .spot-image img {
+    /* [Làm gì]: Chiếm trọn 100% độ rộng của thẻ cha | [Tác dụng khi dùng]: Để phần tử tràn đầy khung hoặc ép rớt xuống 1 hàng riêng */
     width: 100%;
+    /* [Làm gì]: Đặt chiều cao cố định (340px) | [Tác dụng khi dùng]: Đảm bảo các bức ảnh hoặc khung có chiều cao đều tăm tắp */
     height: 340px;
+    /* [Làm gì]: Cắt cúp hình ảnh thông minh vừa vặn khung | [Tác dụng khi dùng]: BẮT BUỘC DÙNG: Giúp ảnh không bao giờ bị méo hình hay bẹp ảnh */
     object-fit: cover;
+    /* [Làm gì]: Hiển thị phần tử dưới dạng khối độc lập chiếm trọn 1 dòng | [Tác dụng khi dùng]: Tự xuống dòng và ăn khớp các thuộc tính width/height/padding */
     display: block;
+    /* [Làm gì]: Cài đặt thời gian chuyển đổi hiệu ứng mượt mà (transform 0.5s ease) | [Tác dụng khi dùng]: Giúp đổi màu, phóng to, trượt êm ái không bị giật cục */
     transition: transform 0.5s ease;
 }
 
 .spot-image:hover img {
+    /* [Làm gì]: Biến đổi hình học (scale(1.06)) | [Tác dụng khi dùng]: scale phóng to ảnh khi hover, translateY trượt mở menu */
     transform: scale(1.06);
 }
 
 @media (max-width: 768px) {
     .spot-item {
+        /* [Làm gì]: Xếp các phần tử con theo một cột dọc từ trên xuống | [Tác dụng khi dùng]: BẮT BUỘC dùng khi làm giao diện trên điện thoại di động */
         flex-direction: column;
+        /* [Làm gì]: Khoảng cách tự động giữa các phần tử con trong Flexbox (25px) | [Tác dụng khi dùng]: Cách đều các mục mà không cần đặt margin lẻ tẻ */
         gap: 25px;
+        /* [Làm gì]: Khoảng cách lề ở mép bottom bên ngoài (50px) | [Tác dụng khi dùng]: Đẩy phần tử cách xa các khối lân cận */
         margin-bottom: 50px;
     }
 
     .spot-content h3 {
+        /* [Làm gì]: Cài đặt kích thước cỡ chữ (1.5rem) | [Tác dụng khi dùng]: Phân cấp tiêu đề to rõ và nội dung bài viết vừa tầm mắt người đọc */
         font-size: 1.5rem;
     }
 
     .spot-image {
+        /* [Làm gì]: Chiếm trọn 100% độ rộng của thẻ cha | [Tác dụng khi dùng]: Để phần tử tràn đầy khung hoặc ép rớt xuống 1 hàng riêng */
         width: 100%;
     }
 
     .spot-image img {
+        /* [Làm gì]: Đặt chiều cao cố định (240px) | [Tác dụng khi dùng]: Đảm bảo các bức ảnh hoặc khung có chiều cao đều tăm tắp */
         height: 240px;
     }
 }
 
 .famous-spots-section {
+    /* [Làm gì]: Giới hạn bề ngang tối đa (1200px) | [Tác dụng khi dùng]: Giữ nội dung không bị bè quá rộng trên màn hình máy tính lớn */
     max-width: 1200px;
+    /* [Làm gì]: Căn lề tự động | [Tác dụng khi dùng]: Tự động chia đều khoảng cách lề xung quanh phần tử */
     margin: 0  auto;
+    /* [Làm gì]: Tạo khoảng đệm lót bên trong (70px 20px) | [Tác dụng khi dùng]: Giúp chữ thông thoáng và mở rộng diện tích bấm cho nút */
     padding: 70px 20px;
+    /* [Làm gì]: Thiết lập màu sắc hoặc lớp nền (#edf5f7) | [Tác dụng khi dùng]: Tô màu phân biệt các khối hoặc làm nền tương phản cho chữ */
     background-color: #edf5f7;
+    /* [Làm gì]: Bo tròn các góc của phần tử (24px) | [Tác dụng khi dùng]: Tạo góc bo mềm mại, hiện đại cho nút bấm, thẻ bài viết, hình ảnh */
     border-radius: 24px;
 }
 
 .spot-item {
+    /* [Làm gì]: Kích hoạt bố cục linh hoạt Flexbox | [Tác dụng khi dùng]: Dàn các phần tử con nằm ngang hoặc dọc một cách linh hoạt, dễ căn chỉnh */
     display: flex;
+    /* [Làm gì]: Căn chỉnh tất cả phần tử con thẳng hàng vào giữa tâm theo trục dọc | [Tác dụng khi dùng]: Giúp logo và menu đều nhau không bị lệch cao thấp */
     align-items: center;
+    /* [Làm gì]: Khoảng cách tự động giữa các phần tử con trong Flexbox (50px) | [Tác dụng khi dùng]: Cách đều các mục mà không cần đặt margin lẻ tẻ */
     gap: 50px;
+    /* [Làm gì]: Khoảng cách lề ở mép bottom bên ngoài (40px) | [Tác dụng khi dùng]: Đẩy phần tử cách xa các khối lân cận */
     margin-bottom: 40px;
+    /* [Làm gì]: Thiết lập màu sắc hoặc lớp nền (#ffffff) | [Tác dụng khi dùng]: Tô màu phân biệt các khối hoặc làm nền tương phản cho chữ */
     background-color: #ffffff;
+    /* [Làm gì]: Tạo khoảng đệm lót bên trong (35px) | [Tác dụng khi dùng]: Giúp chữ thông thoáng và mở rộng diện tích bấm cho nút */
     padding: 35px;
+    /* [Làm gì]: Bo tròn các góc của phần tử (20px) | [Tác dụng khi dùng]: Tạo góc bo mềm mại, hiện đại cho nút bấm, thẻ bài viết, hình ảnh */
     border-radius: 20px;
+    /* [Làm gì]: Tạo hiệu ứng đổ bóng mờ cho phần tử (0 10px 25px rgba(0, 0,  0, 0.06)) | [Tác dụng khi dùng]: Tạo chiều sâu 3D, giúp nút bấm/thẻ nổi bật trên bề mặt trang */
     box-shadow: 0 10px 25px rgba(0, 0,  0, 0.06);
 }
 
 .spot-image {
+    /* [Làm gì]: Tỉ lệ co giãn và kích thước cơ sở trong Flexbox (1 1 450px) | [Tác dụng khi dùng]: Chia đều độ rộng các cột hoặc ép phần tử chiếm trọn hàng */
     flex: 1 1 450px;
+    /* [Làm gì]: Đặt chiều cao cố định (340px) | [Tác dụng khi dùng]: Đảm bảo các bức ảnh hoặc khung có chiều cao đều tăm tắp */
     height: 340px;
+    /* [Làm gì]: Bo tròn các góc của phần tử (18px) | [Tác dụng khi dùng]: Tạo góc bo mềm mại, hiện đại cho nút bấm, thẻ bài viết, hình ảnh */
     border-radius: 18px;
+    /* [Làm gì]: Xử lý phần nội dung bị tràn ra ngoài khung | [Tác dụng khi dùng]: hidden cắt bỏ phần thừa giúp giữ bo góc và giấu phần ảnh zoom khi hover */
     overflow: hidden;
+    /* [Làm gì]: Tạo hiệu ứng đổ bóng mờ cho phần tử (0 12px 30px rgba(0, 0, 0, 0.12)) | [Tác dụng khi dùng]: Tạo chiều sâu 3D, giúp nút bấm/thẻ nổi bật trên bề mặt trang */
     box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
 }
 
 .spot-image img {
+    /* [Làm gì]: Chiếm trọn 100% độ rộng của thẻ cha | [Tác dụng khi dùng]: Để phần tử tràn đầy khung hoặc ép rớt xuống 1 hàng riêng */
     width: 100%;
+    /* [Làm gì]: Chiếm trọn 100% chiều cao của thẻ cha | [Tác dụng khi dùng]: Giúp ảnh hoặc video lấp đầy toàn bộ khung chứa không bị hở đáy */
     height: 100%;
+    /* [Làm gì]: Cắt cúp hình ảnh thông minh vừa vặn khung | [Tác dụng khi dùng]: BẮT BUỘC DÙNG: Giúp ảnh không bao giờ bị méo hình hay bẹp ảnh */
     object-fit: cover;
+    /* [Làm gì]: Hiển thị phần tử dưới dạng khối độc lập chiếm trọn 1 dòng | [Tác dụng khi dùng]: Tự xuống dòng và ăn khớp các thuộc tính width/height/padding */
     display: block;
+    /* [Làm gì]: Cài đặt thời gian chuyển đổi hiệu ứng mượt mà (transform 0.5s ease) | [Tác dụng khi dùng]: Giúp đổi màu, phóng to, trượt êm ái không bị giật cục */
     transition: transform 0.5s ease;
 }
 
 .spot-image:hover img {
+    /* [Làm gì]: Biến đổi hình học (skew(1.06)) | [Tác dụng khi dùng]: scale phóng to ảnh khi hover, translateY trượt mở menu */
     transform: skew(1.06);
 }
 
 .famous-spots-section {
+    /* [Làm gì]: Giới hạn bề ngang tối đa (1200px) | [Tác dụng khi dùng]: Giữ nội dung không bị bè quá rộng trên màn hình máy tính lớn */
     max-width: 1200px;
+    /* [Làm gì]: Căn lề trên-dưới 0, trái-phải tự động (auto) | [Tác dụng khi dùng]: Căn khối khung nội dung ra chính giữa màn hình */
     margin: 0 auto;
+    /* [Làm gì]: Tạo khoảng đệm lót bên trong (70px 20px) | [Tác dụng khi dùng]: Giúp chữ thông thoáng và mở rộng diện tích bấm cho nút */
     padding: 70px 20px;
+    /* [Làm gì]: Thiết lập màu sắc hoặc lớp nền (#edf5f7) | [Tác dụng khi dùng]: Tô màu phân biệt các khối hoặc làm nền tương phản cho chữ */
     background-color: #edf5f7;
+    /* [Làm gì]: Bo tròn các góc của phần tử (24px) | [Tác dụng khi dùng]: Tạo góc bo mềm mại, hiện đại cho nút bấm, thẻ bài viết, hình ảnh */
     border-radius: 24px;
 }
 
 .spot-item {
+    /* [Làm gì]: Kích hoạt bố cục linh hoạt Flexbox | [Tác dụng khi dùng]: Dàn các phần tử con nằm ngang hoặc dọc một cách linh hoạt, dễ căn chỉnh */
     display: flex;
+    /* [Làm gì]: Căn chỉnh tất cả phần tử con thẳng hàng vào giữa tâm theo trục dọc | [Tác dụng khi dùng]: Giúp logo và menu đều nhau không bị lệch cao thấp */
     align-items: center;
+    /* [Làm gì]: Khoảng cách tự động giữa các phần tử con trong Flexbox (50px) | [Tác dụng khi dùng]: Cách đều các mục mà không cần đặt margin lẻ tẻ */
     gap: 50px;
+    /* [Làm gì]: Khoảng cách lề ở mép bottom bên ngoài (40px) | [Tác dụng khi dùng]: Đẩy phần tử cách xa các khối lân cận */
     margin-bottom: 40px;
+    /* [Làm gì]: Tạo khoảng đệm lót bên trong (35px) | [Tác dụng khi dùng]: Giúp chữ thông thoáng và mở rộng diện tích bấm cho nút */
     padding: 35px;
+    /* [Làm gì]: Thiết lập màu sắc hoặc lớp nền (#ffffff) | [Tác dụng khi dùng]: Tô màu phân biệt các khối hoặc làm nền tương phản cho chữ */
     background-color: #ffffff;
+    /* [Làm gì]: Bo tròn các góc của phần tử (28px) | [Tác dụng khi dùng]: Tạo góc bo mềm mại, hiện đại cho nút bấm, thẻ bài viết, hình ảnh */
     border-radius: 28px;
+    /* [Làm gì]: Tạo hiệu ứng đổ bóng mờ cho phần tử (0 10px 25px rgba(0, 0, 0, 0.06)) | [Tác dụng khi dùng]: Tạo chiều sâu 3D, giúp nút bấm/thẻ nổi bật trên bề mặt trang */
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.06);
 }
 
 @media (max-width: 768px) {
     .famous-spots-section {
+        /* [Làm gì]: Tạo khoảng đệm lót bên trong (40px 15px) | [Tác dụng khi dùng]: Giúp chữ thông thoáng và mở rộng diện tích bấm cho nút */
         padding: 40px 15px;
+        /* [Làm gì]: Bo tròn các góc của phần tử (16px) | [Tác dụng khi dùng]: Tạo góc bo mềm mại, hiện đại cho nút bấm, thẻ bài viết, hình ảnh */
         border-radius: 16px;
     }
 
     .spot-item {
+        /* [Làm gì]: Xếp các phần tử con theo một cột dọc từ trên xuống | [Tác dụng khi dùng]: BẮT BUỘC dùng khi làm giao diện trên điện thoại di động */
         flex-direction: column;
+        /* [Làm gì]: Tạo khoảng đệm lót bên trong (20px) | [Tác dụng khi dùng]: Giúp chữ thông thoáng và mở rộng diện tích bấm cho nút */
         padding: 20px;
+        /* [Làm gì]: Khoảng cách tự động giữa các phần tử con trong Flexbox (20px) | [Tác dụng khi dùng]: Cách đều các mục mà không cần đặt margin lẻ tẻ */
         gap: 20px;
+        /* [Làm gì]: Khoảng cách lề ở mép bottom bên ngoài (25px) | [Tác dụng khi dùng]: Đẩy phần tử cách xa các khối lân cận */
         margin-bottom: 25px;
     }
 
     .spot-content h3  {
+        /* [Làm gì]: Cài đặt kích thước cỡ chữ (1.4rem) | [Tác dụng khi dùng]: Phân cấp tiêu đề to rõ và nội dung bài viết vừa tầm mắt người đọc */
         font-size: 1.4rem;
     }
 
     .spot-image  {
+        /* [Làm gì]: Chiếm trọn 100% độ rộng của thẻ cha | [Tác dụng khi dùng]: Để phần tử tràn đầy khung hoặc ép rớt xuống 1 hàng riêng */
         width: 100%;
+        /* [Làm gì]: Đặt chiều cao cố định (240px) | [Tác dụng khi dùng]: Đảm bảo các bức ảnh hoặc khung có chiều cao đều tăm tắp */
         height: 240px;
+        /* [Làm gì]: Tỉ lệ co giãn và kích thước cơ sở trong Flexbox (none) | [Tác dụng khi dùng]: Chia đều độ rộng các cột hoặc ép phần tử chiếm trọn hàng */
         flex: none;
     }
 
     .spot-image img  {
+        /* [Làm gì]: Chiếm trọn 100% độ rộng của thẻ cha | [Tác dụng khi dùng]: Để phần tử tràn đầy khung hoặc ép rớt xuống 1 hàng riêng */
         width: 100%;
+        /* [Làm gì]: Chiếm trọn 100% chiều cao của thẻ cha | [Tác dụng khi dùng]: Giúp ảnh hoặc video lấp đầy toàn bộ khung chứa không bị hở đáy */
         height: 100%;
     }
 }
 
 .spot-tag {
+    /* [Làm gì]: Bo tròn các góc của phần tử (10px) | [Tác dụng khi dùng]: Tạo góc bo mềm mại, hiện đại cho nút bấm, thẻ bài viết, hình ảnh */
     border-radius: 10px;
 }
