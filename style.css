@@ -493,6 +493,9 @@ footer {
     text-transform: uppercase;
     letter-spacing: 2px;
     margin-bottom: 10px;
+    border: 1px solid #35B0D2;
+    border-radius: 30px;
+    padding: 5px 15px;
 }
 
 
@@ -538,4 +541,155 @@ footer {
     .video-container {
         border-radius: 12px;
     }
+}
+
+.famous-spots-section  {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 70px 20px;
+}
+.spots-header {
+    text-align: center;
+    max-width: 800;
+    margin: 0 auto 50px auto;
+}
+
+.spots-header .sub-title {
+    display: inline-block;
+    color: #35B0D2;
+    font-size: 0.95rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+.spots-header h2 {
+    font-size: 2.3rem;
+    color: #222;
+    margin-bottom: 15px;
+    font-weight: 800;
+}
+
+.spots-heade p  {
+    font-size: 1.05rem;
+    color: #666;
+    line-height: 1.6;
+}
+
+.spot-item {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    margin-bottom: 70px;
+}
+
+.spot-content {
+    flex: 1 1 500px;
+}
+
+.spot-tag {
+    display: inline-block;
+    background-color: #e6f7fa;
+    color: #35b0d2;
+    padding: 6px 12px;
+    font-size: 0.88rem;
+    font-weight: 600;
+    margin-bottom: 14px;
+}
+
+.spot-content h3  {
+    font-size: 1.8rem;
+    color: #222222;
+    margin-bottom: 16px;
+    line-height: 1.35;
+}
+
+.spot-content p{
+    font-size: 1.05rem;
+    color: #555555;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+
+.spot-features {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    
+}
+
+.spot-features li {
+    font-size: 0.98rem;
+    color: #444444;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.spot-features li i{
+    color: #35B0D2;
+    font-size: 1.1rem;
+}
+
+.spot-image  {
+    flex: 1 1 450px;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+}
+
+.spot-image img {
+    width: 100%;
+    height: 340px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+.spot-image:hover img {
+    transform: scale(1.06);
+}
+
+@media (max-width: 768px) {
+    .spot-item {
+        flex-direction: column;
+        gap: 25px;
+        margin-bottom: 50px;
+    }
+
+    .spot-content h3 {
+        font-size: 1.5rem;
+    }
+
+    .spot-image {
+        width: 100%;
+    }
+
+    .spot-image img {
+        height: 240px;
+    }
+}
+
+.famous-spots-section {
+    max-width: 1200px;
+    margin: 0  auto;
+    padding: 70px 20px;
+    background-color: #edf5f7;
+    border-radius: 24px;
+}
+
+.spot-item {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    margin-bottom: 40px;
+    background-color: #ffffff;
+    padding: 35px;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0, 0,  0, 0.06);
 }
