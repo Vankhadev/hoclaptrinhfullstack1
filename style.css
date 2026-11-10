@@ -44,8 +44,8 @@ header {
     position: sticky;
     /* [Làm gì]: Cách mép trên đỉnh 0 pixel | [Tác dụng khi dùng]: Giữ thanh menu dính chặt sát mép đỉnh trên cùng của màn hình */
     top: 0;
-    /* [Làm gì]: Thiết lập màu sắc hoặc lớp nền (#fff) | [Tác dụng khi dùng]: Tô màu phân biệt các khối hoặc làm nền tương phản cho chữ */
-    background: #fff;
+    /* [Làm gì]: Thứ tự xếp lớp cao nhất (9999) | [Tác dụng khi dùng]: Đảm bảo Header và Menu đổ xuống luôn nằm ĐÈ LÊN MỌI THÀNH PHẦN (kể cả ảnh banner) */
+    z-index: 9999;
     /* [Làm gì]: Tạo đường viền kẻ ở mép đáy dưới cùng | [Tác dụng khi dùng]: Phân tách thanh header hoặc tiêu đề với phần nội dung bên dưới */
     border-bottom: 1px solid #eaeaea;
     /* [Làm gì]: Cài đặt thời gian chuyển đổi hiệu ứng mượt mà (var(--transition)) | [Tác dụng khi dùng]: Giúp đổi màu, phóng to, trượt êm ái không bị giật cục */
@@ -144,39 +144,6 @@ nav {
     }
 
     .nav-links {
-        /* [Làm gì]: Ẩn hoàn toàn phần tử khỏi màn hình | [Tác dụng khi dùng]: Dùng để giấu menu hoặc nút bấm khi chưa đến lúc hiển thị */
-        display: none;
-         /* [Làm gì]: Xếp các phần tử con theo một cột dọc từ trên xuống | [Tác dụng khi dùng]: BẮT BUỘC dùng khi làm giao diện trên điện thoại di động */
-         flex-direction: column;
-        /* [Làm gì]: Định vị tuyệt đối tách khỏi luồng tài liệu | [Tác dụng khi dùng]: Đặt phần tử ở vị trí chính xác bất kỳ theo thẻ cha mà không đẩy xô lệch layout */
-        position: absolute;
-        /* [Làm gì]: Đặt vị trí đỉnh bằng 100% chiều cao thẻ cha | [Tác dụng khi dùng]: Thả menu con nằm ngay sát mép dưới của thanh navbar */
-        top: 100%;
-        /* [Làm gì]: Căn sát mép trái 0 pixel | [Tác dụng khi dùng]: Cho menu hoặc khung trải dài từ mép trái màn hình */
-        left: 0;
-        /* [Làm gì]: Chiếm trọn 100% độ rộng của thẻ cha | [Tác dụng khi dùng]: Để phần tử tràn đầy khung hoặc ép rớt xuống 1 hàng riêng */
-        width: 100%;
-        /* [Làm gì]: Thiết lập màu sắc hoặc lớp nền (#fff) | [Tác dụng khi dùng]: Tô màu phân biệt các khối hoặc làm nền tương phản cho chữ */
-        background-color: #fff;
-        /* [Làm gì]: Khoảng cách tự động giữa các phần tử con trong Flexbox (10px) | [Tác dụng khi dùng]: Cách đều các mục mà không cần đặt margin lẻ tẻ */
-        gap: 10px;
-        /* [Làm gì]: Tạo khoảng đệm lót bên trong (20px) | [Tác dụng khi dùng]: Giúp chữ thông thoáng và mở rộng diện tích bấm cho nút */
-        padding: 20px;
-        /* [Làm gì]: Tạo hiệu ứng đổ bóng mờ cho phần tử (0 10px 15px rgba(0, 0, 0, 0.1)) | [Tác dụng khi dùng]: Tạo chiều sâu 3D, giúp nút bấm/thẻ nổi bật trên bề mặt trang */
-        box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
-        /* [Làm gì]: Thứ tự xếp lớp theo chiều sâu trục Z (1000) | [Tác dụng khi dùng]: Số càng cao thì phần tử càng nằm đè lên trên các phần tử khác (menu nổi trên banner) */
-        z-index: 1000;
-        /* [Làm gì]: Độ mờ / độ trong suốt của phần tử (0) | [Tác dụng khi dùng]: Tạo hiệu ứng mờ dần (Fade-in/Fade-out) cực mượt */
-        opacity: 0;
-        /* [Làm gì]: Trạng thái hiển thị trong luồng tài liệu (hidden) | [Tác dụng khi dùng]: hidden để ẩn hẳn không bấm nhầm được khi đóng menu, visible để bấm bình thường */
-        visibility: hidden;
-        /* [Làm gì]: Biến đổi hình học (translatey(-20px)) | [Tác dụng khi dùng]: scale phóng to ảnh khi hover, translateY trượt mở menu */
-        transform: translateY(-20px);
-        /* [Làm gì]: Cài đặt thời gian chuyển đổi hiệu ứng mượt mà (all 0.3s ease-in-out) | [Tác dụng khi dùng]: Giúp đổi màu, phóng to, trượt êm ái không bị giật cục */
-        transition: all 0.3s ease-in-out;
-    }
-
-    .nav-links {
         /* [Làm gì]: Kích hoạt bố cục linh hoạt Flexbox | [Tác dụng khi dùng]: Dàn các phần tử con nằm ngang hoặc dọc một cách linh hoạt, dễ căn chỉnh */
         display: flex;
         /* [Làm gì]: Xếp các phần tử con theo một cột dọc từ trên xuống | [Tác dụng khi dùng]: BẮT BUỘC dùng khi làm giao diện trên điện thoại di động */
@@ -189,25 +156,39 @@ nav {
         left: 0;
         /* [Làm gì]: Chiếm trọn 100% độ rộng của thẻ cha | [Tác dụng khi dùng]: Để phần tử tràn đầy khung hoặc ép rớt xuống 1 hàng riêng */
         width: 100%;
-        /* [Làm gì]: Thiết lập màu sắc hoặc lớp nền (#ffff) | [Tác dụng khi dùng]: Tô màu phân biệt các khối hoặc làm nền tương phản cho chữ */
-        background-color: #ffff;
-        /* [Làm gì]: Khoảng cách tự động giữa các phần tử con trong Flexbox (8px) | [Tác dụng khi dùng]: Cách đều các mục mà không cần đặt margin lẻ tẻ */
+        /* [Làm gì]: Nền màu trắng tinh (#ffffff) */
+        background-color: #ffffff;
+        /* [Làm gì]: Khoảng cách tự động giữa các mục menu (8px) | [Tác dụng khi dùng]: Cách đều các mục menu */
         gap: 8px;
         /* [Làm gì]: Tạo khoảng đệm lót bên trong (20px) | [Tác dụng khi dùng]: Giúp chữ thông thoáng và mở rộng diện tích bấm cho nút */
         padding: 20px;
-        /* [Làm gì]: Tạo hiệu ứng đổ bóng mờ cho phần tử (0 12px 25px rgba(0, 0, 0, 0.12)) | [Tác dụng khi dùng]: Tạo chiều sâu 3D, giúp nút bấm/thẻ nổi bật trên bề mặt trang */
-        box-shadow: 0 12px 25px rgba(0, 0, 0, 0.12);
-        /* [Làm gì]: Thứ tự xếp lớp theo chiều sâu trục Z (1000) | [Tác dụng khi dùng]: Số càng cao thì phần tử càng nằm đè lên trên các phần tử khác (menu nổi trên banner) */
-        z-index: 1000;
+        /* [Làm gì]: Đổ bóng 3D phía dưới menu */
+        box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+        /* [Làm gì]: Đường viền đáy xanh ngọc 2px */
+        border-bottom: 2px solid #35B0D2;
+        /* [Làm gì]: Thứ tự xếp lớp theo chiều sâu trục Z (9999) | [Tác dụng khi dùng]: Đảm bảo menu luôn đè lên trên ảnh banner */
+        z-index: 9999;
+        /* [Làm gì]: Ban đầu ẩn menu (độ mờ 0) */
+        opacity: 0;
+        /* [Làm gì]: Ẩn khỏi màn hình */
+        visibility: hidden;
+        /* [Làm gì]: Kéo nhẹ menu lùi lên 15px | [Tác dụng khi dùng]: Tạo hiệu ứng trượt mở mượt mà */
+        transform: translateY(-15px);
+        /* [Làm gì]: Cài đặt thời gian chuyển đổi hiệu ứng mượt mà (0.3s) | [Tác dụng khi dùng]: Giúp trượt êm ái */
+        transition: all 0.3s ease-in-out;
+        /* [Làm gì]: Vô hiệu hóa chuột khi menu đang đóng | [Tác dụng khi dùng]: Không bấm nhầm vào link khi chưa mở menu */
+        pointer-events: none;
     }
 
     .nav-links.active {
-       /* [Làm gì]: Độ mờ / độ trong suốt của phần tử (1) | [Tác dụng khi dùng]: Tạo hiệu ứng mờ dần (Fade-in/Fade-out) cực mượt */
+       /* [Làm gì]: Hiện rõ 100% | [Tác dụng khi dùng]: Menu hiện rõ ràng khi người dùng bấm nút 3 gạch */
        opacity: 1;
-       /* [Làm gì]: Trạng thái hiển thị trong luồng tài liệu (visible) | [Tác dụng khi dùng]: hidden để ẩn hẳn không bấm nhầm được khi đóng menu, visible để bấm bình thường */
+       /* [Làm gì]: Hiển thị bình thường | [Tác dụng khi dùng]: Người dùng có thể nhìn thấy menu */
        visibility: visible;
-       /* [Làm gì]: Biến đổi hình học (translatey(0)) | [Tác dụng khi dùng]: scale phóng to ảnh khi hover, translateY trượt mở menu */
+       /* [Làm gì]: Trượt xuống vị trí chuẩn 0 | [Tác dụng khi dùng]: Tạo cảm giác menu trượt xuống từ thanh header */
        transform: translateY(0);
+       /* [Làm gì]: Cho phép bấm chọn link */
+       pointer-events: auto;
     }
 
     .nav-links li {
@@ -1400,8 +1381,9 @@ footer {
 }
 
 
+
 /* =======================================================
-   BANNER HERO CHUNG CHO CÁC TRANG CON (.hero-page)
+   CÁC THÀNH PHẦN KHUNG GIAO DIỆN DÙNG CHUNG CÁC TRANG CON
 ======================================================= */
 .hero-page {
     /* [Làm gì]: Chiều cao tối thiểu 50vh (50% màn hình) | [Tác dụng khi dùng]: Tạo khung banner vừa vặn, không che hết trang */
@@ -1420,27 +1402,6 @@ footer {
     padding: 60px 20px;
     /* [Làm gì]: Định vị tương đối | [Tác dụng khi dùng]: Làm mốc định vị cho các phần tử con */
     position: relative;
-}
-
-/* BANNER RIÊNG TRANG ĐỊA ĐIỂM (Ảnh Cù Lao & Sông Nước) */
-.hero-dest {
-    /* [Làm gì]: Lớp phủ đen mờ 50% kết hợp ảnh nền bentre01.jpg | [Tác dụng khi dùng]: Làm dịu nền để chữ trắng nổi bật */
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-                url("./image/bentre01.jpg") no-repeat center center / cover;
-}
-
-/* BANNER RIÊNG TRANG ẨM THỰC (Ảnh Trái Cây & Miệt Vườn) */
-.hero-food {
-    /* [Làm gì]: Lớp phủ tối 55% kết hợp ảnh nền bentre02.webp | [Tác dụng khi dùng]: Tạo không khí ấm áp mời gọi */
-    background: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)),
-                url("./image/bentre02.webp") no-repeat center center / cover;
-}
-
-/* BANNER RIÊNG TRANG LIÊN HỆ (Ảnh Cầu Sông Bến Tre) */
-.hero-contact {
-    /* [Làm gì]: Lớp phủ tối 50% kết hợp ảnh nền bentre03.jpg | [Tác dụng khi dùng]: Tạo cảm giác chuyên nghiệp, tin cậy */
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-                url("./image/bentre03.jpg") no-repeat center center / cover;
 }
 
 .hero-page-content {
@@ -1499,10 +1460,6 @@ footer {
     text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
 }
 
-
-/* =======================================================
-   KHUNG CHỨA TOÀN TRANG & TIÊU ĐỀ PHẦN (.page-container)
-======================================================= */
 .page-container {
     /* [Làm gì]: Chiều rộng tối đa 1200px | [Tác dụng khi dùng]: Đồng bộ độ rộng với toàn bộ trang web */
     max-width: 1200px;
@@ -1571,9 +1528,21 @@ footer {
 }
 
 
-/* =======================================================
-   TRANG ĐỊA ĐIỂM: LƯỚI CARD ĐỊA ĐIỂM (.dest-grid, .dest-card)
-======================================================= */
+/* ==========================================================================
+   ==========================================================================
+   PHẦN I: TOÀN BỘ CSS CHO TRANG ĐỊA ĐIỂM (DIA-DIEM.HTML)
+   Bao gồm: Banner Hero -> Lưới Card Địa Điểm -> Cẩm Nang -> Responsive Điện Thoại
+   ==========================================================================
+   ========================================================================== */
+
+/* 1. BANNER HERO RIÊNG CHO TRANG ĐỊA ĐIỂM */
+.hero-dest {
+    /* [Làm gì]: Lớp phủ đen mờ 50% kết hợp ảnh nền bentre01.jpg | [Tác dụng khi dùng]: Làm dịu nền để chữ trắng nổi bật */
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+                url("./image/bentre01.jpg") no-repeat center center / cover;
+}
+
+/* 2. LƯỚI CARD ĐỊA ĐIỂM */
 .dest-grid {
     /* [Làm gì]: Kích hoạt bố cục lưới Grid hiện đại | [Tác dụng khi dùng]: Tự động chia các thẻ card đều tăm tắp */
     display: grid;
@@ -1758,10 +1727,7 @@ footer {
     font-size: 0.85rem;
 }
 
-
-/* =======================================================
-   TRANG ĐỊA ĐIỂM: HỘP CẨM NANG BỎ TÚI (.travel-tips-box)
-======================================================= */
+/* 3. CẨM NANG BỎ TÚI KHI DU LỊCH BẾN TRE */
 .travel-tips-box {
     /* [Làm gì]: Nền chuyển màu xanh ngọc nhạt êm dịu */
     background: linear-gradient(135deg, #e6f7fa 0%, #edf5f7 100%);
@@ -1882,10 +1848,72 @@ footer {
     line-height: 1.6;
 }
 
+/* 4. RESPONSIVE ĐIỆN THOẠI RIÊNG CHO TRANG ĐỊA ĐIỂM (DƯỚI 768px) */
+@media (max-width: 768px) {
+    .hero-dest {
+        min-height: 42vh;
+        padding: 40px 15px;
+    }
 
-/* =======================================================
-   TRANG ẨM THỰC: LƯỚI CARD MÓN ĂN (.food-grid, .food-card)
-======================================================= */
+    .hero-dest h1 {
+        font-size: 1.9rem;
+    }
+
+    .hero-dest p {
+        font-size: 0.95rem;
+    }
+
+    .dest-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .dest-thumb {
+        height: 210px;
+    }
+
+    .travel-tips-box {
+        padding: 30px 18px;
+        margin-top: 50px;
+        border-radius: 18px;
+    }
+
+    .tips-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-dest h1 {
+        font-size: 1.65rem;
+    }
+
+    .dest-body {
+        padding: 18px;
+    }
+
+    .dest-body h3 {
+        font-size: 1.15rem;
+    }
+}
+
+
+/* ==========================================================================
+   ==========================================================================
+   PHẦN II: TOÀN BỘ CSS CHO TRANG ẨM THỰC (AM-THUC.HTML)
+   Bao gồm: Banner Hero -> Lưới Card Món Ăn -> Bảng Địa Chỉ -> Responsive Điện Thoại
+   ==========================================================================
+   ========================================================================== */
+
+/* 1. BANNER HERO RIÊNG CHO TRANG ẨM THỰC */
+.hero-food {
+    /* [Làm gì]: Lớp phủ tối 55% kết hợp ảnh nền bentre02.webp | [Tác dụng khi dùng]: Tạo không khí ấm áp mời gọi */
+    background: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)),
+                url("./image/bentre02.webp") no-repeat center center / cover;
+}
+
+/* 2. LƯỚI CARD MÓN ĂN */
 .food-grid {
     /* [Làm gì]: Lưới chia cột tự động cho các món ăn | [Tác dụng khi dùng]: Dàn đều các món đẹp mắt */
     display: grid;
@@ -2026,10 +2054,7 @@ footer {
     color: #e67e22;
 }
 
-
-/* =======================================================
-   TRANG ẨM THỰC: BẢNG GỢI Ý ĐỊA CHỈ ĂN NGON (.food-places-section)
-======================================================= */
+/* 3. BẢNG GỢI Ý ĐỊA CHỈ ĂN NGON & MUA QUÀ */
 .food-places-section {
     /* [Làm gì]: Nền trắng tinh */
     background-color: #ffffff;
@@ -2136,10 +2161,73 @@ footer {
     color: #222222;
 }
 
+/* 4. RESPONSIVE ĐIỆN THOẠI RIÊNG CHO TRANG ẨM THỰC (DƯỚI 768px) */
+@media (max-width: 768px) {
+    .hero-food {
+        min-height: 42vh;
+        padding: 40px 15px;
+    }
 
-/* =======================================================
-   TRANG LIÊN HỆ: BỐ CỤC 2 CỘT (.contact-wrapper)
-======================================================= */
+    .hero-food h1 {
+        font-size: 1.9rem;
+    }
+
+    .hero-food p {
+        font-size: 0.95rem;
+    }
+
+    .food-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .food-thumb {
+        height: 210px;
+    }
+
+    .food-places-section {
+        padding: 30px 18px;
+        margin-top: 50px;
+        border-radius: 18px;
+    }
+
+    .places-table th, 
+    .places-table td {
+        padding: 12px 14px;
+        font-size: 0.88rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-food h1 {
+        font-size: 1.65rem;
+    }
+
+    .food-body {
+        padding: 18px;
+    }
+
+    .food-body h3 {
+        font-size: 1.15rem;
+    }
+}
+
+
+/* ==========================================================================
+   ==========================================================================
+   PHẦN III: TOÀN BỘ CSS CHO TRANG LIÊN HỆ (LIEN-HE.HTML)
+   Bao gồm: Banner Hero -> Thông Tin & Form -> Bản Đồ -> FAQ -> Responsive Điện Thoại
+   ==========================================================================
+   ========================================================================== */
+
+/* 1. BANNER HERO RIÊNG CHO TRANG LIÊN HỆ */
+.hero-contact {
+    /* [Làm gì]: Lớp phủ tối 50% kết hợp ảnh nền bentre03.jpg | [Tác dụng khi dùng]: Tạo cảm giác chuyên nghiệp, tin cậy */
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+                url("./image/bentre03.jpg") no-repeat center center / cover;
+}
+
+/* 2. BỐ CỤC 2 CỘT: THÔNG TIN & FORM LIÊN HỆ */
 .contact-wrapper {
     /* [Làm gì]: Kích hoạt Flexbox bố cục 2 cột | [Tác dụng khi dùng]: Cột thông tin bên trái và Form gửi bên phải */
     display: flex;
@@ -2298,7 +2386,6 @@ footer {
 .btn-yt { background-color: #ff0000; }
 .btn-tt { background-color: #000000; }
 .btn-zl { background-color: #0068ff; }
-
 
 /* CỘT FORM GỬI THÔNG TIN BÊN PHẢI */
 .contact-form-col {
@@ -2477,10 +2564,7 @@ footer {
     font-weight: 600;
 }
 
-
-/* =======================================================
-   TRANG LIÊN HỆ: BẢN ĐỒ GOOGLE MAPS (.map-section)
-======================================================= */
+/* 3. BẢN ĐỒ CHỈ ĐƯỜNG GOOGLE MAPS */
 .map-section {
     /* [Làm gì]: Cách phần trên 60px */
     margin-top: 60px;
@@ -2504,10 +2588,7 @@ footer {
     display: block;
 }
 
-
-/* =======================================================
-   TRANG LIÊN HỆ: CÂU HỎI THƯỜNG GẶP FAQ (.faq-section)
-======================================================= */
+/* 4. CÂU HỎI THƯỜNG GẶP FAQ */
 .faq-section {
     /* [Làm gì]: Cách lề dưới 60px */
     margin-bottom: 60px;
@@ -2563,86 +2644,21 @@ footer {
     margin: 0;
 }
 
-
-/* =======================================================
-   RESPONSIVE TOÀN DIỆN CHO MÀN HÌNH ĐIỆN THOẠI (DƯỚI 768px)
-======================================================= */
+/* 5. RESPONSIVE ĐIỆN THOẠI RIÊNG CHO TRANG LIÊN HỆ (DƯỚI 768px) */
 @media (max-width: 768px) {
-    /* 1. KHU VỰC VỊ TRÍ BẢN ĐỒ TRANG GIỚI THIỆU */
-    .section-hero1 {
-        padding: 40px 15px;
-        border-radius: 16px;
-        gap: 20px;
-    }
-
-    .section-hero1-item p {
-        font-size: 0.95rem;
-    }
-
-    .section-hero1-image {
-        flex: 1 1 100%;
-        padding: 20px;
-        border-radius: 16px;
-    }
-
-    .section-hero1-image img {
-        height: 220px;
-    }
-
-    /* 2. BANNER HERO CÁC TRANG CON */
-    .hero-page {
+    .hero-contact {
         min-height: 42vh;
         padding: 40px 15px;
     }
 
-    .hero-page-content h1 {
+    .hero-contact h1 {
         font-size: 1.9rem;
     }
 
-    .hero-page-content p {
+    .hero-contact p {
         font-size: 0.95rem;
     }
 
-    /* 3. KHUNG CHỨA TOÀN TRANG & TIÊU ĐỀ */
-    .page-container {
-        margin: 40px auto 60px auto;
-        padding: 0 15px;
-    }
-
-    .section-heading {
-        margin-bottom: 35px;
-    }
-
-    .section-heading h2 {
-        font-size: 1.65rem;
-    }
-
-    /* 4. LƯỚI CARD ĐỊA ĐIỂM & ẨM THỰC TRÊN MOBILE: 1 CỘT ĐỨNG */
-    .dest-grid,
-    .food-grid {
-        grid-template-columns: 1fr;
-        gap: 25px;
-    }
-
-    .dest-thumb,
-    .food-thumb {
-        height: 210px;
-    }
-
-    /* 5. CẨM NANG VÀ BẢNG ẨM THỰC TRÊN MOBILE */
-    .travel-tips-box,
-    .food-places-section {
-        padding: 30px 18px;
-        margin-top: 50px;
-        border-radius: 18px;
-    }
-
-    .tips-grid {
-        grid-template-columns: 1fr;
-        gap: 20px;
-    }
-
-    /* 6. KHUNG LIÊN HỆ & FORM TRÊN MOBILE */
     .contact-wrapper {
         gap: 30px;
         margin-bottom: 50px;
@@ -2658,7 +2674,6 @@ footer {
         gap: 0;
     }
 
-    /* 7. BẢN ĐỒ & FAQ TRÊN MOBILE */
     .map-wrapper iframe {
         height: 320px;
     }
@@ -2669,24 +2684,12 @@ footer {
     }
 }
 
-
-/* =======================================================
-   RESPONSIVE CHO MÀN HÌNH ĐIỆN THOẠI NHỎ (DƯỚI 480px)
-======================================================= */
 @media (max-width: 480px) {
-    .hero-page-content h1 {
+    .hero-contact h1 {
         font-size: 1.65rem;
     }
 
-    .dest-body,
-    .food-body {
-        padding: 18px;
-    }
-
-    .dest-body h3,
-    .food-body h3 {
-        font-size: 1.15rem;
+    .form-container {
+        padding: 20px 15px;
     }
 }
-
-
