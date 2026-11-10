@@ -1187,3 +1187,204 @@ footer {
     /* [Làm gì]: Bo tròn các góc của phần tử (10px) | [Tác dụng khi dùng]: Tạo góc bo mềm mại, hiện đại cho nút bấm, thẻ bài viết, hình ảnh */
     border-radius: 10px;
 }
+
+
+/* =======================================================
+   KHU VỰC VỊ TRÍ, ĐỊA HÌNH & BẢN ĐỒ (.section-hero1)
+======================================================= */
+.section-hero1 {
+    /* [Làm gì]: Giới hạn độ rộng tối đa 1200px của khu vực bản đồ | [Tác dụng khi dùng]: Giữ nội dung không bị bè quá rộng trên màn hình lớn */
+    max-width: 1200px;
+    /* [Làm gì]: Căn lề trên 0, hai bên auto, lề dưới cách 60px | [Tác dụng khi dùng]: Căn toàn bộ khu vực ra chính giữa trang web */
+    margin: 0 auto 60px auto;
+    /* [Làm gì]: Khoảng đệm bên trong: trên-dưới 60px, trái-phải 20px | [Tác dụng khi dùng]: Tạo không gian thông thoáng cho nội dung bên trong */
+    padding: 60px 20px;
+    /* [Làm gì]: Nền màu xanh xám nhạt dịu mát (#edf5f7) | [Tác dụng khi dùng]: Phân tách khu vực này với các phần khác và làm nổi bật 2 hộp thẻ bản đồ màu trắng */
+    background-color: #edf5f7;
+    /* [Làm gì]: Bo tròn 24px bốn góc của khu vực | [Tác dụng khi dùng]: Tạo phong cách khối bo góc mềm mại, hiện đại */
+    border-radius: 24px;
+    /* [Làm gì]: Kích hoạt bố cục Flexbox | [Tác dụng khi dùng]: Dàn xếp khối giới thiệu ở trên và 2 thẻ bản đồ ở dưới linh hoạt */
+    display: flex;
+    /* [Làm gì]: Cho phép các phần tử tự động xuống dòng khi thiếu chỗ | [Tác dụng khi dùng]: Khối chữ chiếm 100% dòng 1, 2 thẻ bản đồ chia đôi dòng 2 */
+    flex-wrap: wrap;
+    /* [Làm gì]: Căn các phần tử vào giữa theo trục ngang | [Tác dụng khi dùng]: Giữ các khối luôn nằm cân đối ở tâm trang */
+    justify-content: center;
+    /* [Làm gì]: Khoảng cách tự động 30px giữa các khối con | [Tác dụng khi dùng]: Tạo khoảng hở đều nhau giữa 2 thẻ bản đồ mà không cần margin lẻ */
+    gap: 30px;
+}
+
+/* KHỐI 1: CHỮ GIỚI THIỆU VỊ TRÍ VÀ ĐỊA HÌNH TRÊN CÙNG */
+.section-hero1-item {
+    /* [Làm gì]: Ép khối chữ chiếm trọn 100% bề ngang của hàng | [Tác dụng khi dùng]: Bắt buộc 2 thẻ bản đồ bên dưới phải rớt xuống hàng tiếp theo */
+    flex: 0 0 100%;
+    /* [Làm gì]: Giới hạn bề ngang tối đa đoạn văn là 900px | [Tác dụng khi dùng]: Tránh các dòng chữ trải quá dài, giúp người xem dễ đọc hơn */
+    max-width: 900px;
+    /* [Làm gì]: Căn khối chữ ra chính giữa | [Tác dụng khi dùng]: Đảm bảo đoạn văn bản nằm ngay tâm của khu vực */
+    margin: 0 auto 15px auto;
+    /* [Làm gì]: Căn toàn bộ chữ ra giữa | [Tác dụng khi dùng]: Tạo sự cân xứng, trang trọng */
+    text-align: center;
+}
+
+.section-hero1-item h3 {
+    /* [Làm gì]: Cài đặt kích thước cỡ chữ (1rem ≈ 16px) | [Tác dụng khi dùng]: Cỡ chữ vừa vặn cho nhãn tiêu đề */
+    font-size: 1rem;
+    /* [Làm gì]: Màu chữ xanh ngọc chủ đạo (#35B0D2) | [Tác dụng khi dùng]: Đồng bộ nhận diện thương hiệu với toàn bộ website */
+    color: #35B0D2;
+    /* [Làm gì]: Tạo đường viền nét liền 1px màu xanh ngọc | [Tác dụng khi dùng]: Tạo khung bao quanh nhãn tiêu đề */
+    border: 1px solid #35B0D2;
+    /* [Làm gì]: Bo tròn hai đầu nhãn thành dạng viên thuốc (30px) | [Tác dụng khi dùng]: Tạo phong cách nhãn tag hiện đại */
+    border-radius: 30px;
+    /* [Làm gì]: Nền màu xanh ngọc rất nhạt (#e6f7fa) | [Tác dụng khi dùng]: Làm nổi bật nhãn tiêu đề trên nền xám */
+    background-color: #e6f7fa;
+    /* [Làm gì]: Hiển thị dạng khối inline | [Tác dụng khi dùng]: Ôm vừa vặn chiều dài chữ, không chiếm hết hàng ngang */
+    display: inline-block;
+    /* [Làm gì]: In đậm chữ (700) | [Tác dụng khi dùng]: Giúp nhãn rõ nét và nổi bật */
+    font-weight: 700;
+    /* [Làm gì]: Chuyển toàn bộ chữ thành IN HOA | [Tác dụng khi dùng]: Tạo điểm nhấn trang trọng cho nhãn mục */
+    text-transform: uppercase;
+    /* [Làm gì]: Giãn cách nhẹ giữa các con chữ 2px | [Tác dụng khi dùng]: Giúp chữ in hoa nhìn thoáng, sang và dễ đọc */
+    letter-spacing: 2px;
+    /* [Làm gì]: Cách các đoạn văn bên dưới 20px | [Tác dụng khi dùng]: Tránh nhãn bị dính sát vào đoạn văn mô tả */
+    margin-bottom: 20px;
+    /* [Làm gì]: Tạo khoảng đệm trong: trên-dưới 6px, trái-phải 20px | [Tác dụng khi dùng]: Mở rộng diện tích viền quanh con chữ */
+    padding: 6px 20px;
+}
+
+.section-hero1-item p {
+    /* [Làm gì]: Cỡ chữ đoạn mô tả (1.05rem ≈ 16.8px) | [Tác dụng khi dùng]: Kích thước tiêu chuẩn dễ đọc */
+    font-size: 1.05rem;
+    /* [Làm gì]: Màu chữ xám đen (#444444) | [Tác dụng khi dùng]: Dịu mắt, không bị gắt như màu đen tuyền */
+    color: #444444;
+    /* [Làm gì]: Khoảng cách giữa các dòng chữ (1.8 lần) | [Tác dụng khi dùng]: Giúp các dòng chữ thoáng mắt, không bị dí sát nhau */
+    line-height: 1.8;
+    /* [Làm gì]: Cách đoạn văn kế tiếp 14px | [Tác dụng khi dùng]: Phân tách rõ ràng giữa phần Vị trí và phần Địa hình */
+    margin-bottom: 14px;
+    /* [Làm gì]: Căn chữ ra chính giữa | [Tác dụng khi dùng]: Tạo sự cân đối cho đoạn văn bản giới thiệu */
+    text-align: center;
+}
+
+.section-hero1-item strong {
+    /* [Làm gì]: Tô màu xanh ngọc cho từ khóa quan trọng | [Tác dụng khi dùng]: Giúp người đọc chú ý ngay vào các chữ "Vị trí", "Địa hình" */
+    color: #35B0D2;
+    /* [Làm gì]: In đậm chữ | [Tác dụng khi dùng]: Tăng độ nhấn mạnh cho từ khóa */
+    font-weight: 700;
+}
+
+/* KHỐI 2 & 3: HAI THẺ CARD BẢN ĐỒ (.section-hero1-image) */
+.section-hero1-image {
+    /* [Làm gì]: Mỗi thẻ chiếm bề rộng cơ sở khoảng 500px, tối đa 560px | [Tác dụng khi dùng]: Giúp 2 thẻ tự chia đều 2 cột song song trên màn hình máy tính */
+    flex: 1 1 500px;
+    max-width: 560px;
+    /* [Làm gì]: Màu nền trắng tinh (#ffffff) | [Tác dụng khi dùng]: Tạo thành chiếc hộp thẻ Card nổi bật trên nền xám xanh */
+    background-color: #ffffff;
+    /* [Làm gì]: Bo tròn 20px bốn góc của thẻ bản đồ | [Tác dụng khi dùng]: Tạo góc bo mềm mại, sang trọng */
+    border-radius: 20px;
+    /* [Làm gì]: Tạo khoảng đệm trong 25px quanh thẻ | [Tác dụng khi dùng]: Giữ ảnh và chữ cách đều mép viền thẻ */
+    padding: 25px;
+    /* [Làm gì]: Đổ bóng mờ nhẹ phía sau thẻ | [Tác dụng khi dùng]: Tạo chiều sâu 3D, giúp hộp bản đồ như nổi lên trên mặt trang */
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.06);
+    /* [Làm gì]: Dùng Flexbox và xếp Tiêu đề -> Ảnh -> Chú thích theo một cột dọc từ trên xuống | [Tác dụng khi dùng]: CỰC KỲ QUAN TRỌNG: Khắc phục lỗi chữ và ảnh bị nằm ngang chen chúc nhau */
+    display: flex;
+    flex-direction: column;
+    /* [Làm gì]: Căn các phần tử vào giữa theo trục ngang | [Tác dụng khi dùng]: Canh đều tiêu đề, ảnh và dòng chú thích */
+    align-items: center;
+    /* [Làm gì]: Căn văn bản ra giữa | [Tác dụng khi dùng]: Giúp tiêu đề và chú thích luôn ở tâm thẻ */
+    text-align: center;
+    /* [Làm gì]: Tạo hiệu ứng chuyển động mượt mà trong 0.35 giây | [Tác dụng khi dùng]: Giúp thẻ nhấc bổng êm ái khi người dùng rê chuột vào */
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+/* [Làm gì]: Hiệu ứng khi rê chuột vào thẻ bản đồ (Hover) | [Tác dụng khi dùng]: Tạo tương tác sinh động cho người xem */
+.section-hero1-image:hover {
+    /* [Làm gì]: Nhấc thẻ bản đồ bay nhẹ lên 6px */
+    transform: translateY(-6px);
+    /* [Làm gì]: Tăng độ bóng đổ phát sáng nhẹ màu xanh | [Tác dụng khi dùng]: Làm thẻ nổi bật hẳn lên khi hover */
+    box-shadow: 0 15px 35px rgba(53, 176, 210, 0.18);
+}
+
+.section-hero1-image h3 {
+    /* [Làm gì]: Cỡ chữ tiêu đề bản đồ (1.35rem ≈ 21.6px) | [Tác dụng khi dùng]: Rõ ràng, dễ đọc */
+    font-size: 1.35rem;
+    /* [Làm gì]: Màu xám đen sắc nét (#222222) | [Tác dụng khi dùng]: Phân cấp tiêu đề nổi bật trên nền trắng */
+    color: #222222;
+    /* [Làm gì]: In đậm chữ (700) | [Tác dụng khi dùng]: Tạo sự chắc chắn cho tiêu đề */
+    font-weight: 700;
+    /* [Làm gì]: Cách bức ảnh bản đồ bên dưới 16px | [Tác dụng khi dùng]: Giữ khoảng cách thoáng giữa chữ và ảnh */
+    margin-bottom: 16px;
+}
+
+.section-hero1-image img {
+    /* [Làm gì]: Bức ảnh chiếm trọn 100% bề ngang của thẻ Card | [Tác dụng khi dùng]: Bản đồ hiển thị to rõ nhất có thể */
+    width: 100%;
+    /* [Làm gì]: Cố định chiều cao ảnh bản đồ là 300px | [Tác dụng khi dùng]: Đảm bảo 2 tấm bản đồ có chiều cao bằng chằn chặn nhau, không bị lệch */
+    height: 300px;
+    /* [Làm gì]: Cắt cúp ảnh thông minh vừa vặn khung 300px | [Tác dụng khi dùng]: KHÔNG BẸP ẢNH, KHÔNG MÉO BẢN ĐỒ */
+    object-fit: cover;
+    /* [Làm gì]: Bo tròn 14px bốn góc của tấm ảnh bản đồ | [Tác dụng khi dùng]: Góc ảnh hài hòa với góc bo của thẻ Card */
+    border-radius: 14px;
+    /* [Làm gì]: Hiển thị dạng khối | [Tác dụng khi dùng]: Xóa bỏ khoảng hở thừa dưới đáy ảnh */
+    display: block;
+    /* [Làm gì]: Cách dòng chú thích bên dưới 16px | [Tác dụng khi dùng]: Tạo khoảng trống thoáng trước khi đọc chú thích */
+    margin-bottom: 16px;
+    /* [Làm gì]: Hiệu ứng phóng to ảnh mượt mà trong 0.4 giây khi rê chuột */
+    transition: transform 0.4s ease;
+}
+
+/* [Làm gì]: Phóng to nhẹ bản đồ 1.03 lần khi rê chuột | [Tác dụng khi dùng]: Tạo cảm giác zoom bản đồ tương tác */
+.section-hero1-image:hover img {
+    transform: scale(1.03);
+}
+
+.section-hero1-image p {
+    /* [Làm gì]: Cỡ chữ chú thích (0.95rem ≈ 15.2px) | [Tác dụng khi dùng]: Nhỏ hơn chữ tiêu đề, vừa vặn làm chú thích */
+    font-size: 0.95rem;
+    /* [Làm gì]: Màu chữ xám trung tính (#555555) | [Tác dụng khi dùng]: Hài hòa, êm mắt */
+    color: #555555;
+    /* [Làm gì]: Giãn cách dòng 1.6 lần | [Tác dụng khi dùng]: Giúp câu chú thích dễ đọc */
+    line-height: 1.6;
+    /* [Làm gì]: Xóa lề thừa | [Tác dụng khi dùng]: Giữ phần đáy thẻ gọn gàng */
+    margin: 0;
+}
+
+.section-hero1-image p strong {
+    /* [Làm gì]: Làm nổi bật tên các tỉnh lân cận bằng màu xanh ngọc | [Tác dụng khi dùng]: Giúp người xem nhận diện nhanh các tỉnh giáp ranh */
+    color: #35B0D2;
+    /* [Làm gì]: Độ đậm vừa phải (600) */
+    font-weight: 600;
+}
+
+/* =======================================================
+   RESPONSIVE CHO MÀN HÌNH ĐIỆN THOẠI (DƯỚI 768px)
+======================================================= */
+@media (max-width: 768px) {
+    .section-hero1 {
+        /* [Làm gì]: Giảm đệm lề trên điện thoại: trên-dưới 40px, hai bên 15px | [Tác dụng khi dùng]: Tiết kiệm diện tích màn hình nhỏ */
+        padding: 40px 15px;
+        /* [Làm gì]: Giảm góc bo xuống 16px cho vừa vặn */
+        border-radius: 16px;
+        /* [Làm gì]: Giảm khoảng cách giữa các khối xuống 20px */
+        gap: 20px;
+    }
+
+    .section-hero1-item p {
+        /* [Làm gì]: Giảm nhẹ cỡ chữ đoạn mô tả trên mobile | [Tác dụng khi dùng]: Vừa tầm mắt khi lướt điện thoại */
+        font-size: 0.95rem;
+    }
+
+    .section-hero1-image {
+        /* [Làm gì]: Mỗi thẻ bản đồ chiếm 100% bề ngang trên điện thoại | [Tác dụng khi dùng]: Bản đồ tự động xếp chồng dọc từ trên xuống */
+        flex: 1 1 100%;
+        /* [Làm gì]: Giảm đệm lề thẻ card xuống 20px */
+        padding: 20px;
+        /* [Làm gì]: Bo góc 16px */
+        border-radius: 16px;
+    }
+
+    .section-hero1-image img {
+        /* [Làm gì]: Giảm chiều cao bản đồ trên điện thoại xuống 220px | [Tác dụng khi dùng]: Bản đồ vừa tầm mắt, người dùng không phải cuộn quá dài */
+        height: 220px;
+    }
+}
+
+
+
