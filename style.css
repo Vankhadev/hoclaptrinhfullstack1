@@ -1386,15 +1386,1197 @@ footer {
     }
 }
 
+
+/* =======================================================
+   TRẠNG THÁI ACTIVE TRÊN MENU ĐIỀU HƯỚNG (.nav-links a.active)
+======================================================= */
+.nav-links a.active {
+    /* [Làm gì]: Đổi màu chữ sang xanh ngọc chủ đạo (#35B0D2) | [Tác dụng khi dùng]: Báo cho người dùng biết họ đang ở trang nào */
+    color: #35B0D2;
+    /* [Làm gì]: In đậm chữ (700) | [Tác dụng khi dùng]: Làm nổi bật nút trang hiện tại */
+    font-weight: 700;
+    /* [Làm gì]: Tạo vạch gạch chân màu xanh ngọc ở đáy | [Tác dụng khi dùng]: Tạo điểm nhấn trang nhã cho menu đang chọn */
+    border-bottom: 2px solid #35B0D2;
+}
+
+
+/* =======================================================
+   BANNER HERO CHUNG CHO CÁC TRANG CON (.hero-page)
+======================================================= */
+.hero-page {
+    /* [Làm gì]: Chiều cao tối thiểu 50vh (50% màn hình) | [Tác dụng khi dùng]: Tạo khung banner vừa vặn, không che hết trang */
+    min-height: 50vh;
+    /* [Làm gì]: Kích hoạt Flexbox | [Tác dụng khi dùng]: Căn chữ ra chính giữa khung banner */
+    display: flex;
+    /* [Làm gì]: Căn giữa theo trục ngang */
+    justify-content: center;
+    /* [Làm gì]: Căn giữa theo trục dọc */
+    align-items: center;
+    /* [Làm gì]: Căn toàn bộ chữ ra giữa | [Tác dụng khi dùng]: Tạo sự cân đối và trang trọng */
+    text-align: center;
+    /* [Làm gì]: Màu chữ trắng nổi bật | [Tác dụng khi dùng]: Dễ đọc trên nền ảnh tối */
+    color: #ffffff;
+    /* [Làm gì]: Đệm trên-dưới 60px, trái-phải 20px | [Tác dụng khi dùng]: Tránh chữ dính sát viền mép banner */
+    padding: 60px 20px;
+    /* [Làm gì]: Định vị tương đối | [Tác dụng khi dùng]: Làm mốc định vị cho các phần tử con */
+    position: relative;
+}
+
+/* BANNER RIÊNG TRANG ĐỊA ĐIỂM (Ảnh Cù Lao & Sông Nước) */
+.hero-dest {
+    /* [Làm gì]: Lớp phủ đen mờ 50% kết hợp ảnh nền bentre01.jpg | [Tác dụng khi dùng]: Làm dịu nền để chữ trắng nổi bật */
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+                url("./image/bentre01.jpg") no-repeat center center / cover;
+}
+
+/* BANNER RIÊNG TRANG ẨM THỰC (Ảnh Trái Cây & Miệt Vườn) */
+.hero-food {
+    /* [Làm gì]: Lớp phủ tối 55% kết hợp ảnh nền bentre02.webp | [Tác dụng khi dùng]: Tạo không khí ấm áp mời gọi */
+    background: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)),
+                url("./image/bentre02.webp") no-repeat center center / cover;
+}
+
+/* BANNER RIÊNG TRANG LIÊN HỆ (Ảnh Cầu Sông Bến Tre) */
+.hero-contact {
+    /* [Làm gì]: Lớp phủ tối 50% kết hợp ảnh nền bentre03.jpg | [Tác dụng khi dùng]: Tạo cảm giác chuyên nghiệp, tin cậy */
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+                url("./image/bentre03.jpg") no-repeat center center / cover;
+}
+
+.hero-page-content {
+    /* [Làm gì]: Giới hạn bề ngang chữ tối đa 850px | [Tác dụng khi dùng]: Giữ đoạn mô tả gọn gàng, người đọc không phải liếc mắt quá rộng */
+    max-width: 850px;
+    /* [Làm gì]: Chiếm 100% độ rộng trong giới hạn */
+    width: 100%;
+}
+
+.hero-tag {
+    /* [Làm gì]: Hiển thị dạng inline-block | [Tác dụng khi dùng]: Ôm vừa nội dung chữ */
+    display: inline-block;
+    /* [Làm gì]: Nền xanh ngọc trong suốt nhẹ | [Tác dụng khi dùng]: Tạo nhãn tag nhỏ phía trên tiêu đề */
+    background: rgba(53, 176, 210, 0.25);
+    /* [Làm gì]: Viền xanh ngọc mỏng 1px | [Tác dụng khi dùng]: Khung viền sắc sảo */
+    border: 1px solid #35B0D2;
+    /* [Làm gì]: Màu chữ xanh ngọc sáng | [Tác dụng khi dùng]: Nhận diện thương hiệu */
+    color: #4fe0ff;
+    /* [Làm gì]: Bo tròn viền dạng viên thuốc (30px) */
+    border-radius: 30px;
+    /* [Làm gì]: Đệm trên-dưới 6px, trái-phải 18px */
+    padding: 6px 18px;
+    /* [Làm gì]: Cỡ chữ 0.9rem (~14.4px) */
+    font-size: 0.9rem;
+    /* [Làm gì]: Chữ in đậm 600 */
+    font-weight: 600;
+    /* [Làm gì]: Khoảng cách dưới 16px */
+    margin-bottom: 16px;
+    /* [Làm gì]: Giãn cách chữ 1px */
+    letter-spacing: 1px;
+}
+
+.hero-page-content h1 {
+    /* [Làm gì]: Cỡ chữ tiêu đề lớn 2.6rem (~41.6px) | [Tác dụng khi dùng]: Tạo điểm nhấn cho toàn bộ trang */
+    font-size: 2.6rem;
+    /* [Làm gì]: Độ đậm cao nhất (800) | [Tác dụng khi dùng]: Chắc chắn, uy quyền */
+    font-weight: 800;
+    /* [Làm gì]: Màu chữ trắng tinh (#fff) */
+    color: #ffffff;
+    /* [Làm gì]: Đổ bóng mờ sau chữ | [Tác dụng khi dùng]: Giúp chữ đọc cực rõ kể cả ảnh nền sáng */
+    text-shadow: 0 3px 8px rgba(0, 0, 0, 0.6);
+    /* [Làm gì]: Cách đoạn mô tả bên dưới 16px */
+    margin-bottom: 16px;
+    /* [Làm gì]: Chiều cao dòng 1.25 */
+    line-height: 1.25;
+}
+
+.hero-page-content p {
+    /* [Làm gì]: Cỡ chữ mô tả 1.1rem (~17.6px) | [Tác dụng khi dùng]: Vừa tầm mắt người đọc */
+    font-size: 1.1rem;
+    /* [Làm gì]: Màu chữ trắng hơi đục dịu mắt (#f0f0f0) */
+    color: #f0f0f0;
+    /* [Làm gì]: Chiều cao dòng 1.7 | [Tác dụng khi dùng]: Các dòng chữ thông thoáng */
+    line-height: 1.7;
+    /* [Làm gì]: Đổ bóng nhẹ sau chữ */
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+
+/* =======================================================
+   KHUNG CHỨA TOÀN TRANG & TIÊU ĐỀ PHẦN (.page-container)
+======================================================= */
+.page-container {
+    /* [Làm gì]: Chiều rộng tối đa 1200px | [Tác dụng khi dùng]: Đồng bộ độ rộng với toàn bộ trang web */
+    max-width: 1200px;
+    /* [Làm gì]: Căn lề trên 60px, dưới 80px, hai bên tự động căn giữa */
+    margin: 60px auto 80px auto;
+    /* [Làm gì]: Khoảng đệm 2 bên lề 20px | [Tác dụng khi dùng]: Không bị dính sát viền mép khi co nhỏ màn hình */
+    padding: 0 20px;
+}
+
+.section-heading {
+    /* [Làm gì]: Căn toàn bộ chữ ra giữa */
+    text-align: center;
+    /* [Làm gì]: Cách phần danh sách bên dưới 50px */
+    margin-bottom: 50px;
+}
+
+.sub-title {
+    /* [Làm gì]: Hiển thị inline-block ôm sát chữ */
+    display: inline-block;
+    /* [Làm gì]: Màu xanh ngọc chủ đạo (#35B0D2) */
+    color: #35B0D2;
+    /* [Làm gì]: Cỡ chữ 0.95rem */
+    font-size: 0.95rem;
+    /* [Làm gì]: In đậm 700 */
+    font-weight: 700;
+    /* [Làm gì]: Chuyển thành CHỮ HOA */
+    text-transform: uppercase;
+    /* [Làm gì]: Giãn cách ký tự 2px | [Tác dụng khi dùng]: Tạo vẻ sang trọng, tinh tế */
+    letter-spacing: 2px;
+    /* [Làm gì]: Nền xanh nhạt dịu mát (#e6f7fa) */
+    background-color: #e6f7fa;
+    /* [Làm gì]: Bo góc dạng viên thuốc (30px) */
+    border-radius: 30px;
+    /* [Làm gì]: Viền mảnh xanh ngọc 1px */
+    border: 1px solid #35B0D2;
+    /* [Làm gì]: Đệm trong trên-dưới 6px, trái-phải 20px */
+    padding: 6px 20px;
+    /* [Làm gì]: Cách tiêu đề lớn h2 bên dưới 14px */
+    margin-bottom: 14px;
+}
+
+.section-heading h2 {
+    /* [Làm gì]: Cỡ chữ tiêu đề 2.1rem (~33.6px) */
+    font-size: 2.1rem;
+    /* [Làm gì]: In đậm 800 */
+    font-weight: 800;
+    /* [Làm gì]: Màu đen xám đậm (#1f1f1f) | [Tác dụng khi dùng]: Tương phản mạnh trên nền trắng */
+    color: #1f1f1f;
+    /* [Làm gì]: Chiều cao dòng 1.3 */
+    line-height: 1.3;
+    /* [Làm gì]: Cách vạch kẻ bên dưới 16px */
+    margin-bottom: 16px;
+}
+
+.heading-line {
+    /* [Làm gì]: Chiều dài vạch kẻ 70px */
+    width: 70px;
+    /* [Làm gì]: Độ dày vạch kẻ 3px */
+    height: 3px;
+    /* [Làm gì]: Màu xanh ngọc chủ đạo (#35B0D2) */
+    background-color: #35B0D2;
+    /* [Làm gì]: Căn vạch kẻ ra chính giữa trang */
+    margin: 0 auto;
+    /* [Làm gì]: Bo nhẹ 2 đầu vạch kẻ (2px) */
+    border-radius: 2px;
+}
+
+
+/* =======================================================
+   TRANG ĐỊA ĐIỂM: LƯỚI CARD ĐỊA ĐIỂM (.dest-grid, .dest-card)
+======================================================= */
+.dest-grid {
+    /* [Làm gì]: Kích hoạt bố cục lưới Grid hiện đại | [Tác dụng khi dùng]: Tự động chia các thẻ card đều tăm tắp */
+    display: grid;
+    /* [Làm gì]: Chia cột tự động co giãn: mỗi cột tối thiểu 350px, tự lấp đầy hàng ngang */
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    /* [Làm gì]: Khoảng cách giữa các thẻ card là 30px | [Tác dụng khi dùng]: Không bị dính nhau */
+    gap: 30px;
+}
+
+.dest-card {
+    /* [Làm gì]: Nền trắng tinh (#ffffff) */
+    background-color: #ffffff;
+    /* [Làm gì]: Bo tròn 20px bốn góc thẻ card | [Tác dụng khi dùng]: Tạo vẻ mềm mại, hiện đại */
+    border-radius: 20px;
+    /* [Làm gì]: Cắt bỏ mọi phần tử con lòi ra ngoài góc bo | [Tác dụng khi dùng]: Giữ góc ảnh bo tròn khớp với thẻ */
+    overflow: hidden;
+    /* [Làm gì]: Đường viền mảnh màu xám nhạt | [Tác dụng khi dùng]: Định hình khung thẻ */
+    border: 1px solid #eef2f5;
+    /* [Làm gì]: Đổ bóng 3D nhẹ sau thẻ | [Tác dụng khi dùng]: Giúp thẻ nổi bật nhẹ trên mặt trang */
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+    /* [Làm gì]: Hiệu ứng chuyển động mượt mà trong 0.35s | [Tác dụng khi dùng]: Giúp thẻ nhấc bổng êm ái khi rê chuột */
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+    /* [Làm gì]: Kích hoạt Flexbox theo chiều dọc | [Tác dụng khi dùng]: Giúp các phần nội dung trải đều từ trên xuống */
+    display: flex;
+    flex-direction: column;
+}
+
+.dest-card:hover {
+    /* [Làm gì]: Nhấc thẻ bay nhẹ lên 8px khi rê chuột */
+    transform: translateY(-8px);
+    /* [Làm gì]: Tăng bóng đổ phát sáng nhẹ | [Tác dụng khi dùng]: Tạo hiệu ứng tương tác sinh động */
+    box-shadow: 0 18px 35px rgba(53, 176, 210, 0.16);
+}
+
+.dest-thumb {
+    /* [Làm gì]: Cố định chiều cao ảnh là 230px | [Tác dụng khi dùng]: Giúp mọi thẻ card có ảnh cao bằng nhau tuyệt đối */
+    height: 230px;
+    /* [Làm gì]: Định vị tương đối | [Tác dụng khi dùng]: Làm điểm neo cho nhãn tag huy hiệu định vị góc trên ảnh */
+    position: relative;
+    /* [Làm gì]: Giấu phần thừa của ảnh */
+    overflow: hidden;
+}
+
+.dest-thumb img {
+    /* [Làm gì]: Ảnh chiếm 100% chiều rộng khung */
+    width: 100%;
+    /* [Làm gì]: Ảnh chiếm 100% chiều cao khung */
+    height: 100%;
+    /* [Làm gì]: Cắt cúp ảnh thông minh vừa khít khung | [Tác dụng khi dùng]: KHÔNG MÉO ẢNH, KHÔNG BẸP ẢNH */
+    object-fit: cover;
+    /* [Làm gì]: Chuyển động mượt trong 0.4s */
+    transition: transform 0.4s ease;
+}
+
+.dest-card:hover .dest-thumb img {
+    /* [Làm gì]: Phóng to nhẹ ảnh 1.06 lần khi rê chuột | [Tác dụng khi dùng]: Hiệu ứng zoom ảnh hiện đại */
+    transform: scale(1.06);
+}
+
+.dest-badge {
+    /* [Làm gì]: Định vị tuyệt đối ở góc trên bên phải ảnh | [Tác dụng khi dùng]: Đặt nhãn nổi trên ảnh */
+    position: absolute;
+    top: 14px;
+    right: 14px;
+    /* [Làm gì]: Màu chữ trắng */
+    color: #ffffff;
+    /* [Làm gì]: Cỡ chữ nhỏ gọn 0.82rem */
+    font-size: 0.82rem;
+    /* [Làm gì]: In đậm chữ 700 */
+    font-weight: 700;
+    /* [Làm gì]: Bo tròn hai đầu nhãn 30px */
+    border-radius: 30px;
+    /* [Làm gì]: Đệm trong trên-dưới 6px, trái-phải 14px */
+    padding: 6px 14px;
+    /* [Làm gì]: Đổ bóng sau nhãn */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+    /* [Làm gì]: Đảm bảo nhãn luôn nằm trên cùng */
+    z-index: 2;
+}
+
+/* CÁC MÀU SẮC HUY HIỆU PHÂN LOẠI */
+.badge-green  { background-color: #27ae60; }
+.badge-blue   { background-color: #2980b9; }
+.badge-orange { background-color: #e67e22; }
+.badge-teal   { background-color: #16a085; }
+.badge-red    { background-color: #c0392b; }
+.badge-purple { background-color: #8e44ad; }
+
+.dest-body {
+    /* [Làm gì]: Khoảng đệm bên trong nội dung thẻ là 24px */
+    padding: 24px;
+    /* [Làm gì]: Tự động chiếm trọn phần chiều cao còn lại | [Tác dụng khi dùng]: Đáy các thẻ card luôn thẳng hàng nhau */
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.dest-rating {
+    /* [Làm gì]: Màu vàng cam cho ngôi sao đánh giá | [Tác dụng khi dùng]: Đẹp mắt, uy tín */
+    color: #f39c12;
+    /* [Làm gì]: Cỡ chữ đánh giá 0.88rem */
+    font-size: 0.88rem;
+    /* [Làm gì]: Cách tiêu đề bên dưới 10px */
+    margin-bottom: 10px;
+}
+
+.dest-rating span {
+    /* [Làm gì]: Màu chữ xám cho số lượng đánh giá (#666) */
+    color: #666666;
+    /* [Làm gì]: Cách các ngôi sao 6px */
+    margin-left: 6px;
+    /* [Làm gì]: Nét chữ vừa phải (500) */
+    font-weight: 500;
+}
+
+.dest-body h3 {
+    /* [Làm gì]: Cỡ chữ tiêu đề địa điểm 1.25rem (~20px) */
+    font-size: 1.25rem;
+    /* [Làm gì]: Màu chữ xám đen (#222) */
+    color: #222222;
+    /* [Làm gì]: In đậm 700 */
+    font-weight: 700;
+    /* [Làm gì]: Chiều cao dòng 1.35 */
+    line-height: 1.35;
+    /* [Làm gì]: Cách dòng địa chỉ 10px */
+    margin-bottom: 10px;
+}
+
+.dest-location {
+    /* [Làm gì]: Màu xanh ngọc chủ đạo (#35B0D2) */
+    color: #35B0D2;
+    /* [Làm gì]: Cỡ chữ địa chỉ 0.9rem */
+    font-size: 0.9rem;
+    /* [Làm gì]: In đậm vừa phải (600) */
+    font-weight: 600;
+    /* [Làm gì]: Cách đoạn mô tả 14px */
+    margin-bottom: 14px;
+}
+
+.dest-desc {
+    /* [Làm gì]: Màu chữ xám tối (#555555) | [Tác dụng khi dùng]: Dễ đọc */
+    color: #555555;
+    /* [Làm gì]: Cỡ chữ 0.95rem */
+    font-size: 0.95rem;
+    /* [Làm gì]: Khoảng cách dòng 1.6 */
+    line-height: 1.6;
+    /* [Làm gì]: Cách danh sách điểm nổi bật 18px */
+    margin-bottom: 18px;
+    /* [Làm gì]: Tự giãn cách để đẩy phần dưới xuống đáy */
+    flex: 1;
+}
+
+.dest-features {
+    /* [Làm gì]: Xếp các mục nổi bật theo hàng dọc */
+    display: flex;
+    flex-direction: column;
+    /* [Làm gì]: Khoảng cách giữa các mục là 8px */
+    gap: 8px;
+    /* [Làm gì]: Tạo đường kẻ mờ phân cách phía trên */
+    border-top: 1px dashed #e8ecf0;
+    /* [Làm gì]: Đệm trên 14px */
+    padding-top: 14px;
+}
+
+.dest-features li {
+    /* [Làm gì]: Xóa lề */
+    margin: 0;
+    /* [Làm gì]: Cỡ chữ điểm nổi bật 0.88rem */
+    font-size: 0.88rem;
+    /* [Làm gì]: Màu chữ (#444) */
+    color: #444444;
+    /* [Làm gì]: Kích hoạt flexbox để căn icon thẳng hàng với chữ */
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.dest-features li i {
+    /* [Làm gì]: Màu xanh lá cây cho icon dấu tích kiểm (#27ae60) */
+    color: #27ae60;
+    /* [Làm gì]: Cỡ icon nhỏ gọn 0.85rem */
+    font-size: 0.85rem;
+}
+
+
+/* =======================================================
+   TRANG ĐỊA ĐIỂM: HỘP CẨM NANG BỎ TÚI (.travel-tips-box)
+======================================================= */
+.travel-tips-box {
+    /* [Làm gì]: Nền chuyển màu xanh ngọc nhạt êm dịu */
+    background: linear-gradient(135deg, #e6f7fa 0%, #edf5f7 100%);
+    /* [Làm gì]: Bo góc lớn 24px */
+    border-radius: 24px;
+    /* [Làm gì]: Đệm trong 45px 35px */
+    padding: 45px 35px;
+    /* [Làm gì]: Cách danh sách phía trên 70px */
+    margin-top: 70px;
+    /* [Làm gì]: Viền mảnh màu xanh ngọc nhạt */
+    border: 1px solid #d4eff5;
+}
+
+.tips-header {
+    /* [Làm gì]: Flexbox xếp icon và chữ tiêu đề nằm ngang */
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    /* [Làm gì]: Cách lưới bên dưới 35px */
+    margin-bottom: 35px;
+}
+
+.tips-header > i {
+    /* [Làm gì]: Kích thước icon bóng đèn lớn 56px */
+    width: 56px;
+    height: 56px;
+    min-width: 56px;
+    /* [Làm gì]: Nền màu xanh ngọc (#35B0D2) */
+    background-color: #35B0D2;
+    /* [Làm gì]: Màu icon trắng tinh */
+    color: #ffffff;
+    /* [Làm gì]: Cỡ icon 1.6rem */
+    font-size: 1.6rem;
+    /* [Làm gì]: Bo tròn tròn xoe (50%) */
+    border-radius: 50%;
+    /* [Làm gì]: Căn icon vào chính giữa vòng tròn */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* [Làm gì]: Đổ bóng xanh phát sáng */
+    box-shadow: 0 6px 18px rgba(53, 176, 210, 0.35);
+}
+
+.tips-header h3 {
+    /* [Làm gì]: Cỡ chữ tiêu đề cẩm nang 1.45rem */
+    font-size: 1.45rem;
+    /* [Làm gì]: Màu xám đen (#222) */
+    color: #222222;
+    /* [Làm gì]: In đậm 700 */
+    font-weight: 700;
+    /* [Làm gì]: Cách đoạn mô tả 6px */
+    margin-bottom: 6px;
+}
+
+.tips-header p {
+    /* [Làm gì]: Màu chữ xám (#666) */
+    color: #666666;
+    /* [Làm gì]: Cỡ chữ 0.95rem */
+    font-size: 0.95rem;
+}
+
+.tips-grid {
+    /* [Làm gì]: Chia làm 3 cột đều nhau trên máy tính */
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    /* [Làm gì]: Khoảng cách giữa 3 hộp là 25px */
+    gap: 25px;
+}
+
+.tip-item {
+    /* [Làm gì]: Nền trắng tinh */
+    background-color: #ffffff;
+    /* [Làm gì]: Bo góc 18px */
+    border-radius: 18px;
+    /* [Làm gì]: Đệm trong 25px */
+    padding: 25px;
+    /* [Làm gì]: Đổ bóng nhẹ */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.04);
+}
+
+.tip-icon {
+    /* [Làm gì]: Kích thước icon hộp nhỏ 46px */
+    width: 46px;
+    height: 46px;
+    /* [Làm gì]: Nền xanh nhạt (#e6f7fa) */
+    background-color: #e6f7fa;
+    /* [Làm gì]: Màu icon xanh ngọc (#35B0D2) */
+    color: #35B0D2;
+    /* [Làm gì]: Cỡ icon 1.25rem */
+    font-size: 1.25rem;
+    /* [Làm gì]: Bo tròn 12px */
+    border-radius: 12px;
+    /* [Làm gì]: Căn icon ra giữa */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* [Làm gì]: Cách tiêu đề bên dưới 16px */
+    margin-bottom: 16px;
+}
+
+.tip-item h4 {
+    /* [Làm gì]: Cỡ chữ tiêu đề mẹo 1.15rem */
+    font-size: 1.15rem;
+    /* [Làm gì]: Màu chữ (#222) */
+    color: #222222;
+    /* [Làm gì]: In đậm 700 */
+    font-weight: 700;
+    /* [Làm gì]: Cách đoạn nội dung 10px */
+    margin-bottom: 10px;
+}
+
+.tip-item p {
+    /* [Làm gì]: Màu chữ (#555) */
+    color: #555555;
+    /* [Làm gì]: Cỡ chữ 0.92rem */
+    font-size: 0.92rem;
+    /* [Làm gì]: Khoảng cách dòng 1.6 */
+    line-height: 1.6;
+}
+
+
+/* =======================================================
+   TRANG ẨM THỰC: LƯỚI CARD MÓN ĂN (.food-grid, .food-card)
+======================================================= */
+.food-grid {
+    /* [Làm gì]: Lưới chia cột tự động cho các món ăn | [Tác dụng khi dùng]: Dàn đều các món đẹp mắt */
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    /* [Làm gì]: Khoảng cách 30px giữa các món */
+    gap: 30px;
+}
+
+.food-card {
+    /* [Làm gì]: Nền trắng tinh */
+    background-color: #ffffff;
+    /* [Làm gì]: Bo tròn 20px bốn góc */
+    border-radius: 20px;
+    /* [Làm gì]: Giấu nội dung tràn góc */
+    overflow: hidden;
+    /* [Làm gì]: Viền kẻ mờ */
+    border: 1px solid #edf2f5;
+    /* [Làm gì]: Đổ bóng 3D */
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+    /* [Làm gì]: Chuyển động mượt mà trong 0.35s */
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+    /* [Làm gì]: Flexbox dọc */
+    display: flex;
+    flex-direction: column;
+}
+
+.food-card:hover {
+    /* [Làm gì]: Nhấc thẻ món ăn bay lên 8px */
+    transform: translateY(-8px);
+    /* [Làm gì]: Đổ bóng ấm áp màu cam nhẹ */
+    box-shadow: 0 18px 35px rgba(230, 126, 34, 0.16);
+}
+
+.food-thumb {
+    /* [Làm gì]: Chiều cao ảnh món ăn 230px */
+    height: 230px;
+    /* [Làm gì]: Điểm neo định vị */
+    position: relative;
+    overflow: hidden;
+}
+
+.food-thumb img {
+    /* [Làm gì]: Kích thước tràn 100% */
+    width: 100%;
+    height: 100%;
+    /* [Làm gì]: Cắt cúp thông minh không bẹp méo */
+    object-fit: cover;
+    /* [Làm gì]: Chuyển động mượt 0.4s */
+    transition: transform 0.4s ease;
+}
+
+.food-card:hover .food-thumb img {
+    /* [Làm gì]: Zoom ảnh món ăn 1.06 lần */
+    transform: scale(1.06);
+}
+
+.food-badge {
+    /* [Làm gì]: Huy hiệu góc trên bên phải ảnh món ăn */
+    position: absolute;
+    top: 14px;
+    right: 14px;
+    color: #ffffff;
+    font-size: 0.82rem;
+    font-weight: 700;
+    border-radius: 30px;
+    padding: 6px 14px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+    z-index: 2;
+}
+
+.food-body {
+    /* [Làm gì]: Đệm trong 24px */
+    padding: 24px;
+    /* [Làm gì]: Tự chiếm trọn chiều cao còn lại */
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.food-category {
+    /* [Làm gì]: Màu cam cháy nổi bật cho phân loại món (#e67e22) */
+    color: #e67e22;
+    /* [Làm gì]: Cỡ chữ 0.88rem */
+    font-size: 0.88rem;
+    /* [Làm gì]: In đậm 700 */
+    font-weight: 700;
+    /* [Làm gì]: Cách tiêu đề 8px */
+    margin-bottom: 8px;
+    /* [Làm gì]: Giãn cách chữ 1px */
+    letter-spacing: 0.5px;
+}
+
+.food-body h3 {
+    /* [Làm gì]: Cỡ chữ tên món ăn 1.25rem */
+    font-size: 1.25rem;
+    /* [Làm gì]: Màu xám đen (#222) */
+    color: #222222;
+    /* [Làm gì]: In đậm 700 */
+    font-weight: 700;
+    /* [Làm gì]: Khoảng cách dòng 1.35 */
+    line-height: 1.35;
+    /* [Làm gì]: Cách đoạn mô tả 12px */
+    margin-bottom: 12px;
+}
+
+.food-desc {
+    /* [Làm gì]: Màu chữ (#555) */
+    color: #555555;
+    /* [Làm gì]: Cỡ chữ 0.95rem */
+    font-size: 0.95rem;
+    /* [Làm gì]: Chiều cao dòng 1.6 */
+    line-height: 1.6;
+    /* [Làm gì]: Cách hộp cảm nhận hương vị 16px */
+    margin-bottom: 16px;
+    /* [Làm gì]: Tự giãn cách */
+    flex: 1;
+}
+
+.food-taste-box {
+    /* [Làm gì]: Nền màu vàng kem nhạt ấm cúng (#fff9f2) */
+    background-color: #fff9f2;
+    /* [Làm gì]: Viền kẻ đậm màu cam ở mép trái (4px) | [Tác dụng khi dùng]: Tạo điểm nhấn ghi chú đặc sản */
+    border-left: 4px solid #e67e22;
+    /* [Làm gì]: Đệm trong 12px 16px */
+    padding: 12px 16px;
+    /* [Làm gì]: Bo nhẹ góc phải (8px) */
+    border-radius: 0 8px 8px 0;
+    /* [Làm gì]: Cỡ chữ 0.9rem */
+    font-size: 0.9rem;
+    /* [Làm gì]: Màu chữ (#444) */
+    color: #444444;
+    /* [Làm gì]: Chiều cao dòng 1.55 */
+    line-height: 1.55;
+}
+
+.food-taste-box strong {
+    /* [Làm gì]: Màu cam nổi bật cho chữ "Hương vị" */
+    color: #e67e22;
+}
+
+
+/* =======================================================
+   TRANG ẨM THỰC: BẢNG GỢI Ý ĐỊA CHỈ ĂN NGON (.food-places-section)
+======================================================= */
+.food-places-section {
+    /* [Làm gì]: Nền trắng tinh */
+    background-color: #ffffff;
+    /* [Làm gì]: Bo góc lớn 24px */
+    border-radius: 24px;
+    /* [Làm gì]: Đệm trong 45px 35px */
+    padding: 45px 35px;
+    /* [Làm gì]: Cách danh sách món ăn 70px */
+    margin-top: 70px;
+    /* [Làm gì]: Viền kẻ xám nhạt */
+    border: 1px solid #edf2f5;
+    /* [Làm gì]: Đổ bóng 3D */
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+}
+
+.places-header {
+    /* [Làm gì]: Flexbox xếp icon và tiêu đề nằm ngang */
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    /* [Làm gì]: Cách bảng 30px */
+    margin-bottom: 30px;
+}
+
+.places-header > i {
+    /* [Làm gì]: Kích thước icon cửa hàng 56px */
+    width: 56px;
+    height: 56px;
+    min-width: 56px;
+    /* [Làm gì]: Nền cam ấm (#e67e22) */
+    background-color: #e67e22;
+    /* [Làm gì]: Màu icon trắng */
+    color: #ffffff;
+    /* [Làm gì]: Cỡ icon 1.5rem */
+    font-size: 1.5rem;
+    /* [Làm gì]: Bo tròn 50% */
+    border-radius: 50%;
+    /* [Làm gì]: Căn giữa */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* [Làm gì]: Đổ bóng cam */
+    box-shadow: 0 6px 18px rgba(230, 126, 34, 0.35);
+}
+
+.places-header h3 {
+    /* [Làm gì]: Cỡ chữ 1.4rem */
+    font-size: 1.4rem;
+    /* [Làm gì]: Màu xám đen (#222) */
+    color: #222222;
+    /* [Làm gì]: In đậm 700 */
+    font-weight: 700;
+    /* [Làm gì]: Cách mô tả 6px */
+    margin-bottom: 6px;
+}
+
+.places-header p {
+    /* [Làm gì]: Màu xám (#666) */
+    color: #666666;
+    /* [Làm gì]: Cỡ chữ 0.95rem */
+    font-size: 0.95rem;
+}
+
+.places-table-wrapper {
+    /* [Làm gì]: Cho phép cuộn ngang trên điện thoại nếu bảng quá dài | [Tác dụng khi dùng]: Bảng không bị vỡ trên di động */
+    overflow-x: auto;
+}
+
+.places-table {
+    /* [Làm gì]: Bảng chiếm 100% bề ngang */
+    width: 100%;
+    /* [Làm gì]: Gộp viền bảng lại không bị viền đôi | [Tác dụng khi dùng]: Gọn gàng và chuẩn UI */
+    border-collapse: collapse;
+    /* [Làm gì]: Cỡ chữ bảng 0.95rem */
+    font-size: 0.95rem;
+}
+
+.places-table th, 
+.places-table td {
+    /* [Làm gì]: Đệm trong mỗi ô: trên-dưới 16px, trái-phải 18px */
+    padding: 16px 18px;
+    /* [Làm gì]: Căn lề chữ sang trái */
+    text-align: left;
+    /* [Làm gì]: Đường kẻ đáy mỏng phân cách các hàng */
+    border-bottom: 1px solid #edf2f5;
+}
+
+.places-table th {
+    /* [Làm gì]: Nền tiêu đề bảng xanh nhạt (#edf8fa) */
+    background-color: #edf8fa;
+    /* [Làm gì]: Màu chữ xanh ngọc chủ đạo (#35B0D2) */
+    color: #35B0D2;
+    /* [Làm gì]: In đậm 700 */
+    font-weight: 700;
+}
+
+.places-table tr:hover {
+    /* [Làm gì]: Đổi màu nền hàng khi rê chuột vào | [Tác dụng khi dùng]: Dễ theo dõi dòng đang xem */
+    background-color: #fcfcfc;
+}
+
+.places-table td strong {
+    /* [Làm gì]: Tô đậm tên món ăn */
+    color: #222222;
+}
+
+
+/* =======================================================
+   TRANG LIÊN HỆ: BỐ CỤC 2 CỘT (.contact-wrapper)
+======================================================= */
+.contact-wrapper {
+    /* [Làm gì]: Kích hoạt Flexbox bố cục 2 cột | [Tác dụng khi dùng]: Cột thông tin bên trái và Form gửi bên phải */
+    display: flex;
+    /* [Làm gì]: Cho phép rớt xuống dòng khi thiếu chỗ trên màn hình nhỏ */
+    flex-wrap: wrap;
+    /* [Làm gì]: Khoảng cách giữa 2 cột là 40px */
+    gap: 40px;
+    /* [Làm gì]: Cách khối bản đồ bên dưới 70px */
+    margin-bottom: 70px;
+}
+
+/* CỘT THÔNG TIN LIÊN HỆ BÊN TRÁI */
+.contact-info-col {
+    /* [Làm gì]: Chiếm độ rộng cơ sở 380px, co giãn linh hoạt */
+    flex: 1 1 380px;
+    /* [Làm gì]: Sắp xếp các hộp thông tin theo chiều dọc */
+    display: flex;
+    flex-direction: column;
+    /* [Làm gì]: Khoảng cách giữa các hộp là 20px */
+    gap: 20px;
+}
+
+.contact-card {
+    /* [Làm gì]: Flexbox xếp icon và chữ nằm ngang */
+    display: flex;
+    align-items: flex-start;
+    /* [Làm gì]: Khoảng cách giữa icon và chữ là 18px */
+    gap: 18px;
+    /* [Làm gì]: Nền trắng tinh */
+    background-color: #ffffff;
+    /* [Làm gì]: Bo góc 18px */
+    border-radius: 18px;
+    /* [Làm gì]: Đệm trong 22px */
+    padding: 22px;
+    /* [Làm gì]: Viền xám mờ */
+    border: 1px solid #edf2f5;
+    /* [Làm gì]: Đổ bóng 3D */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.04);
+    /* [Làm gì]: Chuyển động mượt khi hover */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-card:hover {
+    /* [Làm gì]: Nhấc thẻ bay nhẹ lên 4px */
+    transform: translateY(-4px);
+    /* [Làm gì]: Đổ bóng xanh nhẹ */
+    box-shadow: 0 12px 25px rgba(53, 176, 210, 0.15);
+}
+
+.contact-icon {
+    /* [Làm gì]: Kích thước icon hình vuông bo góc 52px */
+    width: 52px;
+    height: 52px;
+    min-width: 52px;
+    /* [Làm gì]: Nền xanh nhạt (#e6f7fa) */
+    background-color: #e6f7fa;
+    /* [Làm gì]: Màu icon xanh ngọc chủ đạo (#35B0D2) */
+    color: #35B0D2;
+    /* [Làm gì]: Cỡ icon 1.35rem */
+    font-size: 1.35rem;
+    /* [Làm gì]: Bo góc mềm mại 14px */
+    border-radius: 14px;
+    /* [Làm gì]: Căn icon ra chính giữa */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact-text h4 {
+    /* [Làm gì]: Cỡ chữ tiêu đề 1.1rem */
+    font-size: 1.1rem;
+    /* [Làm gì]: Màu xám đen (#222) */
+    color: #222222;
+    /* [Làm gì]: In đậm 700 */
+    font-weight: 700;
+    /* [Làm gì]: Cách nội dung 6px */
+    margin-bottom: 6px;
+}
+
+.contact-text p {
+    /* [Làm gì]: Màu chữ (#555) */
+    color: #555555;
+    /* [Làm gì]: Cỡ chữ 0.95rem */
+    font-size: 0.95rem;
+    /* [Làm gì]: Khoảng cách dòng 1.55 */
+    line-height: 1.55;
+    /* [Làm gì]: Xóa lề thừa */
+    margin: 0;
+}
+
+.contact-text p strong {
+    /* [Làm gì]: Màu xanh ngọc cho số điện thoại hotline */
+    color: #35B0D2;
+}
+
+/* HỘP KẾT NỐI MẠNG XÃ HỘI */
+.social-connect-box {
+    /* [Làm gì]: Nền màu xanh xám nhạt dịu mát (#edf5f7) */
+    background-color: #edf5f7;
+    /* [Làm gì]: Bo góc 18px */
+    border-radius: 18px;
+    /* [Làm gì]: Đệm trong 24px */
+    padding: 24px;
+    /* [Làm gì]: Căn chữ ra giữa */
+    text-align: center;
+    /* [Làm gì]: Viền kẻ mờ */
+    border: 1px solid #e1eff2;
+}
+
+.social-connect-box h4 {
+    /* [Làm gì]: Cỡ chữ 1.05rem */
+    font-size: 1.05rem;
+    /* [Làm gì]: Màu chữ (#222) */
+    color: #222222;
+    /* [Làm gì]: In đậm 700 */
+    font-weight: 700;
+}
+
+.social-buttons {
+    /* [Làm gì]: Flexbox căn các nút mạng xã hội ra giữa */
+    display: flex;
+    justify-content: center;
+    /* [Làm gì]: Khoảng cách 15px giữa các nút */
+    gap: 15px;
+    /* [Làm gì]: Cách tiêu đề 16px */
+    margin-top: 16px;
+}
+
+.social-btn {
+    /* [Làm gì]: Kích thước nút mạng xã hội 46px */
+    width: 46px;
+    height: 46px;
+    /* [Làm gì]: Bo tròn tròn xoe 50% */
+    border-radius: 50%;
+    /* [Làm gì]: Căn icon ra chính giữa nút */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* [Làm gì]: Màu icon trắng */
+    color: #ffffff;
+    /* [Làm gì]: Cỡ icon 1.2rem */
+    font-size: 1.2rem;
+    /* [Làm gì]: Chuyển động mượt 0.3s */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.social-btn:hover {
+    /* [Làm gì]: Nhấc nút bay lên 4px khi rê chuột */
+    transform: translateY(-4px);
+    /* [Làm gì]: Đổ bóng phát sáng */
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.2);
+}
+
+/* MÀU NỀN TỪNG MẠNG XÃ HỘI */
+.btn-fb { background-color: #1877f2; }
+.btn-yt { background-color: #ff0000; }
+.btn-tt { background-color: #000000; }
+.btn-zl { background-color: #0068ff; }
+
+
+/* CỘT FORM GỬI THÔNG TIN BÊN PHẢI */
+.contact-form-col {
+    /* [Làm gì]: Chiếm bề rộng cơ sở 500px, linh hoạt co giãn */
+    flex: 1 1 500px;
+}
+
+.form-container {
+    /* [Làm gì]: Nền trắng tinh */
+    background-color: #ffffff;
+    /* [Làm gì]: Bo góc lớn 24px */
+    border-radius: 24px;
+    /* [Làm gì]: Đệm trong 40px */
+    padding: 40px;
+    /* [Làm gì]: Viền xám nhạt */
+    border: 1px solid #edf2f5;
+    /* [Làm gì]: Đổ bóng 3D */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+}
+
+.form-container h3 {
+    /* [Làm gì]: Cỡ chữ tiêu đề form 1.55rem */
+    font-size: 1.55rem;
+    /* [Làm gì]: Màu xám đen (#222) */
+    color: #222222;
+    /* [Làm gì]: In đậm 800 */
+    font-weight: 800;
+    /* [Làm gì]: Cách dòng mô tả 8px */
+    margin-bottom: 8px;
+}
+
+.form-subtext {
+    /* [Làm gì]: Màu xám (#666) */
+    color: #666666;
+    /* [Làm gì]: Cỡ chữ 0.95rem */
+    font-size: 0.95rem;
+    /* [Làm gì]: Cách các ô nhập 25px */
+    margin-bottom: 25px;
+}
+
+.styled-form .form-group {
+    /* [Làm gì]: Cách ô nhập kế tiếp 20px */
+    margin-bottom: 20px;
+}
+
+.styled-form label {
+    /* [Làm gì]: Hiển thị dạng khối độc lập trên ô nhập */
+    display: block;
+    /* [Làm gì]: Cỡ chữ nhãn 0.92rem */
+    font-size: 0.92rem;
+    /* [Làm gì]: In đậm vừa phải 600 */
+    font-weight: 600;
+    /* [Làm gì]: Màu xám đậm (#333) */
+    color: #333333;
+    /* [Làm gì]: Cách ô nhập 8px */
+    margin-bottom: 8px;
+}
+
+.styled-form label i {
+    /* [Làm gì]: Màu icon nhãn xanh ngọc */
+    color: #35B0D2;
+    /* [Làm gì]: Cách chữ nhãn 6px */
+    margin-right: 6px;
+}
+
+.styled-form .required {
+    /* [Làm gì]: Dấu sao đỏ báo trường bắt buộc nhập */
+    color: #e74c3c;
+    margin-left: 2px;
+}
+
+.form-row {
+    /* [Làm gì]: Xếp 2 ô Số điện thoại và Email nằm song song ngang hàng trên máy tính */
+    display: flex;
+    /* [Làm gì]: Khoảng cách giữa 2 ô là 20px */
+    gap: 20px;
+}
+
+.form-row .form-group {
+    /* [Làm gì]: Chia đều 50% độ rộng cho mỗi ô */
+    flex: 1;
+}
+
+.styled-form input,
+.styled-form select,
+.styled-form textarea {
+    /* [Làm gì]: Chiếm trọn 100% độ rộng của ô chứa */
+    width: 100%;
+    /* [Làm gì]: Đệm trong: trên-dưới 13px, trái-phải 16px | [Tác dụng khi dùng]: Ô nhập to rõ, dễ bấm */
+    padding: 13px 16px;
+    /* [Làm gì]: Viền xám mỏng 1.5px */
+    border: 1.5px solid #e2e8f0;
+    /* [Làm gì]: Bo góc 12px */
+    border-radius: 12px;
+    /* [Làm gì]: Cỡ chữ 0.95rem */
+    font-size: 0.95rem;
+    /* [Làm gì]: Đồng bộ phông chữ Poppins của website */
+    font-family: inherit;
+    /* [Làm gì]: Màu chữ (#333) */
+    color: #333333;
+    /* [Làm gì]: Nền màu trắng tinh */
+    background-color: #ffffff;
+    /* [Làm gì]: Chuyển màu viền mượt mà khi bấm chuột vào */
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.styled-form textarea {
+    /* [Làm gì]: Cho phép người dùng kéo giãn chiều cao textarea nếu viết dài */
+    resize: vertical;
+}
+
+/* HIỆU ỨNG KHI BẤM CHUỘT VÀO Ô NHẬP (FOCUS) */
+.styled-form input:focus,
+.styled-form select:focus,
+.styled-form textarea:focus {
+    /* [Làm gì]: Bỏ đường viền đen mặc định của trình duyệt */
+    outline: none;
+    /* [Làm gì]: Đổi viền sang màu xanh ngọc chủ đạo (#35B0D2) */
+    border-color: #35B0D2;
+    /* [Làm gì]: Đổ bóng hào quang xanh ngọc phát sáng 4px quanh ô */
+    box-shadow: 0 0 0 4px rgba(53, 176, 210, 0.15);
+}
+
+.btn-submit {
+    /* [Làm gì]: Nút chiếm trọn 100% bề ngang */
+    width: 100%;
+    /* [Làm gì]: Đệm trong 15px */
+    padding: 15px;
+    /* [Làm gì]: Nền chuyển màu xanh ngọc sang xanh đậm */
+    background: linear-gradient(135deg, #35B0D2 0%, #228aa7 100%);
+    /* [Làm gì]: Màu chữ trắng tinh */
+    color: #ffffff;
+    /* [Làm gì]: Xóa đường viền nút */
+    border: none;
+    /* [Làm gì]: Bo góc nút 12px */
+    border-radius: 12px;
+    /* [Làm gì]: Cỡ chữ 1.05rem */
+    font-size: 1.05rem;
+    /* [Làm gì]: In đậm chữ 700 */
+    font-weight: 700;
+    /* [Làm gì]: Con trỏ chuột chuyển thành hình bàn tay khi rê vào nút */
+    cursor: pointer;
+    /* [Làm gì]: Flexbox căn chữ và icon máy bay giấy ra giữa */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* [Làm gì]: Khoảng cách giữa chữ và icon 10px */
+    gap: 10px;
+    /* [Làm gì]: Chuyển động mượt 0.3s */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn-submit:hover {
+    /* [Làm gì]: Nhấc nút bay lên 3px khi rê chuột */
+    transform: translateY(-3px);
+    /* [Làm gì]: Đổ bóng xanh phát sáng quanh nút */
+    box-shadow: 0 8px 25px rgba(53, 176, 210, 0.35);
+}
+
+.form-success-alert {
+    /* [Làm gì]: Nền xanh lá cây nhạt báo thành công (#d4edda) */
+    background-color: #d4edda;
+    /* [Làm gì]: Màu chữ xanh lá đậm (#155724) */
+    color: #155724;
+    /* [Làm gì]: Viền xanh lá (#c3e6cb) */
+    border: 1px solid #c3e6cb;
+    /* [Làm gì]: Bo góc 12px */
+    border-radius: 12px;
+    /* [Làm gì]: Đệm trong 16px */
+    padding: 16px;
+    /* [Làm gì]: Cách nút gửi 20px */
+    margin-top: 20px;
+    /* [Làm gì]: Cỡ chữ 0.95rem */
+    font-size: 0.95rem;
+    /* [Làm gì]: In đậm vừa 600 */
+    font-weight: 600;
+}
+
+
+/* =======================================================
+   TRANG LIÊN HỆ: BẢN ĐỒ GOOGLE MAPS (.map-section)
+======================================================= */
+.map-section {
+    /* [Làm gì]: Cách phần trên 60px */
+    margin-top: 60px;
+    /* [Làm gì]: Cách phần FAQ bên dưới 70px */
+    margin-bottom: 70px;
+}
+
+.map-wrapper {
+    /* [Làm gì]: Bo tròn 20px góc bản đồ */
+    border-radius: 20px;
+    /* [Làm gì]: Giấu các góc thừa của iframe bản đồ */
+    overflow: hidden;
+    /* [Làm gì]: Đổ bóng 3D */
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    /* [Làm gì]: Viền xám mỏng */
+    border: 1px solid #edf2f5;
+}
+
+.map-wrapper iframe {
+    /* [Làm gì]: Hiển thị dạng khối | [Tác dụng khi dùng]: Xóa khoảng trống thừa dưới đáy iframe */
+    display: block;
+}
+
+
+/* =======================================================
+   TRANG LIÊN HỆ: CÂU HỎI THƯỜNG GẶP FAQ (.faq-section)
+======================================================= */
+.faq-section {
+    /* [Làm gì]: Cách lề dưới 60px */
+    margin-bottom: 60px;
+}
+
+.faq-grid {
+    /* [Làm gì]: Lưới chia 2 cột câu hỏi trên máy tính */
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    /* [Làm gì]: Khoảng cách giữa các câu hỏi là 25px */
+    gap: 25px;
+}
+
+.faq-item {
+    /* [Làm gì]: Nền trắng tinh */
+    background-color: #ffffff;
+    /* [Làm gì]: Bo góc 18px */
+    border-radius: 18px;
+    /* [Làm gì]: Đệm trong 25px */
+    padding: 25px;
+    /* [Làm gì]: Viền kẻ xám nhạt */
+    border: 1px solid #edf2f5;
+    /* [Làm gì]: Đổ bóng nhẹ */
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.04);
+}
+
+.faq-item h4 {
+    /* [Làm gì]: Cỡ chữ tiêu đề câu hỏi 1.1rem */
+    font-size: 1.1rem;
+    /* [Làm gì]: Màu xanh ngọc chủ đạo (#35B0D2) */
+    color: #35B0D2;
+    /* [Làm gì]: In đậm 700 */
+    font-weight: 700;
+    /* [Làm gì]: Cách đoạn trả lời 10px */
+    margin-bottom: 10px;
+    /* [Làm gì]: Chiều cao dòng 1.4 */
+    line-height: 1.4;
+}
+
+.faq-item h4 i {
+    /* [Làm gì]: Cách chữ câu hỏi 8px */
+    margin-right: 8px;
+}
+
+.faq-item p {
+    /* [Làm gì]: Màu chữ (#555) */
+    color: #555555;
+    /* [Làm gì]: Cỡ chữ 0.95rem */
+    font-size: 0.95rem;
+    /* [Làm gì]: Chiều cao dòng 1.6 */
+    line-height: 1.6;
+    /* [Làm gì]: Xóa lề thừa */
+    margin: 0;
+}
+
+
+/* =======================================================
+   RESPONSIVE TOÀN DIỆN CHO MÀN HÌNH ĐIỆN THOẠI (DƯỚI 768px)
+======================================================= */
 @media (max-width: 768px) {
+    /* 1. KHU VỰC VỊ TRÍ BẢN ĐỒ TRANG GIỚI THIỆU */
     .section-hero1 {
         padding: 40px 15px;
         border-radius: 16px;
         gap: 20px;
     }
 
-    .section-hero-item p {
-        font: 0.95rem;
+    .section-hero1-item p {
+        font-size: 0.95rem;
     }
 
     .section-hero1-image {
@@ -1406,5 +2588,105 @@ footer {
     .section-hero1-image img {
         height: 220px;
     }
+
+    /* 2. BANNER HERO CÁC TRANG CON */
+    .hero-page {
+        min-height: 42vh;
+        padding: 40px 15px;
+    }
+
+    .hero-page-content h1 {
+        font-size: 1.9rem;
+    }
+
+    .hero-page-content p {
+        font-size: 0.95rem;
+    }
+
+    /* 3. KHUNG CHỨA TOÀN TRANG & TIÊU ĐỀ */
+    .page-container {
+        margin: 40px auto 60px auto;
+        padding: 0 15px;
+    }
+
+    .section-heading {
+        margin-bottom: 35px;
+    }
+
+    .section-heading h2 {
+        font-size: 1.65rem;
+    }
+
+    /* 4. LƯỚI CARD ĐỊA ĐIỂM & ẨM THỰC TRÊN MOBILE: 1 CỘT ĐỨNG */
+    .dest-grid,
+    .food-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .dest-thumb,
+    .food-thumb {
+        height: 210px;
+    }
+
+    /* 5. CẨM NANG VÀ BẢNG ẨM THỰC TRÊN MOBILE */
+    .travel-tips-box,
+    .food-places-section {
+        padding: 30px 18px;
+        margin-top: 50px;
+        border-radius: 18px;
+    }
+
+    .tips-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    /* 6. KHUNG LIÊN HỆ & FORM TRÊN MOBILE */
+    .contact-wrapper {
+        gap: 30px;
+        margin-bottom: 50px;
+    }
+
+    .form-container {
+        padding: 25px 18px;
+        border-radius: 18px;
+    }
+
+    .form-row {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    /* 7. BẢN ĐỒ & FAQ TRÊN MOBILE */
+    .map-wrapper iframe {
+        height: 320px;
+    }
+
+    .faq-grid {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
 }
+
+
+/* =======================================================
+   RESPONSIVE CHO MÀN HÌNH ĐIỆN THOẠI NHỎ (DƯỚI 480px)
+======================================================= */
+@media (max-width: 480px) {
+    .hero-page-content h1 {
+        font-size: 1.65rem;
+    }
+
+    .dest-body,
+    .food-body {
+        padding: 18px;
+    }
+
+    .dest-body h3,
+    .food-body h3 {
+        font-size: 1.15rem;
+    }
+}
+
 

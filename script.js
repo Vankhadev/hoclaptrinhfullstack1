@@ -68,9 +68,33 @@ allLinks.forEach((link) => {
 document.addEventListener('click', (e) => {
     // [Làm gì]: Kiểm tra xem vị trí người dùng vừa click có nằm bên trong menu hay nút bấm không.
     // Nếu KHÔNG nằm bên trong -> Tức là bấm ra ngoài.
-    if (!navLinks.contains(e.target) && !menuToggle.contains(e.target)) {
+    if (navLinks && menuToggle && !navLinks.contains(e.target) && !menuToggle.contains(e.target)) {
         navLinks.classList.remove('active');
         menuIcon.classList.remove('fa-xmark');
         menuIcon.classList.add('fa-bars');
     }
 });
+
+
+// =======================================================
+// 5. XỬ LÝ GỬI FORM LIÊN HỆ (TRANG LIEN-HE.HTML)
+// =======================================================
+// [Khi nào dùng]: Ngăn trang web bị tải lại và hiển thị thông báo cảm ơn khi gửi form thành công.
+const contactForm = document.getElementById('contactForm');
+const formSuccessMessage = document.getElementById('formSuccessMessage');
+
+if (contactForm) {
+    contactForm.addEventListener('submit', (e) => {
+        // [Làm gì]: Ngăn chặn trình duyệt load lại trang mặc định
+        e.preventDefault();
+
+        // [Làm gì]: Hiển thị khung thông báo gửi thành công màu xanh
+        if (formSuccessMessage) {
+            formSuccessMessage.style.display = 'block';
+            // [Làm gì]: Xóa trắng các ô nhập liệu sau khi gửi thành công
+            contactForm.reset();
+            // [Làm gì]: Cuộn nhẹ màn hình đến dòng thông báo
+            formSuccessMessage.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+    });
+}

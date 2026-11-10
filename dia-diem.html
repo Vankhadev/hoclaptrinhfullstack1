@@ -1,40 +1,305 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="vi">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Địa Điểm Quê Tôi</title>
+    <title>Địa Điểm Du Lịch Bến Tre | Cảnh Đẹp Xứ Dừa</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
+    <!-- =======================================================
+         HEADER & THANH ĐIỀU HƯỚNG CHÍNH
+    ======================================================= -->
     <header>
         <nav>
-        <a href="index.html" class="logo">Bến Tre</a>
-        <button class="menu-toggle">
-            <i class="fas fa-bars"></i>
-        </button>
-        <ul class="nav-links">
-            <li><a href="./index.html">Trang Chủ</a></li>
-            <li><a href="./gioi_thieu.html">Giới Thiệu</a></li>
-            <li><a href="./dia_diem.html">Địa Điểm</a></li>
-            <li><a href="./am_thuc.html">Ẩm Thực</a></li>R
-            <li><a href="./lien_he.html">Liên Hệ</a></li>
-        </ul>
+            <a href="index.html" class="logo">Bến Tre</a>
+            <button class="menu-toggle" aria-label="Mở Menu">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul class="nav-links">
+                <li><a href="./index.html">Trang Chủ</a></li>
+                <li><a href="./gioi_thieu.html">Giới Thiệu</a></li>
+                <li><a href="./dia-diem.html" class="active">Địa Điểm</a></li>
+                <li><a href="./am-thuc.html">Ẩm Thực</a></li>
+                <li><a href="./lien-he.html">Liên Hệ</a></li>
+            </ul>
         </nav>
     </header>
 
+    <!-- =======================================================
+         BANNER HERO TRANG ĐỊA ĐIỂM
+    ======================================================= -->
+    <section class="hero-page hero-dest">
+        <div class="hero-page-content">
+            <span class="hero-tag"><i class="fas fa-map-marked-alt"></i> Khám Phá Xứ Dừa</span>
+            <h1>Những Địa Điểm Du Lịch Nổi Tiếng</h1>
+            <p>Từ những cù lao rợp bóng dừa xanh mát, vườn trái cây sum suê trĩu quả đến các di tích lịch sử vang dội - Bến Tre luôn chào đón bạn với lòng hiếu khách chân thành.</p>
+        </div>
+    </section>
+
+    <!-- =======================================================
+         NỘI DUNG CHÍNH: DANH SÁCH ĐỊA ĐIỂM DU LỊCH
+    ======================================================= -->
+    <main class="page-container">
+        <!-- TIÊU ĐỀ KHU VỰC -->
+        <div class="section-heading">
+            <span class="sub-title">Điểm Dừng Chân Lý Tưởng</span>
+            <h2>Top 8 Điểm Đến Không Thể Bỏ Lỡ Tại Bến Tre</h2>
+            <div class="heading-line"></div>
+        </div>
+
+        <!-- LƯỚI CARD ĐỊA ĐIỂM -->
+        <div class="dest-grid">
+            <!-- ĐỊA ĐIỂM 1 -->
+            <article class="dest-card">
+                <div class="dest-thumb">
+                    <img src="./image/bentre02.webp" alt="Khu du lịch sinh thái Cồn Phụng">
+                    <span class="dest-badge badge-green"><i class="fas fa-leaf"></i> Sinh Thái</span>
+                </div>
+                <div class="dest-body">
+                    <div class="dest-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                        <span>4.8 (1.250 đánh giá)</span>
+                    </div>
+                    <h3>1. Khu Du Lịch Sinh Thái Cồn Phụng</h3>
+                    <p class="dest-location"><i class="fas fa-map-marker-alt"></i> Xã Tân Thạch, Huyện Châu Thành, Bến Tre</p>
+                    <p class="dest-desc">Nổi tiếng với di tích Đạo Dừa độc đáo, trải nghiệm ngồi xuồng ba lá luồn lách qua các con rạch dừa nước rợp bóng mát, tham quan trang trại nuôi ong lấy mật và lò kẹo dừa truyền thống.</p>
+                    <ul class="dest-features">
+                        <li><i class="fas fa-check"></i> Chèo xuồng ba lá ngắm rạch dừa</li>
+                        <li><i class="fas fa-check"></i> Thưởng thức trà mật ong hoa nhãn</li>
+                        <li><i class="fas fa-check"></i> Tham quan kiến trúc di tích Đạo Dừa</li>
+                    </ul>
+                </div>
+            </article>
+
+            <!-- ĐỊA ĐIỂM 2 -->
+            <article class="dest-card">
+                <div class="dest-thumb">
+                    <img src="./image/bentre07.jpg" alt="Khu du lịch Lan Vương">
+                    <span class="dest-badge badge-blue"><i class="fas fa-gamepad"></i> Dân Gian</span>
+                </div>
+                <div class="dest-body">
+                    <div class="dest-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <span>4.9 (2.100 đánh giá)</span>
+                    </div>
+                    <h3>2. Khu Du Lịch Lan Vương - Thiên Đường Trò Chơi</h3>
+                    <p class="dest-location"><i class="fas fa-map-marker-alt"></i> Ấp 2, Xã Phú Nhuận, TP. Bến Tre</p>
+                    <p class="dest-desc">Địa điểm vui chơi dã ngoại cực hot! Du khách được mặc áo bà ba truyền thống, hòa mình vào không gian sông nước với các trò chơi tát mương bắt cá, đạp xe qua cầu khỉ, đu dây qua sông và chèo xuồng kayak.</p>
+                    <ul class="dest-features">
+                        <li><i class="fas fa-check"></i> Hóa thân nông dân mặc áo bà ba</li>
+                        <li><i class="fas fa-check"></i> Tát mương bắt cá & nướng trui tại chỗ</li>
+                        <li><i class="fas fa-check"></i> Trò chơi dân gian vui nhộn gắn kết đồng đội</li>
+                    </ul>
+                </div>
+            </article>
+
+            <!-- ĐỊA ĐIỂM 3 -->
+            <article class="dest-card">
+                <div class="dest-thumb">
+                    <img src="./image/bentre06.webp" alt="Làng hoa kiểng Cái Mơn Chợ Lách">
+                    <span class="dest-badge badge-orange"><i class="fas fa-seedling"></i> Làng Nghề</span>
+                </div>
+                <div class="dest-body">
+                    <div class="dest-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <span>4.9 (1.680 đánh giá)</span>
+                    </div>
+                    <h3>3. Làng Hoa Kiểng Cái Mơn - Chợ Lách</h3>
+                    <p class="dest-location"><i class="fas fa-map-marker-alt"></i> Huyện Chợ Lách, Tỉnh Bến Tre</p>
+                    <p class="dest-desc">Được mệnh danh là "vương quốc hoa kiểng và cây giống" lớn nhất miền Tây Nam Bộ. Nơi đây quy tụ hàng triệu chậu mai vàng, cúc mâm xôi, cây cảnh bonsai uốn tỉa nghệ thuật và vườn sầu riêng bạt ngàn.</p>
+                    <ul class="dest-features">
+                        <li><i class="fas fa-check"></i> Check-in biển hoa rực rỡ sắc màu</li>
+                        <li><i class="fas fa-check"></i> Thưởng thức sầu riêng Cái Mơn ngọt béo</li>
+                        <li><i class="fas fa-check"></i> Tìm hiểu nghệ thuật uốn tỉa bonsai kiểng cổ</li>
+                    </ul>
+                </div>
+            </article>
+
+            <!-- ĐỊA ĐIỂM 4 -->
+            <article class="dest-card">
+                <div class="dest-thumb">
+                    <img src="./image/bentre01.jpg" alt="Khu du lịch sinh thái Cồn Quy">
+                    <span class="dest-badge badge-green"><i class="fas fa-leaf"></i> Sinh Thái</span>
+                </div>
+                <div class="dest-body">
+                    <div class="dest-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                        <span>4.7 (890 đánh giá)</span>
+                    </div>
+                    <h3>4. Khu Du Lịch Sinh Thái Cồn Quy</h3>
+                    <p class="dest-location"><i class="fas fa-map-marker-alt"></i> Xã Tân Thạch & Quới Sơn, Huyện Châu Thành</p>
+                    <p class="dest-desc">Cồn Quy vẫn giữ được nét đẹp hoang sơ, mộc mạc nhất trong tứ linh cồn. Du khách sẽ được thưởng thức trái cây chín mọng hái tận cành và thả hồn theo những giai điệu Đờn Ca Tài Tử mộc mạc.</p>
+                    <ul class="dest-features">
+                        <li><i class="fas fa-check"></i> Giao lưu Đờn Ca Tài Tử Nam Bộ</li>
+                        <li><i class="fas fa-check"></i> Vườn nhãn, chôm chôm ăn thỏa thích</li>
+                        <li><i class="fas fa-check"></i> Không gian sông nước êm đềm thư thái</li>
+                    </ul>
+                </div>
+            </article>
+
+            <!-- ĐỊA ĐIỂM 5 -->
+            <article class="dest-card">
+                <div class="dest-thumb">
+                    <img src="./image/bentre03.jpg" alt="Sân chim Vàm Hồ Ba Tri">
+                    <span class="dest-badge badge-teal"><i class="fas fa-feather-alt"></i> Hoang Dã</span>
+                </div>
+                <div class="dest-body">
+                    <div class="dest-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                        <span>4.6 (640 đánh giá)</span>
+                    </div>
+                    <h3>5. Sân Chim Vàm Hồ (Ba Tri)</h3>
+                    <p class="dest-location"><i class="fas fa-map-marker-alt"></i> Xã Mỹ Hòa & Tân Xuân, Huyện Ba Tri</p>
+                    <p class="dest-desc">Khu sinh thái rừng ngập mặn trù phú ven sông Ba Lai, là ngôi nhà trú ngụ của hơn 84 loài chim hoang dã. Cảnh tượng hàng vạn cánh cò trắng bay về tổ trong ánh hoàng hôn đỏ rực là khoảnh khắc kỳ thú không thể nào quên.</p>
+                    <ul class="dest-features">
+                        <li><i class="fas fa-check"></i> Chiêm ngưỡng hàng vạn cánh cò lúc hoàng hôn</li>
+                        <li><i class="fas fa-check"></i> Đi bộ dưới tán rừng chà là nguyên sinh</li>
+                        <li><i class="fas fa-check"></i> Hệ sinh thái đầm lầy tự nhiên độc đáo</li>
+                    </ul>
+                </div>
+            </article>
+
+            <!-- ĐỊA ĐIỂM 6 -->
+            <article class="dest-card">
+                <div class="dest-thumb">
+                    <img src="./image/bentre07.jpg" alt="Di tích Đồng Khởi Bến Tre">
+                    <span class="dest-badge badge-red"><i class="fas fa-monument"></i> Lịch Sử</span>
+                </div>
+                <div class="dest-body">
+                    <div class="dest-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <span>4.8 (920 đánh giá)</span>
+                    </div>
+                    <h3>6. Di Tích Lịch Sử Quốc Gia Đồng Khởi</h3>
+                    <p class="dest-location"><i class="fas fa-map-marker-alt"></i> Xã Định Thủy, Huyện Mỏ Cày Nam, Bến Tre</p>
+                    <p class="dest-desc">Nơi nổ ra ngọn lửa Đồng Khởi huyền thoại năm 1960 của "Đội quân tóc dài" xứ Dừa anh dũng. Khu di tích lưu giữ hàng trăm hiện vật, vũ khí tự tạo và câu chuyện hào hùng của Nữ tướng Nguyễn Thị Định.</p>
+                    <ul class="dest-features">
+                        <li><i class="fas fa-check"></i> Tham quan bảo tàng hiện vật lịch sử</li>
+                        <li><i class="fas fa-check"></i> Lắng nghe câu chuyện hào hùng của Đội quân tóc dài</li>
+                        <li><i class="fas fa-check"></i> Viếng đền thờ và tượng đài Đồng Khởi</li>
+                    </ul>
+                </div>
+            </article>
+
+            <!-- ĐỊA ĐIỂM 7 -->
+            <article class="dest-card">
+                <div class="dest-thumb">
+                    <img src="./image/bentre010.jpg" alt="Chùa Vạn Phước Bình Đại">
+                    <span class="dest-badge badge-purple"><i class="fas fa-place-of-worship"></i> Tâm Linh</span>
+                </div>
+                <div class="dest-body">
+                    <div class="dest-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <span>4.9 (1.100 đánh giá)</span>
+                    </div>
+                    <h3>7. Chùa Vạn Phước - Ngôi Chùa Vàng Ven Biển</h3>
+                    <p class="dest-location"><i class="fas fa-map-marker-alt"></i> Thị trấn Ba Tri - Bình Đại, Tỉnh Bến Tre</p>
+                    <p class="dest-desc">Một trong những ngôi chùa lớn và lộng lẫy nhất miền Tây với sắc vàng rực rỡ uy nghiêm. Chùa có khuôn viên rộng hơn 8ha với tượng Phật Di Lặc dát vàng khổng lồ và cảnh quan thanh tịnh.</p>
+                    <ul class="dest-features">
+                        <li><i class="fas fa-check"></i> Chiêm bái tượng Phật Di Lặc uy nghi</li>
+                        <li><i class="fas fa-check"></i> Kiến trúc cổng tam quan lộng lẫy tráng lệ</li>
+                        <li><i class="fas fa-check"></i> Không gian thanh tịnh cầu bình an may mắn</li>
+                    </ul>
+                </div>
+            </article>
+
+            <!-- ĐỊA ĐIỂM 8 -->
+            <article class="dest-card">
+                <div class="dest-thumb">
+                    <img src="./image/bentre02.webp" alt="Cù Lao Minh Bến Tre">
+                    <span class="dest-badge badge-green"><i class="fas fa-tree"></i> Miệt Vườn</span>
+                </div>
+                <div class="dest-body">
+                    <div class="dest-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                        <span>4.7 (730 đánh giá)</span>
+                    </div>
+                    <h3>8. Cù Lao Minh - Miệt Vườn Trù Phú</h3>
+                    <p class="dest-location"><i class="fas fa-map-marker-alt"></i> Nằm giữa sông Hàm Luông và Cổ Chiên</p>
+                    <p class="dest-desc">Cù lao lớn nhất Bến Tre, nổi tiếng với những rặng dừa thẳng tắp bạt ngàn, làng nghề dệt chiếu cói Cà Mơn và các lò chế biến than dừa, thảm xơ dừa xuất khẩu đi khắp thế giới.</p>
+                    <ul class="dest-features">
+                        <li><i class="fas fa-check"></i> Đạp xe khám phá đường làng rợp bóng dừa</li>
+                        <li><i class="fas fa-check"></i> Tham quan làng nghề dệt chiếu thủ công</li>
+                        <li><i class="fas fa-check"></i> Thưởng thức nước dừa xiêm ngọt lịm tại vườn</li>
+                    </ul>
+                </div>
+            </article>
+        </div>
+
+        <!-- CẨM NANG BỎ TÚI KHI ĐI DU LỊCH BẾN TRE -->
+        <section class="travel-tips-box">
+            <div class="tips-header">
+                <i class="fas fa-lightbulb"></i>
+                <div>
+                    <h3>Cẩm Nang Bỏ Túi Khi Khám Phá Bến Tre</h3>
+                    <p>Những lưu ý hữu ích để chuyến đi của bạn trọn vẹn và nhiều niềm vui nhất</p>
+                </div>
+            </div>
+            <div class="tips-grid">
+                <div class="tip-item">
+                    <div class="tip-icon"><i class="fas fa-calendar-check"></i></div>
+                    <h4>Thời Điểm Lý Tưởng</h4>
+                    <p>Bến Tre có khí hậu ôn hòa quanh năm. Tuy nhiên đẹp nhất là mùa hè (tháng 5 - 8) để thưởng thức trái cây chín, hoặc dịp giáp Tết để ngắm làng hoa Cái Mơn rực rỡ.</p>
+                </div>
+                <div class="tip-item">
+                    <div class="tip-icon"><i class="fas fa-motorcycle"></i></div>
+                    <h4>Phương Tiện Đi Lại</h4>
+                    <p>Chỉ cách Sài Gòn khoảng 85km (2 tiếng đi xe khách hoặc xe máy). Khi đến nơi, bạn có thể thuê xe máy chạy đường làng hoặc thuê xuồng ghe đi tour sông nước.</p>
+                </div>
+                <div class="tip-item">
+                    <div class="tip-icon"><i class="fas fa-tshirt"></i></div>
+                    <h4>Trang Phục Gợi Ý</h4>
+                    <p>Nên chuẩn bị quần áo thoải mái, dép sandal hoặc giày mềm dễ đi lại. Đừng quên mang thêm một bộ quần áo dự phòng khi tham gia các trò chơi tát mương bắt cá.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- =======================================================
+         FOOTER CHÂN TRANG
+    ======================================================= -->
     <footer>
         <section class="section-footer">
             <a href="./index.html">Bến Tre</a>
             <span> Hẹn Gặp Lại Bạn Trong Thời Gian Sắp Tới </span>
-            <P class="footer-copyright">copyright &copy; 2026 Bến Tre quê Tôi .<a href="./index.html"> By Vankha Team</a></P>
+            <p class="footer-copyright">copyright &copy; 2026 Bến Tre Quê Tôi. <a href="./index.html">By Vankha Team</a></p>
         </section>
     </footer>
+
     <script src="script.js"></script>
 </body>
 </html>
-
-
-
-       
