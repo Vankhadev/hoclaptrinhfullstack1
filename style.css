@@ -1386,5 +1386,25 @@ footer {
     }
 }
 
+@media (max-width: 768px) {
+    .section-hero1 {
+        padding: 40px 15px;
+        border-radius: 16px;
+        gap: 20px;
+    }
 
+    .section-hero-item p {
+        font: 0.95rem;
+    }
+
+    .section-hero1-image {
+        flex: 1 1 100%;
+        padding: 20px;
+        border-radius: 16px;
+    }
+
+    .section-hero1-image img {
+        height: 220px;
+    }
+}
 
